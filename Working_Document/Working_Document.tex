@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb, amsfonts}
+\usepackage{algorithm}
+\usepackage{float}
+\usepackage{subcaption}
+ \usepackage{relsize}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage[table]{xcolor}
+\usepackage{bm}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{cite}
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ total={8.5in,11in},
+ left=1.25in,
+ right=1in,
+ top=1in,
+ bottom=1in,
+ }
+\doublespace
+
+
+\def\r{{\mathbb R}}
+
+\begin{document}
+All of the work described below uses the model Tim emailed to Joey on October 13, 2017; the codes are included in OO-NVU-20.zip saved in the repository. Our objective is to identify which parameters in the model govern the dynamics of the potassium, the state $K_e$ in the model, during the period when a current is applied.
+
+As a first step we allowed 70 parameters to vary on a uniform interval about their nominal value with 10\% uncertainty. These 70 parameters are found in the following channels within the ``Neuron.m" file contained in OO-NVU-20.zip,
+\begin{enumerate}
+\item[$\bullet$] Na flux through NaP channel in soma using GHK
+\item[$\bullet$] Na flux through NaT channel in soma using GHK
+\item[$\bullet$] K flux through KDR channel in soma using GHK
+\item[$\bullet$] K flux through KA channel in soma using GHKinput\_current
+\item[$\bullet$] Na flux through NaP channel in dendrite using GHK
+\item[$\bullet$] Na/K flux through NMDA channel in dendrite using GHK
+\item[$\bullet$] K flux through KDR channel in dendrite using GHK
+\item[$\bullet$] K flux through KA channel in dendrite using GHK
+\end{enumerate}
+
+We generated 1000 realizations of these parameters (assuming them to be independent) and solved the ODE system for each realization. Of these 1000 realizations, 167 of them did not return a solution for the entire time interval; we expect that the ODE solver was unable to solve for those parameter values. Using the solutions for the 833 remaining realizations we sought to construct a KL expansion of the process and learn the coefficient functions from the realizations. We found that the spectrum of the covariance operator and dominant eigenvectors converged quickly; however, we were unable to learn the coefficient functions because of the dimension and nonlinearity of the problem.
+
+Using the 833 realizations we are able to identify that around 24 of them yielded a potassium profile consistent with experimental data. This seems to indicate that there exists a subset of the parameters under consideration which give the desired dynamics. Upon inspection of histograms and correlation plots, we hypothesize that to understand the parameters yielding results comparable to experimental data we must understand the correlation structure of the parameters. We assumed them to be independent because we have no further knowledge at this time. If we can solve a Bayesian inverse problem we may discovered the desired correlation structure, but this is too computationally intensive with the current parameter dimension and model complexity. 
+
+To reduce the parameter dimension we would like to compute Sobol' indices of the parameters and remove the parameters of less importance. We cannot compute the Sobol' indices for the full model because of the computational expense. Rather, we seek to do the analysis on each channel so that through a collection of lower dimensional problems we may compute Sobol' indices and extract important parameters from each channel. As we move toward this end we have included four additional parameters in the buffer equation, search ``change in buffer for K+ in the extracellular space" in Neuron.m to find this equation. This is a total of 74 parameters partitioned over 8 channels and a buffer in the model. We will seek to construct surrogate models and compute Sobol' indices on each of these 9 subsets of parameters and use the results to extract a lower dimensional parameter set on which to continue the correlation analysis.
+
+
+
+
+
+
+
+\end{document}
