@@ -43,15 +43,45 @@ As a first step we allowed 70 parameters to vary on a uniform interval about the
 \item[$\bullet$] K flux through KA channel in dendrite using GHK
 \end{enumerate}
 
-We generated 1000 realizations of these parameters (assuming them to be independent) and solved the ODE system for each realization. Of these 1000 realizations, 167 of them did not return a solution for the entire time interval; we expect that the ODE solver was unable to solve for those parameter values. Using the solutions for the 833 remaining realizations we sought to construct a KL expansion of the process and learn the coefficient functions from the realizations. We found that the spectrum of the covariance operator and dominant eigenvectors converged quickly; however, we were unable to learn the coefficient functions because of the dimension and nonlinearity of the problem.
+We generated 1000 realizations of these parameters (assuming them to be independent) and solved the ODE system for each realization. Of these 1000 realizations, 167 of them did not return a solution for the entire time interval; we expect that the ODE solver was unable to solve for those parameter values. There were also 3 realizations where the ODE solver returned complex solutions, these where discarded as well. This left 830 realizations to be used for the subsequent analysis.
 
-Using the 833 realizations we are able to identify that around 24 of them yielded a potassium profile consistent with experimental data. This seems to indicate that there exists a subset of the parameters under consideration which give the desired dynamics. Upon inspection of histograms and correlation plots, we hypothesize that to understand the parameters yielding results comparable to experimental data we must understand the correlation structure of the parameters. We assumed them to be independent because we have no further knowledge at this time. If we can solve a Bayesian inverse problem we may discovered the desired correlation structure, but this is too computationally intensive with the current parameter dimension and model complexity. 
+Using the 830 realizations we are able to identify that around 24 of them yielded a potassium profile consistent with experimental data. This seems to indicate that there exists a subset of the parameters under consideration which give the desired dynamics. Upon inspection of histograms and correlation plots, we hypothesize that to understand the parameters yielding results comparable to experimental data we must understand the correlation structure of the parameters. We assumed them to be independent because we have no further knowledge at this time. If we can solve a Bayesian inverse problem we may discovered the desired correlation structure, but this is too computationally intensive with the current parameter dimension and model complexity. 
 
-To reduce the parameter dimension we would like to compute Sobol' indices of the parameters and remove the parameters of less importance. We cannot compute the Sobol' indices for the full model because of the computational expense. Rather, we seek to do the analysis on each channel so that through a collection of lower dimensional problems we may compute Sobol' indices and extract important parameters from each channel. As we move toward this end we have included four additional parameters in the buffer equation, search ``change in buffer for K+ in the extracellular space" in Neuron.m to find this equation. This is a total of 74 parameters partitioned over 8 channels and a buffer in the model. We will seek to construct surrogate models and compute Sobol' indices on each of these 9 subsets of parameters and use the results to extract a lower dimensional parameter set on which to continue the correlation analysis.
+Using the 830 realizations we constructed a KL expansion of the process and learned the coefficient functions with a radial basis functions model. This gave a surrogate model from which we computed the total Sobol' indices, they are plotted in Figure~\ref{fig:all_parameters}.
+
+Because of the high parameter dimension there are possible surrogate approximation errors which could alter the Sobol' indices. To reduce the dimension we did analysis on each channel so that through a collection of lower dimensional problems we may compute Sobol' indices and extract important parameters from each channel. In this analysis we included four additional parameters in the buffer equation, search ``change in buffer for K+ in the extracellular space" in Neuron.m to find this equation. This is a total of 74 parameters partitioned over 8 channels and a buffer in the model. Figure~\ref{fig:channelwise_variances} shows the time dependent variance of $K_e$ as parameters are varied within each channel. We have omitted the buffer parameters experiment from this plot as it had negligible variance. The results of Figure~\ref{fig:channelwise_variances} are consistent with Figure~\ref{fig:all_parameters}. There are three channel in Figure~\ref{fig:channelwise_variances} which are nearly 0 so we no longer consider varying those parameters. For each of the 5 channels with nontrivial variance, we constructed surrogate models as we did for the full 70 parameter model and computed total Sobol' indices. The results are shown in Figure~\ref{fig:channelwise_sobol}. These results are consistent with what we observed when varying all 70 parameters. Hence by analyzing them one channel at a time we simplify the construction of surrogate models and computation of Sobol' indices, but the results agree with the case were we vary all 70 parameters. This validates that Figure~\ref{fig:all_parameters} is a trustworthy assessment of the parameters influence.
+
+Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of the original 70 parameters should be varied. Having found this subset of parameters we are now ready to build and surrogate model on the lower dimensional parameter space and use it to solve a Bayesian inverse problem to discover the parameters correlations.
+
+\newpage
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.25]{Figures/All_Parameters.pdf}
+\end{center}
+\caption{Total Sobol' indices for 70 parameters in the 8 channels. The black vertical lines are separating the channels. There are a total of 13 parameters whose total Sobol' index is greater than or equal to 0.01.}
+\label{fig:all_parameters}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.25]{Figures/Channel_Variance_Comparison.pdf}
+\end{center}
+\caption{Variance of the $K_e$ profile when varying parameters within each channel and fixing others to their nominal values.}
+\label{fig:channelwise_variances}
+\end{figure}
 
 
-
-
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.2]{Figures/Channel_1_Parameters.pdf}
+\includegraphics[scale=.2]{Figures/Channel_2_Parameters.pdf}
+\includegraphics[scale=.2]{Figures/Channel_3_Parameters.pdf}
+\includegraphics[scale=.2]{Figures/Channel_5_Parameters.pdf}
+\includegraphics[scale=.2]{Figures/Channel_7_Parameters.pdf}
+\end{center}
+\caption{Total Sobol' indices for parameters in channels 1,2,3,5, and 7. Channel 1 is in the top left, channel 2 the top right, channel 3 the middle left, channel 5 the middle right, and channel 7 at the bottom. In each case all other parameters are fixed to their nominal values so these results ignore interactions of parameters across channels.}
+\label{fig:channelwise_sobol}
+\end{figure}
 
 
 
