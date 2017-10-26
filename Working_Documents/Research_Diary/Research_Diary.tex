@@ -51,14 +51,12 @@ Using the 830 realizations we constructed a KL expansion of the process and lear
 
 Because of the high parameter dimension there are possible surrogate approximation errors which could alter the Sobol' indices. To reduce the dimension we did analysis on each channel so that through a collection of lower dimensional problems we may compute Sobol' indices and extract important parameters from each channel. In this analysis we included four additional parameters in the buffer equation, search ``change in buffer for K+ in the extracellular space" in Neuron.m to find this equation. This is a total of 74 parameters partitioned over 8 channels and a buffer in the model. Figure~\ref{fig:channelwise_variances} shows the time dependent variance of $K_e$ as parameters are varied within each channel. We have omitted the buffer parameters experiment from this plot as it had negligible variance. The results of Figure~\ref{fig:channelwise_variances} are consistent with Figure~\ref{fig:all_parameters}. There are three channel in Figure~\ref{fig:channelwise_variances} which are nearly 0 so we no longer consider varying those parameters. For each of the 5 channels with nontrivial variance, we constructed surrogate models as we did for the full 70 parameter model and computed total Sobol' indices. The results are shown in Figure~\ref{fig:channelwise_sobol}. These results are consistent with what we observed when varying all 70 parameters. Hence by analyzing them one channel at a time we simplify the construction of surrogate models and computation of Sobol' indices, but the results agree with the case were we vary all 70 parameters. This validates that Figure~\ref{fig:all_parameters} is a trustworthy assessment of the parameters influence.
 
-Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of the original 70 parameters should be varied. Having found this subset of parameters we are now ready to build and surrogate model on the lower dimensional parameter space and use it to solve a Bayesian inverse problem to discover the parameters correlations.
-
 \newpage
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=.25]{Figures/All_Parameters.pdf}
 \end{center}
-\caption{Total Sobol' indices for 70 parameters in the 8 channels. The black vertical lines are separating the channels. There are a total of 13 parameters whose total Sobol' index is greater than or equal to 0.01.}
+\caption{Total Sobol' indices for 70 parameters in the 8 channels. The black vertical lines are separating the channels. There are 13 parameters whose total Sobol' index is greater than 0.01.}
 \label{fig:all_parameters}
 \end{figure}
 
@@ -70,6 +68,7 @@ Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of t
 \label{fig:channelwise_variances}
 \end{figure}
 
+\newpage
 
 \begin{figure}[h]
 \begin{center}
@@ -83,6 +82,33 @@ Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of t
 \label{fig:channelwise_sobol}
 \end{figure}
 
+
+\newpage
+
+Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of the original 70 parameters should be varied. We also suspect that the NO pathway is influential so we perform a similar analysis on its parameters. There are 58 parameters which we vary, they are described in the document Tim wrote, "uncertainty\_quantification/Working\_Documents/Code\_Description/NO\_Pathway\_version\_2.pdf." We computed 1000 realizations and constructed a surrogate model using the KL expansion with radial basis functions. The Sobol' indices were computed using the surrogate model, they are shown in Figure~\ref{fig:NO_pathway_all_parameters}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=.25]{Figures/NO_Pathway_All_Parameters.pdf}
+\end{center}
+\caption{Total Sobol' indices for 58 NO pathway parameters. There are 11 parameters whose total Sobol' index is greater than 0.02 and 21 parameters whose total Sobol' index is greater than 0.01.}
+\label{fig:NO_pathway_all_parameters}
+\end{figure}
+
+The 11 most influential parameters, in order, are
+\begin{enumerate}
+\item ('$x_{ki}$', 25);  [um];  (M.E.) in SMCEC
+\item ('$x_{nk}'$, 25);             [um] ;  (M.E.) in Neuron
+\item ('$x_{ki}$', 25);             [um] ;  (M.E.) in Astrocyte
+\item ('$x_{nk}$', 25);             [um] ;  (M.E.) in Astrocyte
+\item  ('$K_{m_{mlcp}}$', 5.5);  [uM] ; in SMCEC
+\item ('$k_{pde}$', 0.0195);  [$s^{-1}$] ; in SMCEC
+\item  ('$V_{max_{sGC}}$', 0.8520);  [] ; in SMCEC
+\item ('$C_4$', 0.011);  [$s^{-1} microM^{-2}$]  in SMCEC
+\item ('k3', 3);  [$uM^{-1} s^{-1}$] ; in SMCEC
+\item ('$V_{max_{NO_{n}}}$', 4.22);     [$s^-1$] ; maximum catalytic rate of NO production (Chen2006) - obtained from fig 6 and equ 17 and 18 in Neuron
+\item ('$D_{cNO}$', 3300);          [$um^2 s^-1$] ; Diffusion coefficient NO (Malinski1993) in Neuron
+\end{enumerate}
 
 
 \end{document}
