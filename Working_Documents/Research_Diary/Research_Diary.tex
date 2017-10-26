@@ -88,7 +88,19 @@ Because of the high parameter dimension there are possible surrogate approximati
 
 \newpage
 
-Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of the original 70 parameters should be varied. We also suspect that the NO pathway is influential so we perform a similar analysis on its parameters. There are 58 parameters which we vary, they are described in the document Tim wrote, "uncertainty\_quantification/Working\_Documents/Code\_Description/NO\_Pathway\_version\_2.pdf." We computed 1000 realizations and constructed a surrogate model using the KL expansion with radial basis functions. The Sobol' indices were computed using the surrogate model, they are shown in Figure~\ref{fig:NO_pathway_all_parameters}.
+Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of the original 70 parameters should be varied. 
+
+\section{NO Pathway notes}
+\commTim{We also suspected that the NO pathway is influential so we perform a similar analysis on its parameters. There are 58 parameters which we vary, they are described in the document Tim wrote, "uncertainty\_quantification/Working\_Documents/Code\_Description/NO\_Pathway\_version\_2.pdf." We computed 1000 realizations and a subset of these are shown in Figure \ref{fig:CBF_Vary_NO_Pathway}. It is clear from this initial data set that increasing the influence of NO on NVC can provide a concave profile (top 3 realisation profiles) but the CBF profile does not reduce after the stimulus is finished and hence the second stimulus causes a much higher CBF than experiment suggests. This may be due to the rate of consumption of NO in the cells (particularly the SMC) or that the NO pathway is not the phenomenon that supports the concavity of the CBF profile. }
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{./Figures/CBF_Vary_NO_Pathway}
+\caption{CBF profiles from varying the 58 parameters defining the NO pathway from neuron to SMC and from EC to SMC.}
+\label{fig:CBF_Vary_NO_Pathway}
+\end{figure}
+
+ From the 1,000 realisations we constructed a surrogate model using the KL expansion with radial basis functions. The Sobol' indices were computed using the surrogate model, they are shown in Figure~\ref{fig:NO_pathway_all_parameters}.
 
 \begin{figure}[h]
 \begin{center}
@@ -99,7 +111,7 @@ Using the results of Figure~\ref{fig:all_parameters} we deduce that only 13 of t
 \end{figure}
 
 The 11 most influential parameters, in order, are
-\begin{enumerate}
+\begin{enumerate}\label{ranked_list_NO_parameters}
 \item ('$x_{ki}$', 25);  [um];  (M.E.) in SMCEC
 \item ('$x_{nk}'$, 25);             [um] ;  (M.E.) in Neuron
 \item ('$x_{ki}$', 25);             [um] ;  (M.E.) in Astrocyte
@@ -113,9 +125,25 @@ The 11 most influential parameters, in order, are
 \item ('$D_{cNO}$', 3300);          [$um^2 s^-1$] ; Diffusion coefficient NO (Malinski1993) in Neuron
 \end{enumerate}
 
-\commTim{Tim may insert a comment like this.}
-\commJoey{Joey may insert a comment like this.}
 
-This is a test.
+\commTim{ From the list of ranked parameters above the consumption rate component does not have a large (or really any) influence on the profile so any solution to the "inverse" problem of finding a set of parameters which has a minimum sum of squared errors to the desire concave CBF profile would not involve NO consumption.\\
+ From this we can perhaps hypothesise that NO is \textbf{not} the phenomenon which supports a concave CBF profile. So if not what is ?  \\
+\textit{ It is interesting to note that the highest ranked parameters affecting the NO profile are the assumed (model estimated) distances of neuron to astrocyte, astrocyte to SMC and EC to SMC.}\\
+There are a number of possible areas that we  investigate , itemised below\\
+\begin{itemize}
+\item an increase in the neuronal activation based on a delayed appearance of cortical activists such as dopamine or norepinephrine (noradrenaline) indicating a possible stress situation of the animal. 
+\item different pathways from the whisker pad to the somatosensory cortex via the brainstem take different times (there is little if any evidence for this) 
+\item long stimulation times cause an as yet unknown increase in neuronal activity
+\item following Elizabeth Hillmann's hypothesis that upstream information is passed to the pial arteries from the parenchyma which then respond (dilate causing increased flow) after a certain time. 
+\item LDF probe used in the data of Zheng et al \cite{Zheng2010} was described as \textbf{The LDF probe (PeriFlux 5010, Perimed, Stockholm, 780 nm illumination, 0.25 mm separation) was placed under visual guidance (Leica MZ 7.5 stereomicroscope—×60 magnification) such that it overlays the cortical surface ( less than 1 mm) and that the maximum
+distance from the LDF probe to the uppermost channel of the multichannel electrode was approximately 100 μmin the x–y plane.} So this means that the CBF profile is an average of both penetrating arterioles and the pial arteries. 
+\item low frequency oscillation (0.1 Hz) caused by dynamics of the relationship between CICR, SERCA and RyR may be initiated after a short period of 8 seconds. 
+\end{itemize} 
+The fact that the CBF is measured above the cortex indicates that the CBF is an average of a number of arterioles and the pial arteries. Thus Hillman's work \cite{Chen2014a} on the endothelial mediated transfer upstream of dilation to the pial arteries could be a possible explanation. In fact when they use acetacholine (ACh) to predilate arteries see supplimentary figure S5c the chnage in HbT shows distinctive "concave" -like profiles. The addition of ACh would also induce significant amounts of $Ca^{2+}$ from the stores via the G -protein coupled receptor. If the ACh concentraiton is within a specific range then the SMC may oscillate at approx 0.1Hz. Therefore we should look at the work of Johny et al \cite{Johny2017} to investigate whether the agonist can produce oscillations which may simulate the concavity profile of the CBF. This does not negate the role of Hillman's hypothesis.
+}
+%\commJoey{Joey may insert a comment like this.}
 
+%This is a test.
+\bibliographystyle{novfour}
+\bibliography{/Users/timdavid/Documents/MendeleyDesktop/library}
 \end{document}
