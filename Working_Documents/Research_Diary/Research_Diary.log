@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.22)  26 OCT 2017 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.22)  26 OCT 2017 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -504,22 +504,22 @@ ne 107.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
 
  []
 
 [5] [6 <./Figures/CBF_Vary_NO_Pathway.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 143.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 143.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
 
 
-LaTeX Warning: Citation `Zheng2010' on page 7 undefined on input line 143.
+LaTeX Warning: Citation `Zheng2010' on page 7 undefined on input line 145.
 
 Missing character: There is no â in font cmbxti10!
 Missing character: There is no € in font cmbxti10!
@@ -532,10 +532,10 @@ Missing character: There is no â in font cmbxti10!
 Missing character: There is no € in font cmbxti10!
 Missing character: There is no “ in font cmbxti10!
 
-LaTeX Warning: Citation `Chen2014a' on page 7 undefined on input line 143.
+LaTeX Warning: Citation `Chen2014a' on page 7 undefined on input line 145.
 
 
-LaTeX Warning: Citation `Johny2017' on page 7 undefined on input line 143.
+LaTeX Warning: Citation `Johny2017' on page 7 undefined on input line 145.
 
 [7 <./Figures/NO_Pathway_All_Parameters.pdf>] (./Research_Diary.bbl) [8]
 (./Research_Diary.aux)
@@ -566,7 +566,7 @@ mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
 b>
-Output written on Research_Diary.pdf (8 pages, 3149704 bytes).
+Output written on Research_Diary.pdf (8 pages, 3150496 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
