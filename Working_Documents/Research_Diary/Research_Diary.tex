@@ -24,7 +24,7 @@
  bottom=1in,
  }
 \doublespace
-
+\newcolumntype{\Ca}{$Ca^{2+}$}
 \newcommand{\commJoey}[1]{{\color{red}{\em Joey: #1}}}
 \newcommand{\commTim}[1]{{\color{blue}{\em Tim: #1}}}
 \newcommand{\commPierre}[1]{{\color{green}{\em Pierre: #1}}}
@@ -141,19 +141,42 @@ distance from the LDF probe to the uppermost channel of the multichannel electro
 \end{itemize} 
 The fact that the CBF is measured above the cortex indicates that the CBF is an average of a number of arterioles and the pial arteries. Thus Hillman's work \cite{Chen2014a} on the endothelial mediated transfer upstream of dilation to the pial arteries could be a possible explanation. In fact when they use acetacholine (ACh) to predilate arteries see supplementary figure S5c the change in HbT shows distinctive "concave" -like profiles. The addition of ACh would also induce significant amounts of $Ca^{2+}$ from the stores via the G -protein coupled receptor (which would initially constrict the vessels). If the ACh concentration is within a specific range then the SMC may oscillate at approx 0.1Hz. Therefore we should look at the work of Johny et al \cite{Johny2017} to investigate whether the agonist can produce oscillations which may simulate the concavity profile of the CBF. This does not negate the role of Hillman's hypothesis.\\
 Talking with KC Brennan and colleagues it seems possible that the concavity is induced by \textit{neuronal modulation}. This is where agonists such as ACh or norepinephrine are released in the somatosensory cortex. This release of agonist then diffuses through the cortical tissue and would increased neuronal activation along with possible cellular oscillations as noted above. \\
-Not sure how we would model this. The sketch shown in Figure \ref{fig:Neuromodulation_paths} provides a viable hypothesis. }
+ The sketch shown in Figure \ref{fig:Neuromodulation_paths} provides a viable hypothesis. }
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\linewidth, angle = -90]{./Figures/Neuromodulation_paths}
 \caption{Sketch of neuromodulation paths for ACh and Norepinephrine}
 \label{fig:Neuromodulation_paths}
 \end{figure}
-\commTim{The basis of the hypothesis is that for long stimulations, ($\ge 8 secs$)  the path from the whisker pad the neuromodulatory effect for both ACh and norepinephrine (directed through both the locus caeruleus and the nucleus tractus solitarius to the hypothalamus ) provides for the release of these agonists (via vericosities) in the sensory cortex.
+\commTim{Berwick's group suggest that the concavity of the CBF is based on competing dilatory and constricting phenomena. Dilation  by EPSP (excitory post synaptic potential) and constriction by IPSP (inhibitory post synapyic potential). I can't find any evidence to support this.  The basis of the contrasting hypothesis is that for long stimulations, ($\ge 8 secs$)  the path from the whisker pad mediates a neuromodulatory effect for both ACh and norepinephrine (directed through both the locus coeruleus and the nucleus tractus solitarius to the hypothalamus bypassing the VPM and POM in the thalamus) and provides for the release of these agonists in the sensory cortex.
 %through the Principal Trigenimal Nucleus to the VPM (ventral posteromedial nucleus  is a nucleus of the thalamus) and thence to the somatosenory cortex allows ACh to efflux through the vericosities that exist on the dendrites of layer 2/3 neurons (calbindin-immuno-reactive neurons (CIR neurons)).
- This release of ACh, for example then diffuses through the cortical tissue and mediates a dilation of vessels cerebral arteries appear to have M5 muscarinic receptors that produce vasodilation in response to ACh. But this response is due to the probable release of endothelial derived NO !!! This then leads to an increase in CBF. Due to the slow  kinetics of this process the ACh mediated dilation will not immediately become apparent. \textbf{Hence we model this secondary dilation as a time-dependent release of NO and a time dependent increase in neuronal input. This means changing the input data from Berwick's group} The input data from Berwick's group was current source density measurements in layer IV and this showed no increase in activity, we could argue that the neuromodulatory effect is seen mostly in layer 1,2,3. }
+ This release of ACh, for example then diffuses through the cortical tissue and mediates a dilation of vessels cerebral arteries appear to have M5 muscarinic receptors that produce vasodilation in response to ACh. But this response is due to the probable release of endothelial derived NO !!! This then leads to an increase in CBF. Due to the slow  kinetics of this process the ACh mediated dilation will not immediately become apparent.  The input data from Berwick's group was current source density measurements in layer IV and this showed no increase in activity, we could argue that the neuromodulatory effect is seen mostly in layer 1,2,3. \\
+ KC's comments make it clear that the original input current from the stimulus should not be altered but that neuromodulation is an additional neuronal activation. Unfortunately we do not know what the time dependent profile of neuromodulation  would be like.\\
+% How do we model the time dependent behaviour of a neuromodulatory effect (of ACh and Norepi) which essentially releases endothelially derived Nitric Oxide?\\
+ Work by Edith Hamel (in Montreal) has given us the experimental evidence we need \cite{Toussay2013}. This paper provides evidence of noradrenaline cortical activation through the Locus Coeruleus. It provides basic pathways which include the cAMP and PIP2 pathways for neuronal $Ca^{2+}$  as well as nNOS. We can therefore provide an additional pathway to the "standard" neuronal activation. Hamel's work shows the timescales  over which the noradrenaline pathway is active. We shall call this the Pain pathway\\
+ \textbf{Notes on some possible models of the Pain pathway.}\\
+ Hamel's group states  "\textbf{...that LC stimulation recruits a broad network of cortical excitatory and inhibitory neurons resulting in increased cortical activity and that K?fluxes and EET signaling mediate a large part of the hemodynamic response.}". They further state that "\textbf{LC activates a broad network of cortical pyramidal cells and interneurons and concomitantly increases cortical perfusion. The hyperemic response virtually disappeared after selective lesioning of the LC–NA system and required activation of $\alpha$ - and $\beta$ -adrenoreceptors. In addition, the evoked CBF response to the LC-NA system required the release of glutamate and GABA likely from the recruited subsets of pyramidal cells and interneurons and was primarily mediated by epoxyeicosatrienoic acids (EETs) and potassium ($K^+$) fluxes through large- conductance, calcium-operated (BK) and inward-rectifier (Kir) $K^+$ channels.}"\\
+ Stimulation consisted of "\textbf{of 10 bursts of pulses (100 Hz, 0.5 ms duration) presented at 0.5 Hz (1 s on/1 s off for a total of 20 s) with a current intensity of 80$\mu$ A.}" CBF measurements were done using LDF 100 $\mu$m probes . From the Toussey paper it is clear that both $K^+$ , $K_{IR}$ and neuronal NO pathways have an influence. In addition in the work by Toussey et al \cite{Toussay2013} mean arterial pressure (MAP) increased during LC stimulation, however the Zheng experiment \cite{Zheng2010} used Phenylephrine infusion to keep MAP constant.  \\
+ After much thought (!) it seems th ebeat way of modelling this (albeit rather phenomenologically ) is to split the stimulation current that is applied to the neuron compartment into two parts, as given by 
+ 
+ }
+ \begin{eqnarray}
+ I_{T}=\alpha I_{LC}(t)+\beta I_{Wh}(t)
+ \end{eqnarray}
+ \commTim{here $I_{LC }$ is the current coming from the locus coeruleus and $I_{Wh}$ from the whisker pad through the Principal trigeminal  nucleus; $\alpha$ and $\beta$ are weighting parameters. They are assumed to be essentially independent pathways. We show this in Figure \ref{fig:LC_Wh_pathways}. 
+  }
+ \begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\linewidth]{./Figures/LC_Wh_pathways}
+\caption{A sketch of the combined effect of the LC and "standard" whisker pad currents}
+\label{fig:LC_Wh_pathways}
+\end{figure}
+
+
+  
 %\commJoey{Joey may insert a comment like this.}
 
 %This is a test.
-\bibliographystyle{novfour}
+\bibliographystyle{KathisBibstyle}
 \bibliography{/Users/timdavid/Documents/MendeleyDesktop/library}
 \end{document}
