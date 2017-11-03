@@ -382,7 +382,7 @@ classdef Neuron < handle
                 output_percentage = 100*index_t./(length(T)); % Output to screen to show progress
                 %fprintf('Percentage done: %.4f\n', output_percentage);
                     
-            elseif p.CurrentType == 3
+            elseif p.CurrentType == 3 || p.CurrentType == 4
                 
             % Load experimental data and use as a scaled current input         
                 dt = p.dt; XLIM2 = p.XLIM2;
