@@ -29,9 +29,9 @@ XLIM2 = 150; % End of simulation
 
 % For current type 1 use max current strength 0.022
 % For current type 3 use max current strength 0.042
-% For current type 4 use max current strength 0.036
+% For current type 4 use max current strength 0.035
 
-CURRENT_STRENGTH    = 0.036;    % Max strength of current input in mA/cm2
+CURRENT_STRENGTH    = 0.035;    % Max strength of current input in mA/cm2
 NEURONAL_START      = 100;      % Start of neuronal stimulation
 CURRENT_TYPE        = 4;        % Types of current input. 1: normal, 2: two stimulations (second stimulation is 8 sec after and 1 sec long), 3: obtained from experimental input data, 4: whisker pad (from experiment) + locus coeruleus (pain pathway)
 
