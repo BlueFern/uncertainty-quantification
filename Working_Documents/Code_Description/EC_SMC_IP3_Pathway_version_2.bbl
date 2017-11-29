@@ -1,0 +1,23 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Chang et~al.(2013)Chang, Brennan, He, Huang, Miura, Wilson and
+  Wylie}]{Chang2013}
+\textbf{Chang, J.~C.; Brennan, K.~C.; He, D.; Huang, H.; Miura, R.~M.; Wilson,
+  P.~L. and Wylie, J.~J.} (\textbf{2013}): {A Mathematical Model of the
+  Metabolic and Perfusion Effects on Cortical Spreading Depression}, PloS one,
+  Vol.~8, No.~8 p. e70469.
+
+\bibitem[{Kager et~al.(2000)Kager, Wadman and Somjen}]{Kager2000a}
+\textbf{Kager, H.; Wadman, W.~J. and Somjen, G.~G.} (\textbf{2000}): {Simulated
+  seizures and spreading depression in a neuron model incorporating
+  interstitial space and ion concentrations.}, Journal of neurophysiology,
+  Vol.~84, No.~1 pp. 495--512.
+
+\bibitem[{Koenigsberger et~al.(2006)Koenigsberger, Sauser, B\'{e}ny and
+  Meister}]{Koenigsberger2006}
+\textbf{Koenigsberger, M.; Sauser, R.; B\'{e}ny, J.-L. and Meister, J.-J.}
+  (\textbf{2006}): {Effects of arterial wall stress on vasomotion.},
+  Biophysical journal, Vol.~91, No.~5 pp. 1663--1674.
+
+\end{thebibliography}

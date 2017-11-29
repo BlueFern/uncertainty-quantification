@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: EC_SMC_IP3_Pathway_version_2.aux
+The style file: KathisBibstyle.bst
+Database file #1: JTB_library.bib
+Database file #2: mybibfile.bib
+I was expecting a `,' or a `}'---line 1051 of file mybibfile.bib
+ :   
+ :   pages = {43-50}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1609 of file mybibfile.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Database file #3: /Users/timdavid/Documents/MendeleyDesktop/library.bib
+Repeated entry---line 4807 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6554 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Chang2013
+ :                   ,
+I'm skipping whatever remains of this entry
+Database file #4: library_part_I.bib
+Repeated entry---line 231 of file library_part_I.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1381 of file library_part_I.bib
+ : @article{Chang2013
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1424 of file library_part_I.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+You've used 3 entries,
+            2714 wiz_defined-function locations,
+            601 strings with 5172 characters,
+and the built_in function-call counts, 2565 in all, are:
+= -- 202
+> -- 118
+< -- 9
++ -- 45
+- -- 43
+* -- 215
+:= -- 358
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 29
+chr.to.int$ -- 4
+cite$ -- 3
+duplicate$ -- 187
+empty$ -- 166
+format.name$ -- 51
+if$ -- 514
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 35
+newline$ -- 13
+num.names$ -- 12
+pop$ -- 65
+preamble$ -- 1
+purify$ -- 26
+quote$ -- 0
+skip$ -- 98
+stack$ -- 0
+substring$ -- 135
+swap$ -- 139
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 27
+warning$ -- 0
+while$ -- 17
+width$ -- 0
+write$ -- 36
+(There were 7 error messages)

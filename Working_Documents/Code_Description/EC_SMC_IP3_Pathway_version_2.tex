@@ -1,0 +1,1105 @@
+\documentclass[fleqn]{report}
+\usepackage{lineno}
+\modulolinenumbers[5]
+\addtolength{\textwidth}{1.5cm}
+
+\usepackage{array, booktabs, import, graphicx}  % for midrule etc. in tabular
+\usepackage{textcomp}  % for upright \mu
+\usepackage[numbers]{natbib}
+\usepackage{multicol}
+\usepackage{NVU}
+\usepackage{glossaries} 
+\usepackage{todonotes}
+\usepackage{xcolor}
+\usepackage[colorlinks]{hyperref}
+\AtBeginDocument{
+  \hypersetup{
+    linkcolor=black,
+    citecolor=red,
+    urlcolor=blue,
+  }
+}
+\usepackage{glossaryEntries}
+
+\usepackage{amsmath}  % to number equations by section 
+\numberwithin{equation}{section}
+
+\usepackage{caption}
+\captionsetup{font={small}}
+
+\usepackage{textcomp} % upright textmu
+\usepackage[toc,page]{appendix}  % Appendix / Supplementary Material
+\usepackage[final]{pdfpages}
+%%\documentclass[review,fleqn]{report}
+%%
+%%\usepackage{lineno}
+%%\modulolinenumbers[5]
+%%
+%%%\journal{Journal of Theoretical Biology}
+%%
+%%\usepackage{array, booktabs}  % for midrule etc. in tabular
+%%\usepackage{textcomp}  % for upright \mu
+%%
+%%\usepackage{multicol}
+%%\usepackage{NVU}
+%%\usepackage{glossaries} 
+%%
+%%\usepackage[colorlinks]{hyperref}
+%%\AtBeginDocument{
+%%  \hypersetup{
+%%    linkcolor=black,
+%%    citecolor=black,
+%%    urlcolor=black,
+%%  }
+%%}
+%\usepackage{glossaryEntries}
+
+\usepackage{amsmath}  % to number equations by section 
+\numberwithin{equation}{section}
+
+\usepackage{caption}
+\captionsetup{font={small}}
+
+\usepackage{textcomp} % upright textmu
+\usepackage[toc,page]{appendix}  % Appendix / Supplementary Material
+\newcommand{\NO}{\text{NO}}
+\newcommand{\Na}{\text{Na$^{+}$}}
+\newcommand{\Nas}{\text{[Na$^+]_{s}$}}
+\newcommand{\Nak}{\text{[Na$^+]_{k}$}}
+\newcommand{\eNOSact}{\text{eNOS$_{\text{act}}$}}
+\newcommand{\nNOSact}{\text{nNOS$_{\text{act}}$}}
+\newcommand{\LArg}{\text{L-Arg}}
+\newcommand{\Otwo}{\text{O$_2$}}
+\newcommand{\Glu}{\text{Glu}}
+\newcommand{\SC}{\text{SC}}
+\newcommand{\K}{\text{K$^+$}}
+\newcommand{\Ks}{\text{[K$^{+}]_s$}}
+\newcommand{\Cl}{\text{Cl$^{-1}$}}
+\newcommand{\Cls}{\text{[Cl$^{-1}]_s$}}
+\newcommand{\Clk}{\text{[Cl$^{-1}]_k$}}
+\newcommand{\HCOs}{\text{[HCO$_{3}^{-1}]_s$}}
+\newcommand{\HCOk}{\text{[HCO$_{3}^{-1}]_k$}}
+\newcommand{\Kk}{\text{[K$^{+}]_k$}}
+\newcommand{\Ca}{\text{Ca$^{2+}$}}
+\newcommand{\EET}{\text{EET}}
+%\newcommand{\IP3}{\text{[IP$_3]$}}
+\newcommand{\EETk}{\text{[EET]$_{k}$}}
+\newcommand{\Can}{\text{[Ca$^{2+}]_n$}}
+\newcommand{\Cak}{\text{[Ca$^{2+}]_k$}}
+\newcommand{\Cai}{\text{[Ca$^{2+}]_i$}}
+\newcommand{\Caj}{\text{[Ca$^{2+}]_j$}}
+\newcommand{\Cap}{\text{[Ca$^{2+}]_p$}}
+\newcommand{\NOn}{\text{[NO]$_n$}}
+\newcommand{\NOk}{\text{[NO]$_k$}}
+\newcommand{\NOi}{\text{[NO]$_i$}}
+\newcommand{\NOj}{\text{[NO]$_j$}}
+\newcommand{\On}{\text{[O$_2]_n$}}
+\newcommand{\Oa}{\text{[O$_2]_a$}}
+\newcommand{\Oi}{\text{[O$_2]_i$}}
+\newcommand{\Oj}{\text{[O$_2]_j$}}
+\newcommand{\cGMP}{\text{cGMP}}
+\newcommand{\microM}{\textmu M} 
+\newcommand{\uMpers}{\textmu M\,s$^{-1}$} 
+\newcommand{\persec}{s$^{-1}$} 
+\newcommand{\umm}{\textmu m} 
+
+\newcommand\e[1]{$\times$10$^{#1}$}
+\newcommand{\n}{$^{-1}$}
+\newcommand\pNO[1]{\text{$p_{\text{NO},#1}$}} 
+\newcommand\cNO[1]{\text{$c_{\text{NO},#1}$}} 
+\newcommand\dNO[1]{\text{$d_{\text{NO},#1}$}} 
+\newcommand{\RTF}{$\frac{RT}{F}$}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+%\bibliographystyle{elsarticle-num}  % %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{KathisBibstyle}
+
+
+\begin{document}
+
+\author{Tim David}
+\title{The EC/SMC/$IP_3$ Pathway and Parameter Values in Code version 2.0 }
+\maketitle
+\newpage
+\linenumbers
+\listoftodos 
+%\input{Introduction}  % \include gives new page
+%\input{MaterialAndMethods}
+%\input{Results}
+%\input{Discussion}
+%
+%%\section*{References}
+%\bibliography{mybibfile}
+%\newpage
+\chapter{Notes for reading}
+This report provides the basic equations and parameters for the $IP_3$  pathway in the EC and SMC for NVU 2.0 
+The following notes, definitions and equations provide the reader with a comprehensive guide to version 1.2 of NVU. The document is set out in sections where each section contains the equations for each compartment, namely neuron, synaptic cleft, astrocyte, perivascular space, smooth muscle cell, endothelial cell, extracellular space and finally the lumen. The reader will find multiple definitions and equations but by dividing the document into sections corresponding to compartments it is hoped that a more clear understanding is obtained.
+Concentrations as written on the left-hand-side of the o.d.e. are given by the notation of $N_j$ where j can be any specii such as \Na of \Ca. True concentrations are written with square brackets as in \Can . In point of fact they are equivalent.
+%Figure \ref{fig:nvu_FULL} shows a schematic of the ion channels, pumps and pathways.
+Subscripts on variable such as concentrations denote the compartment, n=neuron, k=astrocyte, s=synaptic cleft, i=smooth muscle cell, j=endothelial cell, e = extracellular space.  Concentrations with "hats" denote those in the ER/SR stores. 
+\subsection{Version 1.2 /2.0 difference}
+ The basic difference between version 1.2 and version 2.0 is the new neuron model. This is based on the work of Chang et al \cite{Chang2013}	and that of Kager et al \cite{Kager2000a}. For this version the neuron model has  4 compartments; i) soma/axon, ii) dendrite , iii) post synaptic terminal and extracellular space (ECS). Ion channels for \Na, and \K efflux into the ECS.  \K is buffered in the ECS and a portion of the \K flux is passed into the synaptic cleft compartment. On reaching a certain concentration of \K in the synaptic cleft  glutamate is pumped into the synaptic cleft . This glutamate is taken up by both the post-synaptic neuron and the astrocyte. The neuron is stimulated by injection of a current of specified value into the soma/axon compartment. 
+ 
+ \chapter{Basic Equations}
+ \section{\textbf{Global Constants}}\label{sec:equations}
+ 	\begin{table}[h!]
+ 		\centering
+ 			\begin{tabular}{ p{0.1\linewidth}  >{\footnotesize} p{0.41\linewidth}  >{\footnotesize} p{0.20\linewidth} >{\footnotesize} p{0.27\linewidth} }
+ 			\hline
+ 			$ F $				& Faraday's constant 	& 96500 C mole$^{-1}$ & 	\\
+ 			$ T $				& Temperature				& 300 K				 		&	\\
+ 			$ R_{gas} $	  & Gas constant				& 8.315 J mole K$^{-1}$ &  	\\
+ 
+ 			\hline
+ 		\end{tabular}
+ 	\end{table}
+ 		\section{Smooth Muscle Cell}
+ 	
+ 		%
+% 		\textbf{Cytosolic [\gls{Ca}] in the \gls{SMC} (in \uM)}:
+% 		\begin{equation}\label{eq:ci}
+% 		\begin{split}
+% 		\dfrac{\mathrm{d}\CaConsc}{\mathrm{d}t} = J_{IP_{3i}} - J_{SR_{uptake_{i}}} + J_{CICR_{i}} - J_{extrusion_{i}} +  J_{SR_{leak_{i}}}\dots \\
+% 		 - J_{VOCC_{i}} + J_{Na/Ca_{i}}  - 0.1J_{stretch_{i}} + J_{Ca^{2+}-coupling_{i}}^{SMC-EC}
+% 		\end{split} 
+% 		\end{equation}
+% 		%
+% 		[Ca$^{2+}$] in the \gls{SR} of the \gls{SMC} (in \uM):
+% 		\begin{equation} \label{eq:si}
+% 		\dfrac{\mathrm{d}\CaConse}{\mathrm{d}t} =  J_{SR_{uptake_{i}}} - J_{CICR_{i}} - J_{SR_{leak_{i}}}
+% 		\end{equation}
+% 		%
+% 		\textbf{Membrane potential of the \gls{SMC} (in \mV):}
+% 		\begin{equation} \label{eq:vi}
+% 		\begin{split}
+% 		\dfrac{\mathrm{d}v_{i}}{\mathrm{d}t} = \gamma_{i}( -J_{Na/K_{i}} - J_{Cl_{i}} - 2J_{VOCC_{i}}- J_{Na/Ca_{i}} - J_{K_{i}} \dots \\
+% 		- J_{stretch_{i}} - J_{KIR_{i}} ) +V^{SMC-EC}_{coupling_{i}}
+% 		\end{split}
+% 		\end{equation}
+% 		%
+ 			\gls{IP3} concentration om the \gls{SMC} (in \uM): 
+ 			\begin{equation} \label{eq:dIidt}
+ 			\dfrac{\mathrm{d}\IP _{i}}{\mathrm{d}t} = J^{SMC-EC}_{IP_{3}-coupling_{i}} - J_{degrad_{i}}
+ 			\end{equation}
+ 			 		IP$_{3}$ degradation (in \uMs): 
+ 			 		\begin{equation} \label{eq:Jdegradi}
+ 			 		J_{degrad_{i}}= k_{di}I_{i}
+ 			 		\end{equation}
+ 			 		 		Heterocellular IP$_{3}$ coupling between SMCs and ECs (in \uMs):
+ 			 		 		\begin{equation} \label{eq:JIP3couplingi}
+ 			 		 		J_{IP_{3}-coupling_{i}}^{SMC-EC}= -P_{IP_{3}}(\IP_{i}-\IP_{j})
+ 			 		 		\end{equation}
+ 			 		\textbf{Code description}
+\begin{verbatim}
+ du(idx.I_i, :) = J_IP3_coup_i - J_degrad_i;\\
+ J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);\\
+  		J_degrad_i = p.k_d_i * I_i;
+\end{verbatim}
+
+
+% 			J_{IP3_{i}} = p.F_i * I_i^2 / (K_{ri}^2 + I_i^2); \\
+% 			J_{degrad_{i}} = p.k_{d_{i}} * I_i;\\
+% 			J_IP3_j = p.F_j * I_j.^2 ./ (p.K_r_j^2 + I_j.^2);\\
+% 			J_degrad_j = p.k_d_j * I_j;\\
+% 			V_coup_i = -p.G_coup * (v_i - v_j);
+% 			            J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);
+% 			            J_Ca_coup_i = -p.P_Ca * (Ca_i - Ca_j);\\
+% 			           
+		
+ 	%	\todo[inline]{ what is $R_{K,i}$? see below in equation for $K_{act_{i}}$} 
+% 		Open state probability of calcium and cGMP -activated potassium channels :
+% 		\begin{equation} \label{eq:dwidt}
+% 		\dfrac{\mathrm{d}w_{i}}{\mathrm{d}t} =  \lambda_{i} \left( K_{act_{i}} - w_{i} \right)
+% 		\end{equation}
+% 		%
+% 						Equilibrium distribution of open channel states for the BK channel (dim.less), see \citet{Dormanns2014}:  % Koenigsberger
+% 						\begin{equation} \label{eq:K_act}
+% 							K_{act_{i}}= \frac{(\Cai + c_{\text{w},i})^2}{(\Cai + c_{\text{w},i})^2 + \beta_i \exp(v_{\text{Ca}3,i} - v_i/R_{\text{K},i} )}
+% 						\end{equation}
+% 	
+% 						Translation factor, regulatory effect of cGMP on the BK channel open probability (\uM): % correct unit???):			
+% 						\begin{equation} \label{eq:c_w_i}
+% 							c_{\text{w},i} = \frac{1}{2}\left[ 1+tanh(\frac{[cGMP]-cGMP_1}{cGMP_2})\right] 
+% 						\end{equation}
+% 						
+% 	%					\textbf{values for the parameters of equilibrium $K_{\text{act},i}$ and translation factor $c_{\text{w},i}$ can be found in Table \ref{tab:sGC}}\\
+% 						
+% 	
+ 		%\subsubsection*{Fluxes}
+ 		%
+ 		%
+ 		Release of calcium from IP$_{3}$ sensitive stores in the SMC (in \uMps):
+ 		\begin{equation} \label{eq:IP3i}
+ 		J_{IP_{3i}} = F_{i}\frac{\IP_{i}^{2}}{K_{ri}^{2}+\IP_{i}^{2}}
+ 		\end{equation}
+ 		%
+ 		\textbf{Code description}
+ 		\begin{verbatim}
+ 		J_IP3_i = p.F_i * I_i.^2 ./ (p.K_r_i^2 + I_i.^2);
+ 		\end{verbatim}
+ 		\begin{table}[h!]
+ 		\centering
+ 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+ 		\hline
+ 		 $F_{i}$      			& Maximal rate of activation-dependent calcium influx			& 0.23 \uMps				& \cite{Koenigsberger2006} \\
+ 		$K_{ri}$				& Half-saturation constant for agonist-dependent calcium entry	& 1 \uM					& \cite{Koenigsberger2006} \\
+% 		$cGMP_1$				& shift parameter for cGMP regulatory effect	& 10.75  \uM					&   ME \\
+%		$cGMP_2$				& scaling parameter for cGMP regulatory effect	& 0.668 \uM					&   ME \\
+ 		$R_{K,i}$				& scaling parameter for membrane voltage regulatory effect on $K_{act_{i}}$	& ???   mV					&   ME \\
+ 		$k_{di}$      			& Rate constant of IP$_{3}$ degradation	& 0.1 \pers	&\cite{Koenigsberger2006} \\
+ 		 		$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+ 		\hline
+ 		\end{tabular}
+ 		\label{tab:IP3i}
+ 		\end{table}
+ 		
+ 		%
+% 		Uptake of calcium into the sarcoplasmic reticulum (in \uMs):
+% 		\begin{equation} \label{eq:JSRuptakei}
+% 		J_{SR_{uptake_{i}}} = B_{i}\frac{\CaConsc^{2}}{c_{bi}^{2}+\CaConsc^{2}}
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$B_{i}$      			& SR uptake rate constant							& 2.025 \uMs				& \cite{Koenigsberger2006} \\
+% 		$c_{bi}$				& Half-point of the SR ATPase activation sigmoidal 	& 1.0 \uM					& \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JSRuptakei}
+% 		\end{table}
+% 		\\
+% 		%
+% 		Calcium-induced calcium release (CICR; in \uMs):
+% 		\begin{equation} \label{eq:JCICRi}
+% 		J_{CICR_{i}} = C_{i}\frac{\CaConse^{2}}{s_{ci}^{2}+\CaConse^{2}}    \frac{\CaConsc^{4}}{c_{ci}^{4}+\CaConsc^{4}}
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$C_{i}$      			& CICR rate constant									& 55 \uMs		& \cite{Koenigsberger2006} \\
+% 		$s_{ci}$				& Half-point of the CICR Ca$^{2+}$ efflux sigmoidal			& 2.0 \uM		& \cite{Koenigsberger2006} \\
+% 		$c_{ci}$				& Half-point of the CICR activation sigmoidal			& 0.9 \uM		& \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JCICRi}
+% 		\end{table}
+% 		\\
+% 		%
+% 		Calcium extrusion by Ca$^{2+}$-ATPase pumps (in \uMs):
+% 		\begin{equation} \label{eq:Jextrusioni}
+% 		J_{extrusion_{i}} = D_{i}\CaConsc   \left( 1+ \frac{v_{i}-v_{d}}{R_{di}}\right)
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$D_{i}$      			& Rate constant for Ca$^{2+}$ extrusion by the ATPase pump		 & 0.24	\pers			& \cite{Koenigsberger2006} \\
+% 		$v_{d}$					& Intercept of voltage dependence of extrusion ATPase			 & -100.0 \mV			& \cite{Koenigsberger2006} \\
+% 		$R_{di}$				& Slope of voltage dependence of extrusion ATPase.				 & 250.0 \mV			& \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:Jextrusioni}
+% 		\end{table}
+% 		\\
+% 		%
+% 		Leak current from the SR (in \uMs):
+% 		\begin{equation} \label{eq:JSRleaki}
+% 		J_{SR_{leak_{i}}} = L_{i}\CaConse
+% 		\end{equation}
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$L_{i}$      			& Leak from SR rate constant						 & 0.025 \pers				& \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:Jleaki}
+% 		\end{table}
+% 		\\
+% 		
+% 		Calcium influx through VOCCs (in \uMs): 
+% 		\begin{equation} \label{eq:JVOCCi}
+% 		J_{VOCC_{i}} = G_{Cai} \frac{v_{i}-v_{Ca_{1i}}}     {1+ exp(-\left[ \left(  v_{i}-v_{Ca_{2i}}\right) /R_{Cai}      \right] )}
+% 		\end{equation}
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$G_{Cai}$      	& Whole-cell conductance for VOCCs	 					& 1.29$\times$10$^{-3}$  \uMpmVs					& \cite{Koenigsberger2006} \\
+% 		$v_{Ca_{1i}}$   & Reversal potential for VOCCs	 						& 100.0 \mV							& \cite{Koenigsberger2006} \\
+% 		$v_{Ca_{2i}}$  	& Half-point of the VOCC activation sigmoidal		 	& -24.0 \mV							& \cite{Koenigsberger2006} \\
+% 		$R_{Cai}$      	& Maximum slope of the VOCC	activation sigmoidal		& 8.5 \mV							& \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JVOCCi}
+% 		\end{table}
+% 		\newpage
+% 		Flux of calcium exchanging with sodium in the Na$^{+}$Ca$^{2+}$ exchange (in \uMs): 
+% 		\begin{equation} \label{eq:JNaCai}
+% 		J_{Na/Ca_{i}} = G_{Na/Ca_{i}} \frac{\CaConsc}     {\CaConsc + c_{Na/Cai}} \left( v_{i}-v_{Na/Ca_{i}} \right)
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$G_{Na/Cai}$   	& Whole-cell conductance for Na$^{+}$/Ca$^{2+}$ exchange			 		 & 3.16$\times$10$^{-3}$ \uMpmVs	& \cite{Koenigsberger2006} \\
+% 		$c_{Na/Cai}$   	& Half-point for activation of Na$^{+}$/Ca$^{2+}$ exchange by Ca$^{2+}$		 & 0.5 \uM			& \cite{Koenigsberger2006} \\
+% 		$v_{Na/Cai}$   	& Reversal potential for the Na$^{+}$/Ca$^{2+}$ exchanger					 & -30.0 \mV		& \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JNaCai}
+% 		\end{table}
+% 		\\
+% 		%
+% 		Calcium flux through the stretch-activated channels in the SMC (in \uMs): 
+% 		\begin{equation} \label{eq:Jstretchi}
+% 		\begin{split}
+% 		J_{stretch_{i}}= \frac{G_{stretch}}{1+ exp\left(-\alpha_{stretch}  \left(  \frac{\Delta pR}{h} -\sigma_{0}   \right) \right)}  \left(  v_{i}-E_{SAC}   \right) 
+% 		\end{split}
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$G_{stretch}$      		& Whole cell conductance for SACs						& 6.1$\times$10$^{-3}$ \uMpmVs	&\cite{Koenigsberger2006} \\
+% 		$\alpha_{stretch}$      & Slope of stress dependence of the SAC activation sigmoidal	& 7.4$\times$10$^{-3}$ \pmmHg	&\cite{Koenigsberger2006} \\
+% 		$ \Delta p $			& Pressure difference										& 30 \mmHg			& ME \\
+% 		$\sigma_{0}$      		& Half-point of the SAC activation sigmoidal				& 500 \mmHg			&\cite{Koenigsberger2006} \\
+% 		$E_{SAC}$      			& Reversal potential for SACs							& -18 \mV			&\cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:Jstretchi}
+% 		\end{table}
+% 		\\
+% 		%
+% 		Flux through the sodium potassium pump (in \uMs): 
+% 		\begin{equation} \label{eq:J_NaK_i}
+% 		J_{NaK_{i}}= F_{NaK}
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$F_{NaK}$      			& Rate of the potassium influx by the sodium potassium pump 		& 4.32$\times$10$^{-2}$ \uMps 	&\cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JCli}
+% 		\end{table}
+% 		\\
+% 		Chloride flux through the chloride channel (in \uMs):
+% 		\begin{equation} \label{eq:JCli}
+% 		J_{Cl_{i}} = G_{Cli} \left(  v_{i} - v_{Cli}  \right) 
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$G_{Cli}$      			& Whole-cell conductance for Cl$^{-}$ current		& 1.34$\times$10$^{-3}$ \uMpmVs	&\cite{Koenigsberger2006} \\
+% 		$v_{Cli}$      			& Reversal potential for Cl$^{-}$ channels.			& -25.0 \mV			&\cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JCli}
+% 		\end{table}
+% 		\\
+% 		%
+% 		Potassium flux through potassium channel (in \uMs):
+% 		\begin{equation} \label{eq:JKi}
+% 		J_{K_{i}}= G_{Ki} w_{i} \left(  v_{i} - E_{K_{i} } \right) 
+% 		\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$G_{Ki}$      			& Whole-cell conductance for K$^{+}$ efflux.			& 4.46$\times$10$^{-3}$ \uMpmVs	&\cite{Koenigsberger2006} \\
+% 		$vK_i$      			& Nernst potential										& -94 \mV	&\cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JKi}
+% 		\end{table}
+% 		\\
+% 		Flux through KIR channels in the SMC (in \uMs): 
+% 		\begin{equation} \label{eq:JKIRi}
+% 		J_{KIR_{i}} =  \frac{F_{KIR_{i}} g_{KIR_{i}}}{\gamma_{i}}( v_{i} - v_{KIR_{i}})
+% 		\end{equation}
+% 		\todo[inline]{why do we have $\frac{F_{KIR_{i}} }{\gamma_{i}}$ when they have both the same dimensions but one value $F_{KIR_{i}}$ is 750  and the other ${\gamma_{i}}$ is 1970 ? }
+% 	%	\subsubsection*{Additional Equations}
+% 	%	%
+% 	%	Equilibrium distribution of open channel states for the voltage and calcium activated potassium channels (dimensionless):
+% 	%	\begin{equation} \label{eq:Kacti}
+% 	%	K_{act_{i}}= \frac{  \left( \CaConsc + c_{wi}\right)^{2}}    {\left( \CaConsc + c_{wi} \right)^{2}    + \beta_{i} exp( -\left(   \left[ v_{i}-v_{Ca_{3i}}\right] /R_{Ki}   \right) )      }
+% 	%	\end{equation}
+% 	%	%
+% 		Nernst potential of the KIR channel in the SMC (in mV):
+% 		\begin{equation}\label{eq:vKIR}
+% 		v_{KIR_i} = z_1 K_p-z_2
+% 		\end{equation}
+% 		%
+% 		Conductance of KIR channel (in  \textmu M mV$^{-1}$ s$^{-1}$):
+% 		\begin{equation}\label{eq:gKIR}
+% 		g_{KIR_i} = exp(z_5v_i +z_3 K_p - z_4)
+% 		\end{equation}
+% 		%
+% 		%
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$c_{wi}$      			& Translation factor for Ca$^{2+}$ dependence of K$_{Ca}$ channel activation sigmoidal.	& 0.0  \uM	&\cite{Koenigsberger2006} \\
+% 		$\beta_{i}$     		& Translation factor for membrane potential dependence of K$_{Ca}$ channel activation sigmoidal.	& 0.13 \uMtwee& \cite{Koenigsberger2006} \\
+% 		$v_{Ca_{3i}}$   		& Half-point for the K$_{Ca}$ channel activation sigmoidal.			& -27 \mV	&\cite{Koenigsberger2006} \\
+% 		$R_{Ki}$      			& Maximum slope of the K$_{Ca}$ activation sigmoidal.				& 12 \mV	&\cite{Koenigsberger2006} \\
+% 		%$z_{1}$      			& Model estimation for membrane voltage KIR channel				& 4.5$\times$10$^3$ \mV	&\cite{Filosa2006}  \\
+% 		%$z_{2}$      			& Model estimation for membrane voltage KIR channel			& 112 \mV	&\cite{Filosa2006}  \\
+% 		%$z_{3}$      			& Model estimation for the KIR channel conductance				& 4.2$\times$10$^2$ \uMpmVs	&\cite{Filosa2006}  \\
+% 		%$z_{4}$      			& Model estimation for the KIR channel conductance				& 12.6 \uMpmVs	&\cite{Filosa2006}  \\
+% 		%$z_{5}$      			& Model estimation for the KIR channel conductance			& -7.4$\times$10$^{-2}$ \uMpmVs	&\cite{Filosa2006}  \\
+% 		  $ z_1 $	& Model estimation for membrane voltage KIR channel			  & 4.5$\times$10$^3$ \mVpuM & \citep{Filosa2006}\\
+% 		  $ z_2 $	& Model estimation for membrane voltage KIR channel			  & 112	 \mV & \citep{Filosa2006}\\
+% 		  $ z_3 $	& Model estimation for the KIR channel conductance			  & 4.2$\times$10$^2$ mV$^{-1}$s$^{-1}$ & \citep{Filosa2006}\\
+% 		  $ z_4 $	& Model estimation for the KIR channel conductance			  & 12.6			 \uMpmVs & \citep{Filosa2006}\\
+% 		  $ z_5 $	& Model estimation for the KIR channel conductance			  & -7.4$\times$10$^{-2}$		 \uM~mV$^{-2}$s$^{-1}$  & \citep{Filosa2006}\\
+% 		  \hline
+% 		\end{tabular}
+% 		\label{tab:Addeq}
+% 		\end{table}
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$ F_{KIR_{i}} $ & Scaling factor of potassium efflux through the KIR channel & 750 mV~\textmu M$^{-1}$ &   \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:JCli}
+% 		\end{table}
+% 		\subsubsection*{Coupling}~\\
+% 		%
+% 		Heterocellular electrical coupling between SMCs en ECs (in \mVs):
+% 		\begin{equation} \label{eq:Vcouplingi}
+% 		V_{coupling_{i}}^{SMC-EC}= -G_{coup}(v_{i}-v_{j})
+% 		\end{equation}
+ 		%
+
+% 		\textbf{Code Description}
+% 		\begin{verbatim}
+% 		J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);
+% 		\end{verbatim}
+% 		Calcium coupling with EC (in \uMs):
+% 		\begin{equation} \label{eq:JCAcouplingi}
+% 		J_{Ca^{2+}-coupling_{i}}^{SMC-EC}= -P_{Ca^{2+}}(\CaConsc-\CaConec)
+% 		\end{equation}
+% 		%
+ 		\begin{table}[h!]
+ 		\centering
+ 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+ 		\hline
+% 		$G_{coup}$      		& Heterocellular electrical coupling coefficient		& 0.5 \pers	& ME \\
+ 		$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+% 		$P_{Ca^{2+}}$      		& Heterocellular $P_{Ca^{2+}}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+ 		\hline
+ 		\end{tabular}
+% 		\todo[inline]{We should note here that the membrane potential coupling $V_{coupling_{i}}^{SMC-EC}$ is an approximation that assumes the gradient of concentrations is negligible and hence only the membrane potential diffusion term  is non-zero determined from the electro-diffusion theory.}
+ 		\label{tab:JCA3couplingi}
+ 		\end{table}
+% 		\gls{K} concentration in the \gls{SMC} (in \uM):
+% 		\begin{equation} \label{eq:dkidt}
+% 		\dfrac{\mathrm{d} [K^+_{i}]}{\mathrm{d}t}  = J_{Na/K_{i}}  - J_{KIR_{i}} - J_{K_{i}}
+% 		\end{equation}
+% 		
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$\gamma_{i}$				& Change in membrane potential by a scaling factor					& 1970 \mVpuM	& \cite{Koenigsberger2006} \\
+% 		$\lambda_{i} $				& Rate constant for opening											& 45.0 \pers 	& \cite{Koenigsberger2006} \\
+% 		%$\CaConsc$      		& Cytololic [Ca$^{2+}$] in the SMC    								& var. \uM		& - \\
+% 		\hline
+% 		\end{tabular}
+% 		\label{tab:dcidt}
+% 		\end{table}
+% 		Rate of change of NO concentration in the SMC (\uMpers):
+% 				    \begin{equation}  
+% 		      			 \dfrac{\mathrm{d}\NOi}{\mathrm{d}t} = \pNO{i} - \cNO{i} + \dNO{i} 
+% 					\end{equation}
+% 					
+% 					Rate of change of fraction of sGC in the basal state (s\n):% Yang2005
+% 					\begin{equation} 
+% 						\dfrac{\mathrm{d}E_b}{\mathrm{d}t} = -k_1 E_b [\NO]_i + k_{-1} E_{6c} + k_4 E_{5c}
+% 					\end{equation}	
+% 					
+% 					Rate of change of fraction of sGC in the intermediate form (s\n):% Yang2005
+% 					\begin{equation} 
+% 		%				\dfrac{\mathrm{d}E_{6c}}{\mathrm{d}t} = k_1 E_b [\NO]_i - k_{-1} E_{6c} - k_2 E_{6c} - k_3 E_{6c} [\NO]_i
+% 						\dfrac{\mathrm{d}E_{6c}}{\mathrm{d}t} = k_1 E_b [\NO]_i - (k_{-1} + k_2) E_{6c} - k_3 E_{6c} [\NO]_i
+% 					\end{equation}	
+% 		
+% 					Rate of change of cGMP concentration (\uMpers):		% Yang2005	
+% 					\begin{equation} 
+% 						\dfrac{\mathrm{d}[\cGMP]_i}{\mathrm{d}t} = V_{\text{max,sGC}} E_{5c} - \frac{V_{\text{max,pde}}[\cGMP]_i}{K_{\text{m,pde}}+[\cGMP]_i}
+% 					\end{equation}	
+% 					
+% 					
+% 						Maximum cGMP production rate (\uMpers):
+% 									\begin{equation}
+% 										V_{\text{max,pde}} = k_{\text{pde}} [\text{cGMP}]_i
+% 									\end{equation}
+% 		       		
+% 				\subsubsection*{Algebraic equations}
+% 					NO production flux (\uMpers):
+% 					\begin{equation} 
+% 						\pNO{i} = 0
+% 					\end{equation}
+% 				
+% 					NO consumption flux (\uMpers):
+% 					\begin{equation} 
+% 						\cNO{i} = k_{\text{dno}} [\NO]_i
+% 					\end{equation}
+% 		
+% 					NO diffusive flux (\uMpers):
+% 					\begin{equation} 
+% 						\dNO{i} = \frac{[\NO]_k - [\NO]_i}{\tau_{ki}} + \frac{[\NO]_j - [\NO]_i}{\tau_{ij}}
+% 					\end{equation}
+% 		
+% 						\begin{eqnarray} 
+% 							\tau_{i,j}=\frac{x_{K,i}^2}{2 D_{NO}}\\
+% 							x_{K,i}=25 \mu m \\
+% 						\end{eqnarray}
+% 					sGC kinetics rate constant (s\n): % Yang2005
+% 					\begin{equation} 
+% 						k_4 = C_4 [\cGMP]_i^{m_{4}}
+% 					\end{equation}	
+% 					
+% 					Fraction of sGC in the fully activated form (dim.less):% Yang2005
+% 					\begin{equation} 
+% 						E_{5c} = 1 - E_b - E_{6c}
+% 					\end{equation}	
+% 					
+% 					Regulatory effect of cGMP on myosin dephosphorylation (dim.less):			%not on the BK channel open probability !
+% 					\begin{equation} 
+% 						R_{\text{cGMP}} = \frac{[\text{cGMP}]_i^2}{K_{\text{m,mlcp}}^2 + [\text{cGMP}]_i^2}
+% 					\end{equation}
+% 					
+% 					Rate constants for dephosphorylation (s\n ) in the Hia and Murphy 4-state latch model, see \citet{Dormanns2016b}:
+% 					\begin{equation} 
+% 						K_{2c} = K_{5c} = \delta_i \left(k_{\text{mlpc,b}} + k_{\text{mlpc,c}} R_{\text{cGMP}}\right)
+% 					\end{equation}	
+% 				
+% 					Equilibrium distribution of open channel states for the BK channel flux into the ECS  (dim.less), see \citet{Dormanns2014}:  % Koenigsberger
+% 					\begin{equation} 
+% 						K_{\text{act},i} = \frac{(\Cai + c_{\text{w},i})^2}{(\Cai + c_{\text{w},i})^2 + \beta_i \exp(v_{\text{Ca}3,i} - v_i/R_{\text{K},i} )}
+% 					\end{equation}
+% 					
+% 					Translation factor, regulatory effect of cGMP on the BK channel open probability (\uM)):			
+% 	%				\begin{equation} 
+% 	%					c_{\text{w},i} = \frac{1}{\epsilon_i + \alpha_i \exp(\gamma_i [\text{cGMP}]_i)}
+% 	%				\end{equation}
+% 					\begin{equation} 
+% 						c_{\text{w},i} = \frac{c_{w,max}}{2}[1 + tanh( \frac{[\text{cGMP}_i]-\epsilon_i}{\alpha_i})]
+% 					\end{equation}
+% 					
+% 					Time for NO to diffuse between the centres of the SMC and the EC (s):
+% 					\begin{equation}
+% 						\tau_{ij} = \frac{x_{ij}^2}{2 D_{\text{c,NO}}}
+% 					\end{equation}
+% 		%		\subsubsection*{Constants}
+% 					\begin{table}[h!] \label{tab:sGC}
+% 						\centering
+% 						\begin{tabular}{ p{0.1\linewidth}  >{\footnotesize} p{0.41\linewidth}  >{\footnotesize} p{0.14\linewidth} >{\footnotesize} p{0.26\linewidth} }
+% 							\hline
+% 							$ k_{-1} $ 				& sGC kinetics rate constant 	& 100 s\n 				& \citep{Yang2005} \\ 
+% 							$ k_1 $ 				& sGC kinetics rate constant 	& 2\e{3} \uM\n\ s\n 		& \citep{Yang2005} \\ 
+% 							$ k_2 $ 				& sGC kinetics rate constant 	& 0.1 s\n 				& \citep{Yang2005} \\ 
+% 							$ k_3 $ 				& sGC kinetics rate constant 	& 3 \uM\n\ s\n 			& \citep{Yang2005} \\ 
+% 							$ V_{\text{max,sGC}} $ 	& maximal cGMP production rate	& 0.8520 \uMpers  		& \citep{Yang2005} \\ 
+% 							$ K_{\text{m,pde}} $ 	& Michaelis constant 			& 2 \uM 				& \citep{Yang2005} \\ 
+% 							$ k_{\text{dno}}$ 		& lumped NO consumption rate constant reflecting the activity of various NO scavengers & 0.01 s\n & \citep{Yang2005} \\ 
+% 							$ C_4 $ 				& constant 						& 0.011 s\n\ \uM$^{-2}$ 	& \citep{Yang2005} \\ 
+% 							$ m_4 $ 				& cGMP feedback strength 		& 2 (dim.less) 			& \citep{Yang2005} \\
+% 							$ K_{\text{m,mlcp}} $ 	& Hill coefficient				& 5.5 \uM 				& \citep{Yang2005} \\
+% 							$ \delta_i $ 			& constant to fit data			& 58.1395 (dim.less)	& \citep{Hai1988}, fit\\
+% 							$ k_{\text{mlpc,b}} $ 	& basal MLC dephosphorylation rate constant			& 0.0086 s\n  			& \citep{Yang2005} \\
+% 							$ k_{\text{mlpc,c}} $ 	& first-order rate constant for \cGMP-regulated MLC dephosphorylation		& 0.0327 s\n 			& \citep{Yang2005} \\
+% 							$ \alpha_i $ 			& constant to fit data			& 0.665 \uM  		&  \citep{Stockand1996}\\  % shoul be dimless??
+% 							$ \beta_i $ 			& translation factor for membrane potential dependence of $ K_{\text{Ca}} $ channel activation sigmoidal & 0.13 \uM$^2$ & \citep{Koenigsberger2006} \\ 
+% 							$ c_{w,max} $ 			& constant to fit data & 1 \uMpers & \citep{Stockand1996}\\ 
+% 							$ \epsilon_i$			& constant to fit data 				& 10.75 \uM 	&  \citep{Stockand1996} \\ 
+% 							$ \Cai $ 				& calcium concentration in the SMC cytosol & var. 		& see \citet{Dormanns2014} \\
+% 							$ v_{\text{Ca}3,i} $ 			& half-point for the $ K_{\text{Ca}} $ channel activation sigmoidal. & -27 mV & \citep{Koenigsberger2006}\\ 
+% 							$ v_i $ 				& SMC membrane potential 		& var. 	& see \citep{Dormanns2014} \\
+% 							$ R_{\text{K},i}  $ 				& Maximum slope of the $K_{Ca}$ activation sigmoidal & 12 mV & \citep{Koenigsberger2006}\\ 
+% 							$ k_{\text{pde}} $		& phosphodiesterase rate constant & 0.0195 s\n & \citep{Yang2005} \\
+% 							\hline
+% 						\end{tabular}
+% 					\end{table}	
+% 							
+% 		%					$ \gamma_{eNOS} $ 	&  &  \\ 
+% 		%					$ [\Otwo]_j $ 		&  &  \\ 
+% 		%					$ [\LArg]_j $ 		&  &  \\ 
+% 		%					$V_{NO,j_{max}}$			& Maximum eNOS catalytic rate	& \unit[0.24]{\uMpers}	&  M.E.\footnotemark on basis of \citep{Chen2006a}  \\
+% 		%					$K_{m,j}^{O_2}$ 			& Michaelis constant for \Otwo 				& \unit[0.24]{\uMpers}	&    \\
+% 		%					$K_{m,j}^{L\text{-}Arg}$ 	& Start of back-buffering				& \unit[0.24]{\uMpers}	&    \\
+% 		\subsection{The Contraction Model}
+% 		%
+% 		Fraction of free phosphorylated cross-bridges (dimensionless):
+% 		\begin{equation} \label{eq:dMpdt}
+% 		\frac{\dd[Mp]}{\dd t} = K_{4}[AMp] +K_{1} [M] - ( K_{2} + K_{3} ) [Mp]
+% 		\end{equation}
+% 		%
+% 		Fraction of attached phosphorylated cross-bridges (dimensionless):
+% 		\begin{equation} \label{eq:dAMpdt}
+% 		\frac{\dd[AMp]}{\dd t} =K_{3} [Mp] + K_{6} [AM] - ( K_{4} + K_{5} )[AMp]
+% 		\end{equation} 
+% 		%
+% 		Fraction of attached dephosphorylated cross-bridges (dimensionless):
+% 		\begin{equation} \label{eq:dAMdt}
+% 		\frac{\dd[AM]}{\dd t} = K_{5} [AMp]-(K_{7}+K_{6})[AM]
+% 		\end{equation}
+% 		%
+% 		Fraction of free non-phosphorylated cross-bridges (dimensionless):
+% 		\begin{equation} \label{eq:dMdt}
+% 		[M]=1-[AM]-[AMp]-[Mp]
+% 		%\frac{\dd[M]}{\dd t} = -K_{1_{i}} [M] + K_{2_{i}} [Mp] + K_{7_{i}} [AM]
+% 		\end{equation}
+% 		%
+% 		Rate constants that represent phosphorylation of M to Mp and of AM to AMp by the active myosin light chain kinase (MLCK), respectively (in \pers):
+% 		\begin{equation} \label{eq:gamma}
+% 		K_{1} = K_{6} = \gamma_{cross} \CaConsc ^{n_{cross}}
+% 		\end{equation}
+% 		%
+% 		%Note that:
+% 		%\begin{equation} \label{eq:fractiesone}
+% 		%[AM]+[AMp]+[Mp]+[M]=1
+% 		%\end{equation}
+% 		%
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+% 		$K_{2}$      	& Rate constant for dephosphorylation (of Mp to M) by myosin light-chain phosphatase (MLCP)																			 & 0.5 \pers & \cite{Hai1989} \\
+% 		$K_{3}$      	& Rate constants representing the attachment/detachment of fast cycling phosphorylated crossbridges																	 & 0.4 \pers	& \cite{Hai1989} \\
+% 		$K_{4}$      	& Rate constants representing the attachment/detachment of fast cycling phosphorylated crossbridges 																	 & 0.1 \pers	& \cite{Hai1989} \\
+% 		$K_{5}$      & Rate constant for dephosphorylation (of AMp to AM) by myosin light-chain phosphatase (MLCP)																			 & 0.5 \pers	& \cite{Hai1989} \\
+% 		$K_{7}$      	& Rate constant for latch-bridge detachment					& 0.1 \pers	& \cite{Hai1989} \\
+% 		$\gamma_{cross}$      	& Sensitivity of the contractile apparatus to calcium		& 17 \puMdries	& \cite{Koenigsberger2005} \\
+% 		$n_{cross}$      		& Fraction constant of the phosphorylation crossbridge				& 3 \Dless	& \cite{Koenigsberger2005} \\
+% 		\hline
+% 		\end{tabular}
+% 		%\caption{This table shows some data}
+% 		\label{tab:crossbridge}
+% 		\end{table}
+ 		\section{Endothelial Cell}
+ 			\paragraph{Endothelial cell}~\\
+ 			%
+% 			Cytosolic \gls{Ca} concentration in the \gls{EC} (in \uM):
+% 			\begin{equation} \label{eq:cj}
+% 			\begin{split}
+% 			\dfrac{\mathrm{d}\CaConec}{\mathrm{d}t} = J_{IP_{3j}} - J_{ER_{uptake_{j}}} + J_{CICR_{j}} - J_{extrusion_{j}}\dots \\
+% 			 + J_{ER_{leak_{j}}} + J_{cation_{j}} + J_{0_{j}} - J_{stretch_{j}} - J_{Ca^{2+}-coupling_{j}}^{SMC-EC}
+% 			\end{split}
+% 			\end{equation}
+% 			%
+% 			\gls{Ca} concentration in the \gls{ER} in the \gls{EC} (in \uM): %copied from SMC
+% 			\begin{equation} \label{eq:sj}
+% 			\dfrac{\mathrm{d}\CaConee}{\mathrm{d}t} =  J_{SR_{uptake_{j}}} - J_{CICR_{j}} - J_{SR_{leak_{j}}}
+% 			\end{equation}
+% 			%
+% 			Membrane potential of the \gls{EC} (in \mV):
+% 			\begin{equation} \label{eq:dvjdt}
+% 			\dfrac{\mathrm{d}v_{j}}{\mathrm{d}t} =-\frac{1}{C_{m_{j}}} ( J_{K_{j}}+J_{R_{j}}) + V^{SMC-EC}_{coupling_{j}}
+% 			\end{equation}
+% 			%
+ 			\gls{IP3} concentration of the \gls{EC} (in \uM):
+ 			\begin{equation} \label{eq:dIjdt}
+ 			\dfrac{\mathrm{d}\IP_{j}}{\mathrm{d}t} =  J_{EC,IP_3}- J_{degrad_{j}}  - J^{SMC-EC}_{IP_{3}-coupling_{j}}
+ 			\end{equation}
+ 			\textbf{Code Description}
+ 			\begin{verbatim}
+ 			du(idx.I_j, :) = p.J_PLC - J_degrad_j - J_IP3_coup_i;\\
+ 			J_degrad_j = p.k_d_j * I_j;\\
+ 			J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);
+ 			\end{verbatim}
+ 			\subsubsection*{Coupling}~\\
+ 			%
+ 			Heterocellular electrical coupling between SMCs en ECs (in \mVs):
+ 			\begin{equation} \label{eq:Vcouplingi}
+ 			V_{coupling_{i}}^{SMC-EC}= -G_{coup}(v_{i}-v_{j})
+ 			\end{equation}
+ 			%
+ 			Heterocellular IP$_{3}$ coupling between SMCs and ECs (in \uMs):
+ 			\begin{equation} \label{eq:JIP3couplingi}
+ 			J_{IP_{3}-coupling_{i}}^{SMC-EC}= -P_{IP_{3}}(\IP_{i}-\IP_{j})
+ 			\end{equation}
+ 			%
+ 			Calcium coupling with EC (in \uMs):
+ 			\begin{equation} \label{eq:JCAcouplingi}
+ 			J_{Ca^{2+}-coupling_{i}}^{SMC-EC}= -P_{Ca^{2+}}(\CaConsc-\CaConec)
+ 			\end{equation}
+ 
+ 			\begin{table}[h!]
+ 			\centering
+ 			\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+ 			\hline
+ 			$G_{coup}$      		& Heterocellular electrical coupling coefficient		& 0.5 \pers	& ME \\
+ 			$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+ 			$P_{Ca^{2+}}$      		& Heterocellular $P_{Ca^{2+}}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+ 			\hline
+ 			\end{tabular}
+ 			\label{tab:JCA3couplingi}
+ 			\end{table}
+ 			
+ 			\begin{table}[h!]
+ 			\centering
+ 			\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+ 			\hline
+ 			 $C_{m_{j}}$				& Membrane capacitance												& 25.8  \pF		& \cite{Koenigsberger2006} \\
+ 			 $ J_{EC,IP_3} $  & \gls{IP3} production rate & \uMps & \cite{Koenigsberger2006}  \\
+ 			\hline
+ 			\end{tabular}
+ 			\label{tab:JSRuptakei}
+ 			\end{table}
+ 			%\\
+% 			\begin{equation} 
+% 			%				\dfrac{\mathrm{d}[\eNOSact]_j}{\mathrm{d}t} = \gamma_{\text{eNOS}} A_{\text{eNOS,Ca}} + (1-\gamma_{\text{eNOS}}) A_{\text{eNOS,wss}} - \mu_{\text{deact},j}[\eNOSact]_j
+% 							\dfrac{\mathrm{d}[\eNOSact]_j}{\mathrm{d}t} = \gamma_{\text{eNOS}} \frac{K_{\text{dis}}[\Ca]_j}{K_{\text{m,eNOS}}+[\Ca]_j} + (1-\gamma_{\text{eNOS}}) g_{\max} F_{\text{wss}}   - \mu_{\text{deact},j}[\eNOSact]_j
+% 						\end{equation}	
+% 								
+% 						\begin{equation} 
+% 							\dfrac{\mathrm{d}\NOj}{\mathrm{d}t} = \pNO{j} - \cNO{j} + \dNO{j} 
+% 						\end{equation}
+% 						NO production flux (\uMpers):
+% 						\begin{equation} 
+% 							\pNO{j} = V_{\text{max,NO},j} [\eNOSact]_j  \frac{[\Otwo]_j}{K_{\text{m,O2},j}+[\Otwo]_j} \frac{[\LArg]_j}{K_{\text{m,L-Arg},j}+[\LArg]_j}
+% 						\end{equation}	
+% 						
+% 						NO consumption flux (\uMpers):
+% 						\begin{equation} 
+% 							\cNO{j} = k_{\text{O2},j} [\NO]_j^2 [\Otwo]_j 
+% 						\end{equation}	
+% 						
+% 						NO diffusive flux (\uMpers):					
+% 						\begin{equation} 
+% 							\dNO{j} = \frac{[\NO]_i - [\NO]_j}{\tau_{ij}} - \frac{4 D_{\text{c,NO}}[\NO]_j}{r^2}
+% 						\end{equation}	
+% 		
+% 									\begin{eqnarray}
+% 									\tau_{ij}=\frac{x^2}{2D_{NO}}\\
+% 									x=3.75 \mu m
+% 									\end{eqnarray}
+% 									\paragraph{Endothelial cell}~\\
+% 									\\
+% 									%
+ 									Release of calcium from IP$_{3}$-sensitive stores in the EC (in \uMps):
+ 									\begin{equation} \label{eq:JIP3j}
+ 									J_{IP_{3j}} = F_{j}\frac{\IP_{j}^{2}}{K_{rj}^{2}+\IP_{j}^{2}}
+ 									\end{equation}
+ 									IP$_{3}$ degradation (in \uMs):  
+ 			 									\begin{equation} \label{eq:Jdegradj}
+ 									 									J_{degrad_{j}}= k_{dj} \IP_{j}
+							 					\end{equation}
+ 									\textbf{Code Description}
+ 									\begin{verbatim}
+ 									J_IP3_j = p.F_j * I_j.^2 ./ (p.K_r_j^2 + I_j.^2);\\
+ 									J_degrad_j = p.k_d_j * I_j;
+ 									\end{verbatim}
+ 									\begin{table}[h!]
+ 									\centering
+ 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+ 									\hline
+ 									 $F_{j}$      			& Maximal rate of activation-dependent calcium influx			& 0.23 \uMps	& \cite{Koenigsberger2006} \\
+ 									$K_{rj}$				& Half-saturation constant for agonist-dependent calcium entry	& 1 \uM	 & \cite{Koenigsberger2006} \\
+ 										$k_{dj}$      			& Rate constant of IP$_{3}$ degradation						 		& 0.1 \pers		& \cite{Koenigsberger2006} \\
+ 									\hline
+ 									\end{tabular}
+ 									\label{tab:IP3j}
+ 									\end{table}
+ 									%
+% 									Uptake of calcium into the endoplasmic reticulum (in \uMs):
+% 									\begin{equation} \label{eq:JERuptakej}
+% 									J_{ER_{uptake_{j}}} = B_{j}\frac{\CaConec^{2}}{c_{bj}^{2}+\CaConec^{2}}
+% 									\end{equation}
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$B_{j}$      			& ER uptake rate constant							& 0.5 \uMs				& \cite{Koenigsberger2006} \\
+% 									$c_{bj}$				& Half-point of the SR ATPase activation sigmoidal 	& 1.0 \uM					& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:JERuptakej}
+% 									\end{table}
+% 									\\
+% 									%
+% 									Calcium-induced calcium release (CICR; in \uMs):
+% 									\begin{equation} \label{eq:JCICRJ}
+% 									J_{CICR_{j}} = C_{j}\frac{\CaConee^{2}}{s_{cj}^{2}+\CaConee^{2}}    \frac{\CaConec^{4}}{c_{cj}^{4}+\CaConec^{4}}
+% 									\end{equation}
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$C_{j}$      			& CICR rate constant									& 5 \uMs		& \cite{Koenigsberger2006} \\
+% 									$s_{cj}$				& Half-point of the CICR Ca$^{2+}$ efflux sigmoidal			& 2.0 \uM		& \cite{Koenigsberger2006} \\
+% 									$c_{cj}$				& Half-point of the CICR activation sigmoidal			& 0.9 \uM		& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:JCICRj}
+% 									\end{table}
+% 									\\
+% 									Calcium extrusion by Ca$^{2+}$-ATPase pumps (in \uMs):
+% 									\begin{equation} \label{eq:Jextrusionj}
+% 									J_{extrusion_{j}} = D_{j}\CaConec 
+% 									\end{equation}
+% 									%
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$D_{j}$      			& Rate constant for Ca$^{2+}$ extrusion by the ATPase pump		 & 0.24	\pers			& \cite{Koenigsberger2005} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:Jextrusionj}
+% 									\end{table}
+% 									\\ 
+% 									Calcium flux through the stretch-activated channels in the EC (in \uMs): 
+% 									\begin{equation} \label{eq:Jstretchj}
+% 									J_{stretch_{j}}= \frac{G_{stretch}}{1+ e^{-\alpha_{stretch}  \left(  \sigma -\sigma_{0}   \right) }}  \left(  v_{j}-E_{SAC}   \right) \\
+% 									= \frac{G_{stretch}}{1+ e^{-\alpha_{stretch}  \left(  \frac{\Delta pR}{h} -\sigma_{0}   \right) }}  \left(  v_{j}-E_{SAC}   \right) 
+% 									\end{equation}
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$G_{stretch}$      		& The whole cell conductance for SACs						& 6.1$\times$10$^{-3}$ \uMpmVs	&\cite{Koenigsberger2006} \\
+% 									$\alpha_{stretch}$      & Slope of stress dependence of the SAC activation sigmoidal	& 7.4$\times$10$^{-3}$ \pmmHg	&\cite{Koenigsberger2006} \\
+% 									$ \Delta p $			& Pressure difference										& 30 \mmHg			& ME \\
+% 									$\sigma_{0}$      		& Half-point of the SAC activation sigmoidal				& 500 \mmHg			&\cite{Koenigsberger2006} \\
+% 									$E_{SAC}$      			& The reversal potential for SACs							& -18 \mV			&\cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:Jstretchj}
+% 									\end{table}
+% 									\\
+% 									%
+% 									Leak current from the ER (in \uMs):
+% 									\begin{equation} \label{eq:JERleakj}
+% 									J_{ER_{leak_{j}}} = L_{j}\CaConee
+% 									\end{equation}
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$L_{j}$      			& Rate constant for Ca$^{2+}$ leak from the ER 		 & 0.025	\pers			& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:JKj}
+% 									\end{table}
+% 									\\
+% 									%
+% 									Calcium influx through nonselective cation channels (in \uMs):
+% 									\begin{equation} \label{eq:Jcationj}
+% 									J_{cation_{j}} = G_{cat_{j}} (E_{Ca_{j}} - v_{j}) \frac{1}{2} \left(   1+ \mathrm{tanh}  \left(  \frac{\mathrm{log}_{10} \CaConec - m_{3_{cat_{j}}} }    {m_{4_{cat_{j}}}}   \right)      \right) 
+% 									\end{equation}
+% 									%
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$G_{cat j}$      		& Whole-cell cation channel conductivity						 	& 6.6$\times$10$^{-4}$ \uMpmVs	& \cite{Koenigsberger2006} \\
+% 									$E_{Caj}$      			& Ca$^{2+}$ equilibrium potential								 	& 50 \mV		& \cite{Koenigsberger2006} \\
+% 									
+% 									$m_{3_{catj}}$      	& Model constant				 	& -0.18 \uM		& \cite{Koenigsberger2006} \\
+% 									$m_{4_{catj}}$      	& Model constant					& 0.37  \uM		& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:Jcationj}
+% 									\end{table}
+% 									\\
+% 									%
+% 									Potassium efflux through the $J_{BK_{Caj}}$ channel and the $J_{SK_{Caj}}$ channel (in \uMs):
+% 									\begin{equation} \label{eq:JKj}
+% 									J_{K_{j}} = G_{totj} (v_{j}-v_{Kj}) \left(   J_{BK_{Caj}} + J_{SK_{Caj}} \right) 
+% 									\end{equation}
+% 									%
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$G_{totj}$      		& Total potassium channel conductivity.						 		& 6927 \pS		& \cite{Koenigsberger2006} \\
+% 									$v_{Kj}$      			& K$^{+}$ equilibrium potential					 			 		& -80.0 \mV		& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:JKj}
+% 									\end{table}
+% 									\\
+% 									%
+% 									Potassium efflux through the $J_{BK_{Caj}}$ channel (in \uMs):
+% 									\begin{equation} \label{eq:JBKCAj}
+% 									J_{BK_{Caj}} = 0.2 \left(   1+ \mathrm{tanh}   \left(   \frac{   (\mathrm{log}_{10} \CaConec - c) (v_{j}-b_{j}) - a_{1j}  }   { m_{3bj} ( v_{j} + a_{2j} (\mathrm{log}_{10} \CaConec -c )-b_{j} )^{2} + m_{4bj} }  \right)     \right)  
+% 									\end{equation}
+% 									%
+% 									Potassium efflux through the $J_{SK_{Caj}}$ channel (in \uMs):
+% 									\begin{equation} \label{eq:JSKCaj}
+% 									J_{SK_{Caj}} = 0.3\left( 1+ \mathrm{tanh}  \left(  \frac{   \mathrm{log}_{10} \CaConec -m_{3sj}  } {m_{4sj}}  \right)      \right) 
+% 									\end{equation}
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$c$      				& Model constant, further explanation see reference					& -0.4 \uM			& \cite{Koenigsberger2006} \\
+% 									$b_{j}$      			& Model constant, further explanation see reference					& -80.8 \mV		& \cite{Koenigsberger2006} \\
+% 									$a_{1j}$      			& Model constant, further explanation see reference					& 53.3 \uMkeermV	& \cite{Koenigsberger2006} \\
+% 									$a_{2j}$      			& Model constant, further explanation see reference					& 53.3 \mVpuM		& \cite{Koenigsberger2006} \\
+% 									$m_{3bj}$      			& Model constant, further explanation see reference					& 1.32$\times$10$^{-3}$ \uMpmV	& \cite{Koenigsberger2006} \\
+% 									$m_{4bj}$      			& Model constant, further explanation see reference					& 0.30	\uMkeermV	& \cite{Koenigsberger2006} \\
+% 									$m_{3sj}$      			& Model constant, further explanation see reference					& -0.28 \uM		& \cite{Koenigsberger2006} \\
+% 									$m_{4sj}$      			& Model constant, further explanation see reference					& 0.389 \uM		& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:JBKCAj}
+% 									\end{table}
+% 									\\
+% 									%
+% 									Residual current regrouping chloride and sodium current flux (in \uMs):
+% 									\begin{equation} \label{eq:JRj}
+% 									J_{R_{j}} = G_{R_{j}} ( v_{j} - v_{rest j}  )
+% 									\end{equation}
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+% 									$G_{R_{j}}$      		& Residual current conductivity										& 955 \pS			& \cite{Koenigsberger2006} \\
+% 									$v_{rest j}$      		& Membrane resting potential						 				& -31.1 \mV		& \cite{Koenigsberger2006} \\
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:JRj}
+% 									\end{table}
+% 									\\
+% 									%
+
+% 									%
+% 									\begin{table}[h!]
+% 									\centering
+% 									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 									\hline
+%
+% 									\hline
+% 									\end{tabular}
+% 									\label{tab:Jdegradj}
+% 									\end{table}
+% 					\begin{equation}
+% 					J_{0_{j}}=0.029 \mu M s^{-1}
+% 					\end{equation}
+% 					\subsubsection*{Algebraic equations}
+% 			
+% 			%			\Ca -dependent eNOS activation flux (\uMpers):
+% 			%			\begin{equation}
+% 			%				A_{\text{eNOS,Ca}} = \frac{K_{\text{dis}}[\Ca]_j}{K_{\text{m,eNOS}}+[\Ca]_j}
+% 			%			\end{equation}
+% 						
+% 			%			Wall-shear-stress-dependent eNOS activation flux (\uMpers):
+% 			%			\begin{equation}
+% 			%				A_{\text{eNOS,wss}} = g_{\max} F_{\text{wss}}      
+% 			%			\end{equation}
+% 						
+% 						Fraction of the elastic strain energy stored within the membrane (dim.less): % Comerford2008 / Wiesner1997 unit??
+% 						\begin{equation} 
+% 							F_{\text{wss}} = \frac{1}{1+\alpha_{\text{wss}} \exp(-W_{\text{wss}})} - \frac{1}{1+\alpha_{\text{wss}}}
+% 						\end{equation}	
+% 						
+% 						Strain energy density (Pa): % Comerford2008 / Wiesner1997	unit??	
+% 						\begin{equation} 
+% 							W_{\text{wss}} = W_0 \frac{(\tau_{\text{wss}} + \sqrt{16 \delta_{\text{wss}}^2 + \tau_{\text{wss}}^2} - 4 \delta_{\text{wss}})^2}{\tau_{\text{wss}} + \sqrt{16\delta_{\text{wss}}^2 + \tau_{\text{wss}}^2}}
+% 						\end{equation}	
+% 						
+% 						Wall shear stress (Pa): % unit??
+% 						\begin{equation}
+% 			%				\tau_{\text{wss}} = \frac{4 \eta Q}{\pi r^3} = \frac{r \Delta P}{2 L}
+% 							\tau_{\text{wss}} = \frac{r \Delta P}{2 L}
+% 						\end{equation}
+% 						
+% 			%			Blood flow (unit??):
+% 			%			\begin{equation}
+% 			%				Q = \frac{\Delta P \pi r^4}{8 \eta L}
+% 			%			\end{equation}	
+% 							
+% 			%dy(ind.NO_j)  =  (V_NOj_max * (state(ind.eNOS_act)) * (Oj/(K_mO2_j+Oj)) * (LArg_j/(K_mArg+LArg_j)) ) + 
+% 			%((state(ind.NO_i)-state(ind.NO_j))/tau_ij)   - k_O2*(state(ind.NO_j))^2*Oj - state(ind.NO_j)*4*3300/(25^2);
+% 			
+% 			
+% 						\begin{table}[h!]
+% 							\centering
+% 							\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.42\linewidth}  >{\footnotesize} p{0.17\linewidth} >{\footnotesize} p{0.23\linewidth} }
+% 								\hline
+% 								$ \gamma_{\text{eNOS}} $	& relative strength of the \Ca -dependent pathway for the eNOS activation	& 0.1 (dim.less)	& \citep{Comerford2008}	\\
+% 								$ \mu_{\text{deact},j} $	& eNOS-caveolin association rate											& 0.0167 s\n		& \citep{Comerford2008}	\\
+% 								$ K_{\text{dis}} $			& eNOS-caveolin disassociation rate											& 0.09 \uMpers		& \citep{Comerford2008}	\\
+% 								$ \Caj $ 					& calcium concentration in the EC cytosol 									& var. 		& see \citet{Dormanns2014} \\
+% 								$ K_{\text{m,eNOS}} $		& Michaelis constant														& 0.45 \uM			& \citep{Comerford2008}	\\
+% 								$ g_{\max} $				& maximum wall-shear-stress-induced eNOS activation							& 0.06 \uMpers		& \citep{Comerford2008}	\\
+% 								$ \alpha_{\text{wss}} $				& zero shear open channel constant											& 2 (dim.less)		& \citep{Comerford2008}	\\
+% 								$ W_0 $						& shear gating constant 													& 1.4 Pa\n			& \citep{Comerford2008}	\\
+% 								$ \delta_{\text{wss}} $		& membrane shear modulus													& 2.86 Pa		 	& \citep{Comerford2008}	\\
+% 								$ r $						& radius of arteriole 														& var. 				& see \citet{Dormanns2014} \\
+% 								$ V_{\text{max,NO},j} $ 	& maximum catalytic rate of NO production									& 1.22 s\n			& \citep{Chen2006a}		\\ % obtained from fig 6 & equ 17 & 18
+% 								$ [\Otwo]_j $				& \Otwo\ concentration in the EC											& 200 \uM 			& M.E. \\ 
+% 								$ K_{\text{m,O2},j} $		& Michaelis constant for eNOS for \Otwo\  									& 7.7 \uM 			& \citep{Chen2006a} \\ % mean value
+% 								$ [\LArg]_j $				& L-Arg concentration in the neuron 										& 100 \uM 			& \citep{Chen2006a} \\ 
+% 								$ K_{\text{m,L-Arg},j} $	& Michaelis constant for eNOS for \LArg 									& 1.5 \uM 			& \citep{Chen2006a} \\ % mean value
+% 								$ \Delta P / L $			& pressure drop over length of arteriole									& 9.1\e{4} Pa m\n	& M.E. 	\\
+% 								$ k_{\text{O2},j} $ 		& \Otwo\ reaction rate constant							& 9.6\e{-6} \uM$^{-2}$ s\n & \citep{Kavdia2002} \\ % converted from 9.6e6 M^-2 s^-1
+% 								\hline
+% 							\end{tabular}
+% 						\end{table}	
+ 			
+\bibliography{JTB_library,mybibfile,/Users/timdavid/Documents/MendeleyDesktop/library,library_part_I}
+
+\end{document}
