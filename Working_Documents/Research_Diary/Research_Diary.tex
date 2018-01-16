@@ -171,7 +171,32 @@ Talking with KC Brennan and colleagues it seems possible that the concavity is i
 \caption{A sketch of the combined effect of the LC and "standard" whisker pad currents}
 \label{fig:LC_Wh_pathways}
 \end{figure}
+\commTim{\section{Analysis of various pathways in the NVU}
+In comparing the neurovascular coupling results to experiment (specifically murine experiments) it is clear that the time taken for the perfusing vessel to react is slow. Previous work (\cite{Kenny2017}) has shown that there are a number of pathways which influence the neurovascular coupling, especially the change and rate of change of the radius of the perfusing vessel. We therefore wish to analyse not only which pathway has the most influence but also which set of parameters that define the specific pathway have a significant influence on the vessel dynamics. 
+Currently we look at three different pathways.
+\begin{enumerate}
+\item NO 
+\item $K^+$ 
+\item $Ca^{2+}$ in the EC/SMC coupling
+\end{enumerate}
+We will not look at the TRPV4 channel at this time. 
+A list of parameters which affect the three pathways have been defined (and highlighted) in the code. These parameters (as done previously) will be assigned mean values and a uniform distribution ($\pm$ 10 \%). 
+Figure \ref{fig:inputoutput} shows a sketch of the input (current into the neuron $I_{m}$, non-zero over the interval ($t_0,t_1$) and a profile of the vessel radius change as a function of time.   
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{Figures/input_output}
+\caption{sketch of both input (max current into the neuron) and probable output in terms of radius dyanmics.}
+\label{fig:inputoutput}
+\end{figure}
+In sampling the parameters for each pathway we define multiple  QoIs. They are listed below
+\begin{enumerate}
+\item time to maximum radius, $R_m$ i.e.$ (t_m-t_0)$
+\item max radius $R_m$ (defined at $t_m$)
+\item time to decay to baseline ($t_e-t_1$)
+\end{enumerate} 
+Given 3 poathways and 3 QoIs then we will need to do 9 individual sampling runs. (Unless the sampling run can indicate ranking of parameters for more than one QoI). 
 
+}
 
   
 %\commJoey{Joey may insert a comment like this.}

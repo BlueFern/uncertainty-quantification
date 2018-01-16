@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Chen et~al.(2014)Chen, Kozberg, Bouchard, Shaik and
@@ -12,6 +12,11 @@
 \textbf{Johny, J.; Plank, M.~J. and David, T.} (\textbf{2017}): {Importance of
   altered levels of SERCA, IP3R and RyR in vascular smooth muscle cell},
   Biophysical Journal, Vol. 112, No.~2 pp. 265--287.
+
+\bibitem[{Kenny et~al.(2017)Kenny, Plank and David}]{Kenny2017}
+\textbf{Kenny, A.; Plank, M.~J. and David, T.} (\textbf{2017}): {The role of
+  astrocytic calcium and TRPV4 channels in neurovascular coupling}, Journal of
+  Computational Neuroscience (in press), Vol.~1 pp. 1--19.
 
 \bibitem[{Toussay et~al.(2013)Toussay, Basu, Lacoste and Hamel}]{Toussay2013}
 \textbf{Toussay, X.; Basu, K.; Lacoste, B. and Hamel, E.} (\textbf{2013}):
