@@ -1,0 +1,90 @@
+\ProvidesPackage{NVU}
+% Commently used model variables:
+\newcommand{\SOO}{\sigma_{\theta\theta}} % wall stres component
+\newcommand{\CaConac}{[Ca^{2+}]_{k}} % Calcium contration Astrocyte Cytosol
+\newcommand{\CaConae}{ [\widehat{Ca}^{2+}]_{k}} % Calcium contration Astrocyte Reticilum
+\newcommand{\CaConsc}{[Ca^{2+}]_{i}} % Calcium contration SMC Cytosol
+\newcommand{\CaConse}{[\widehat{Ca}^{2+}]_{i}} % Calcium contration SMC Reticilum
+\newcommand{\CaConec}{[Ca^{2+}]_{j}} % Calcium contration EC Cytosol
+\newcommand{\CaConee}{[\widehat{Ca}^{2+}]_{j}} % Calcium contration EC Reticilum
+\newcommand{\dd}{\mathrm{d}} % delta for differential equation depandent of one variable
+\newcommand{\IP}{[IP_{3}]} % 
+
+
+% Unit commando's
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+\newcommand{\mMs}{mM~s$^-1$}
+\newcommand{\mM}{mM}
+\newcommand{\uMs}{\textmu M~s$^{-1}$}
+\newcommand{\puMdries}{\textmu M$^{-3}$~s$^{-1}$}
+\newcommand{\puMs}{\textmu M$^{-1}$~s$^{-1}$}
+\newcommand{\uM}{\textmu M}
+\newcommand{\uMm}{\textmu M~m}
+\newcommand{\uMtwee}{\textmu M$^2$}
+\newcommand{\mV}{mV}
+\newcommand{\Volt}{V}
+\newcommand{\mVpuM}{mV~\textmu M$^{-1}$}
+\newcommand{\mVpnM}{mV~nM$^{-1}$}
+\newcommand{\uMpmV}{\textmu M~mV$^{-1}$}
+\newcommand{\uMkeermV}{\textmu M~mV}
+\newcommand{\uMpmVs}{\textmu M~mV$^{-1}$s$^{-1}$}
+\newcommand{\mVs}{mV~s$^{-1}$}
+\newcommand{\pSmV}{pS~mV}
+\newcommand{\pS}{pS}
+\newcommand{\Siem}{S}
+\newcommand{\pers}{s$^{-1}$}
+\newcommand{\Dless}{$\left[-\right]$}
+\newcommand{\Cmol}{C mol$^{-1}$}
+\newcommand{\mCpmV}{mC~mV$^{-1}$}
+\newcommand{\nL}{nL}
+\newcommand{\pF}{pF}
+\newcommand{\mmHg}{mmHg}
+\newcommand{\pmmHg}{mmHg$^{-1}$}
+\newcommand{\Paspm}{Pa~s~m$^{-1}$}
+\newcommand{\Pas}{Pa~s}
+\newcommand{\Pa}{Pa}
+\newcommand{\m}{m}
+\newcommand{\um}{\textmu m}
+\newcommand{\mtwee}{m$^2$}
+
+\newcommand{\muMps}{\textmu M~m~s$^{-1}$}
+\newcommand{\uMps}{\textmu M~s$^{-1}$}
+\newcommand{\uMmps}{\textmu M~m~s$^{-1}$}
+\newcommand{\mperuMs}{m~\textmu M$^{-1}$s$^{-1}$}
+\newcommand{\perOhmm}{$\Omega^{-1}$m$^{-2}$}
+\newcommand{\uMms}{\textmu M~ms$^{-1}$}
+\newcommand{\JmolK}{J~mol$^{-1}$K$^{-1}$}
+\newcommand{\Kelvin}{K}
+
+
+% Style stuff
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ch}{\mathcal{CH}}
+
+% References and Cites
+\newcommand{\refeq}[1]{Equation \eqref{#1}}
+\newcommand{\reffig}[1]{Figure \ref{fig:#1}}
+\newcommand\annocite[1]{\pdfmarkupcomment[markup=Underline,subject=Citation]{\parencite{#1}}{\fullcite{#1}}}
+
+% Create figure
+\newcommand\makefig[4]{
+\begin{figure}[h!]
+\begin{center}
+\centering
+\includegraphics[width=#1\linewidth, keepaspectratio] {#2}
+\caption{#3}
+\label{fig:#4}
+\end{center}
+\end{figure}
+}
+
+%\begin{figure}[h!]
+%\begin{center}
+%\centering
+%\includegraphics[width=0.65\linewidth, keepaspectratio] {lala.jpg}
+%\caption{heele coowle negert}
+%\label{fig:lala}
+%\end{center}
+%\end{figure}
+% % % % % % % % OF % % % % % %
+%\makefig{0.5}{lala.jpg}{dikke lala}{detweedef}

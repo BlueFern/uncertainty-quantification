@@ -1,0 +1,139 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: K+_Pathway.aux
+The style file: KathisBibstyle.bst
+Database file #1: JTB_library.bib
+Database file #2: mybibfile.bib
+I was expecting a `,' or a `}'---line 1051 of file mybibfile.bib
+ :   
+ :   pages = {43-50}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1609 of file mybibfile.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Database file #3: /Users/timdavid/Documents/MendeleyDesktop/library.bib
+Repeated entry---line 1696 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Kavdia2002
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2694 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Chen2007
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3029 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Comerford2008
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4416 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Hayashi1999
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5239 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Filosa2006
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6466 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Chang2013
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7421 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7566 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{GonzalezFernandez1994
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8578 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Nagelhus1999
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8681 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Ostby2009
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 12649 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Crouch1980
+ :                    ,
+I'm skipping whatever remains of this entry
+Database file #4: library_part_I.bib
+Repeated entry---line 54 of file library_part_I.bib
+ : @article{Comerford2008
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 167 of file library_part_I.bib
+ : @article{Filosa2006
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 231 of file library_part_I.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 355 of file library_part_I.bib
+ : @article{Nagelhus1999
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1381 of file library_part_I.bib
+ : @article{Chang2013
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1424 of file library_part_I.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1481 of file library_part_I.bib
+ : @article{Ostby2009
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1651 of file library_part_I.bib
+ : @article{Nagelhus1999
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1660 of file library_part_I.bib
+ : @article{Filosa2006
+ :                    ,
+I'm skipping whatever remains of this entry
+You've used 15 entries,
+            2714 wiz_defined-function locations,
+            696 strings with 8133 characters,
+and the built_in function-call counts, 12004 in all, are:
+= -- 967
+> -- 518
+< -- 49
++ -- 198
+- -- 184
+* -- 1005
+:= -- 1655
+add.period$ -- 15
+call.type$ -- 15
+change.case$ -- 136
+chr.to.int$ -- 16
+cite$ -- 15
+duplicate$ -- 891
+empty$ -- 800
+format.name$ -- 234
+if$ -- 2419
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 165
+newline$ -- 49
+num.names$ -- 60
+pop$ -- 302
+preamble$ -- 1
+purify$ -- 121
+quote$ -- 0
+skip$ -- 450
+stack$ -- 0
+substring$ -- 652
+swap$ -- 653
+text.length$ -- 44
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 135
+warning$ -- 0
+while$ -- 85
+width$ -- 0
+write$ -- 168
+(There were 22 error messages)

@@ -1,0 +1,6 @@
+\contentsline {todo}{I have kept this in to make code easier to understand. It has no explicit parameters in it for the $K^+$ pathway}{9}{section*.5}
+\contentsline {todo}{what about diffusion into the ECS for both \text {Na$^{+}$}and \text {K$^+$}?}{11}{section*.7}
+\contentsline {todo}{what are the definitions and values of $K_{Na_k}, K_{K_s}$}{13}{section*.10}
+\contentsline {todo}{why do we have $\frac {F_{KIR_{i}} }{\gamma _{i}}$ when they have both the same dimensions but one value $F_{KIR_{i}}$ is 750 and the other ${\gamma _{i}}$ is 1970 ? }{15}{section*.16}
+\contentsline {todo}{We should note here that the membrane potential coupling $V_{coupling_{i}}^{SMC-EC}$ is an approximation that assumes the gradient of concentrations is negligible and hence only the membrane potential diffusion term is non-zero determined from the electro-diffusion theory.}{16}{section*.20}
+\contentsline {todo}{diffusion, NaK and BK fluxes defined here}{17}{section*.24}

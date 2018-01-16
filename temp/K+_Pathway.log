@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.26)  1 DEC 2017 11:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.26)  16 JAN 2018 09:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**EC_SMC_IP3_Pathway_version_2.tex
-(./EC_SMC_IP3_Pathway_version_2.tex
+**K+_Pathway.tex
+(./K+_Pathway.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
@@ -961,37 +961,37 @@ File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count187
 \AM@templatesizebox=\box72
 )
-(./EC_SMC_IP3_Pathway_version_2.aux
+(./K+_Pathway.aux
 
-LaTeX Warning: Label `eq:JIP3couplingi' multiply defined.
+LaTeX Warning: Label `tab:JCli' multiply defined.
 
 
-LaTeX Warning: Label `tab:JCA3couplingi' multiply defined.
+LaTeX Warning: Label `tab:JCli' multiply defined.
 
 )
-\openout1 = `EC_SMC_IP3_Pathway_version_2.aux'.
+\openout1 = `K+_Pathway.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 148.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 149.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1025,7 +1025,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box74
-Package hyperref Info: Link coloring ON on input line 148.
+Package hyperref Info: Link coloring ON on input line 149.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1035,13 +1035,13 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count194
 )
-LaTeX Info: Redefining \ref on input line 148.
-LaTeX Info: Redefining \pageref on input line 148.
-LaTeX Info: Redefining \nameref on input line 148.
+LaTeX Info: Redefining \ref on input line 149.
+LaTeX Info: Redefining \pageref on input line 149.
+LaTeX Info: Redefining \nameref on input line 149.
 
-(./EC_SMC_IP3_Pathway_version_2.out) (./EC_SMC_IP3_Pathway_version_2.out)
+(./K+_Pathway.out) (./K+_Pathway.out)
 \@outlinefile=\write4
-\openout4 = `EC_SMC_IP3_Pathway_version_2.out'.
+\openout4 = `K+_Pathway.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1056,15 +1056,15 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./EC_SMC_IP3_Pathway_version_2.tdo)
+(./K+_Pathway.tdo)
 \tf@tdo=\write5
-\openout5 = `EC_SMC_IP3_Pathway_version_2.tdo'.
+\openout5 = `K+_Pathway.tdo'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.164 \chapter
+l.165 \chapter
               {Notes for reading} [1
 
 ]
@@ -1073,39 +1073,123 @@ Chapter 1.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 170.
 
+
+LaTeX Warning: Reference `fig:nvu_FULL' on page 2 undefined on input line 175.
+
+
+Overfull \hbox (40.25066pt too wide) in paragraph at lines 187--195
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [2
 
-]
+] [3]
 Chapter 2.
-
-Overfull \hbox (40.25066pt too wide) in paragraph at lines 177--185
- [][] 
- []
-
-[3
+[4
 
 ]
-Overfull \hbox (1.93419pt too wide) in paragraph at lines 278--279
-[]|\OT1/cmr/m/n/8 ME| 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5] [6]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+[7
+
+]
+Overfull \hbox (500.16833pt too wide) detected at line 368
+ $\OML/cmm/m/it/10 J[]MDA[] \OT1/cmr/m/n/10 = ((\OML/cmm/m/it/10 m\OT1/cmr/m/n/
+10 5\OML/cmm/m/it/10 : \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 4
+\OML/cmm/m/it/10 : \OMS/cmsy/m/n/10 ^^C [][] ^^C \OML/cmm/m/it/10 p:Farad: \OMS
+/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 v[]: \OMS/cmsy/m/n/10 ^^C \OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 K[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 exp\O
+T1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v[]=p:ph\OT1/cmr/m/n/10 )\O
+ML/cmm/m/it/10 : \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 )))\O
+ML/cmm/m/it/10 :=\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p:ph \OMS/cmsy/m/n/10 ^^C \O
+T1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 exp\OT1/cmr/m/n/10 (\OMS
+/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v[]=p:ph\OT1/cmr/m/n/10 ))))\OML/cmm/m/it/10 :
+=\OT1/cmr/m/n/10 (1 + 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 33 \OMS/cmsy/m/n/10 ^^
+C \OML/cmm/m/it/10 p:Mg \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 exp\OT1/cmr/m/n/1
+0 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 07 \
+OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + 0\OML/cmm/m/it/10 :\
+OT1/cmr/m/n/10 7))); \OML/cmm/m/it/10 parser:addParameter\OT1/cmr/m/n/10 ([][][
+][]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^@ 
+\OT1/cmr/m/n/10 5);$ 
+ []
+
+[8]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 448.
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 481--485
+
+ []
+
+[10]
+Overfull \hbox (6.98685pt too wide) in paragraph at lines 596--596
+[]|$\OT1/cmr/m/n/10 [[]][]$| 
  []
 
 
-Overfull \hbox (5.35504pt too wide) in paragraph at lines 272--284
+Overfull \hbox (9.33966pt too wide) in paragraph at lines 598--598
+[]|$\OML/cmm/m/it/10 V[]$| 
+ []
+
+
+Overfull \hbox (3.81184pt too wide) in paragraph at lines 599--599
+[]|$\OML/cmm/m/it/10 K[]$| 
+ []
+
+
+Overfull \hbox (0.83957pt too wide) in paragraph at lines 605--605
+[]|$\OML/cmm/m/it/10 P[]=P[]$| 
+ []
+
+
+Overfull \hbox (1.77016pt too wide) in paragraph at lines 606--606
+[]|$\OT1/cmr/m/n/10 [[]][]$| 
+ []
+
+
+Overfull \hbox (7.82462pt too wide) in paragraph at lines 616--616
+[]|$\OML/cmm/m/it/10 V[]$| 
+ []
+
+
+Overfull \hbox (2.10925pt too wide) in paragraph at lines 619--619
+[]|$\OT1/cmr/m/n/10 [[]][]$| 
+ []
+
+
+Overfull \hbox (10.90794pt too wide) in paragraph at lines 620--620
+[]|$\OML/cmm/m/it/10 K[]$| 
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 621--621
+[]|\OT1/cmr/m/n/8 9.6$\OMS/cmsy/m/n/8 ^^B$\OT1/cmr/m/n/8 10$[]$ \TS1/cmr/m/n/8 
+µ\OT1/cmr/m/n/8 M$[]$
+ []
+
+
+Overfull \hbox (20.8596pt too wide) in paragraph at lines 590--626
  [][] 
  []
 
 
-Overfull \hbox (5.35504pt too wide) in paragraph at lines 534--543
- [][] 
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 849--850
+[]|\OT1/cmr/m/n/8 [[]]| 
  []
 
 
-Overfull \hbox (1.93419pt too wide) in paragraph at lines 782--783
-[]|\OT1/cmr/m/n/8 ME| 
- []
-
-
-Overfull \hbox (5.35504pt too wide) in paragraph at lines 780--788
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 847--852
  [][] 
  []
 
@@ -1113,47 +1197,339 @@ Overfull \hbox (5.35504pt too wide) in paragraph at lines 780--788
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.35504pt too wide) in paragraph at lines 792--799
+Underfull \hbox (badness 10000) in paragraph at lines 918--919
+
+ []
+
+[11] [12]
+Overfull \hbox (14.11029pt too wide) in paragraph at lines 937--937
+[]|$\OML/cmm/m/it/10 EET[]$| 
+ []
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 937.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 937.
+
+Missing character: There is no µ in font cmr8!
+
+Overfull \hbox (1.48038pt too wide) in paragraph at lines 929--940
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 941--942
+
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1184--1185
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1185--1186
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1186--1187
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1187--1188
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1188--1189
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1189--1190
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.48415pt too wide) in paragraph at lines 1190--1190
+[]|$\OML/cmm/m/it/10 g[]$| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1190--1191
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (3.76796pt too wide) in paragraph at lines 1191--1191
+[]|$\OML/cmm/m/it/10 J[]$| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1191--1192
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1179--1196
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4]
-Overfull \hbox (5.35504pt too wide) in paragraph at lines 846--854
+[13]
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1214--1215
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1215--1216
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (3.05421pt too wide) in paragraph at lines 1216--1216
+[]|$\OML/cmm/m/it/10 Ca[]$| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1212--1220
  [][] 
  []
 
-(./EC_SMC_IP3_Pathway_version_2.bbl [5]) [6
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1105.
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1427--1428
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
 
-(./EC_SMC_IP3_Pathway_version_2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1105.
 
-Package rerunfilecheck Info: File `EC_SMC_IP3_Pathway_version_2.out' has not ch
-anged.
-(rerunfilecheck)             Checksum: 3F685570B959659E07C67C1A960C3223;368.
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1425--1431
+ [][] 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1442--1443
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1443--1444
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1440--1447
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14]
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1459--1460
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1460--1461
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1457--1464
+ [][] 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1494--1495
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1495--1496
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1496--1497
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1497--1503
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1492--1511
+ [][] 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1514--1520
+ [][] 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1530--1531
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1528--1534
+ [][] 
+ []
+
+[15]
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1574--1575
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 1575--1577
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 1572--1580
+ [][] 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2024--2025
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2025--2026
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 2022--2029
+ [][] 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2046--2047
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2047--2048
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2048--2049
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2049--2050
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2050--2051
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2051--2052
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2052--2053
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (1.59251pt too wide) in paragraph at lines 2053--2054
+[]|\OT1/cmr/m/n/8 [[]]| 
+ []
+
+
+Overfull \hbox (5.35504pt too wide) in paragraph at lines 2044--2057
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2040--2415
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16]
+
+LaTeX Warning: Reference `eq:dwidt' on page 17 undefined on input line 2426.
+
+
+LaTeX Warning: Reference `eq:c_w_i' on page 17 undefined on input line 2426.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2441--2442
+[]|\OT1/cmr/m/n/8 whole SMC con-duc-
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 2443--2444
+[]|\OT1/cmr/m/n/8 rate of $\OML/cmm/m/it/8 K[]$ \OT1/cmr/m/n/8 in-flux by
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 2443--2444
+\OT1/cmr/m/n/8 the sodium/potassium
+ []
+
+
+Overfull \hbox (13.10435pt too wide) in paragraph at lines 2436--2446
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./K+_Pathway.bbl [17] [18] [19
+
+]) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2565.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2565.
+ (./K+_Pathway.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2565.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2565.
+
+Package rerunfilecheck Info: File `K+_Pathway.out' has not changed.
+(rerunfilecheck)             Checksum: 69DCB21EEEA8A1D38BD9C691A150695C;1542.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 23393 strings out of 492995
- 417780 string characters out of 6132703
- 542176 words of memory out of 5000000
- 26472 multiletter control sequences out of 15000+600000
- 12214 words of font info for 44 fonts, out of 8000000 for 9000
+ 23617 strings out of 492995
+ 421295 string characters out of 6132703
+ 560517 words of memory out of 5000000
+ 26603 multiletter control sequences out of 15000+600000
+ 12822 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,92p,1963b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,17n,92p,1945b,638s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
@@ -1167,17 +1543,20 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1000.pfb>
-Output written on EC_SMC_IP3_Pathway_version_2.pdf (7 pages, 246621 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/cm-super/sfrm1000.pfb>
+Output written on K+_Pathway.pdf (21 pages, 394060 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 440 compressed objects within 5 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

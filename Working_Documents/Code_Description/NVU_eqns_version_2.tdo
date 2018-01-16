@@ -1,0 +1,10 @@
+\contentsline {todo}{these equations below seem somewhat different from the actual version 2 code (see above). \textbf {Check with Allanah}}{17}{section*.9}
+\contentsline {todo}{check for the diffusion of \text {K$^+$}into the ECS}{20}{section*.12}
+\contentsline {todo}{what about diffusion into the ECS for both \text {Na$^{+}$}and \text {K$^+$}?}{21}{section*.15}
+\contentsline {todo}{If $r_{buff}$ is in fact buffering then shouldn't it be greater than unity rather than 0.05?}{24}{section*.21}
+\contentsline {todo}{Should really have a time-dependent o.d.e. here for the membrane potential}{25}{section*.24}
+\contentsline {todo}{Need \text {Ca$^{2+}$}conservation equation check with Allanah about the format of the TRPV4 flux into the astrocyte and from the PVS. }{26}{section*.27}
+\contentsline {todo}{what are the definitions and values of $K_{Na_k}, K_{K_s}$}{27}{section*.29}
+\contentsline {todo}{why do we have $\frac {F_{KIR_{i}} }{\gamma _{i}}$ when they have both the same dimensions but one value $F_{KIR_{i}}$ is 750 and the other ${\gamma _{i}}$ is 1970 ? }{32}{section*.43}
+\contentsline {todo}{We should note here that the membrane potential coupling $V_{coupling_{i}}^{SMC-EC}$ is an approximation that assumes the gradient of concentrations is negligible and hence only the membrane potential diffusion term is non-zero determined from the electro-diffusion theory.}{33}{section*.49}
+\contentsline {todo}{diffusion, NaK and BK fluxes defined here}{43}{section*.73}

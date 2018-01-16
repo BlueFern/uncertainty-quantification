@@ -1,0 +1,20 @@
+\BOOKMARK [0][-]{chapter.1}{Notes for reading}{}% 1
+\BOOKMARK [1][-]{subsection.1.0.1}{Version 1.2 /2.0 difference}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Global Constants}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{State variables, initial values and parameter values}{}% 4
+\BOOKMARK [0][-]{chapter.3}{Equations for each compartment }{}% 5
+\BOOKMARK [1][-]{section.3.1}{Neuron}{chapter.3}% 6
+\BOOKMARK [2][-]{subsection.3.1.1}{Nernst potential for Na,K ions in soma and dendrite \(Cl constant\)}{section.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.1.2}{Leak fluxes of Na,K,Cl in soma and dendrite using HH}{section.3.1}% 8
+\BOOKMARK [2][-]{subsection.3.1.3}{Dendrite \(with subscript d\)}{section.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.1.4}{Soma/Axon \(with subscript sa\)}{section.3.1}% 10
+\BOOKMARK [2][-]{subsection.3.1.5}{Total ion fluxes}{section.3.1}% 11
+\BOOKMARK [1][-]{section.3.2}{Conservation equations for neuron compartment}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Extra Cellular Space \(ECS with subscript e\)}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Astrocyte \(with subscript k\)}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.4.1}{Fluxes into and out of the astrocyte}{section.3.4}% 15
+\BOOKMARK [1][-]{section.3.5}{Perivascular Space \(with subscript p\)}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.6}{Smooth Muscle Cell}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.7}{Endothelial Cell}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.8}{Extracellular Space}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.9}{Lumen}{chapter.3}% 20
