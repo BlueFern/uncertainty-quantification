@@ -213,17 +213,17 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
  			\end{equation}
  			 		IP$_{3}$ degradation (in \uMs): 
  			 		\begin{equation} \label{eq:Jdegradi}
- 			 		J_{degrad_{i}}= k_{di}I_{i}
+ 			 		J_{degrad_{i}}= \textcolor{red}{k_{di}}I_{i}
  			 		\end{equation}
  			 		 		Heterocellular IP$_{3}$ coupling between SMCs and ECs (in \uMs):
  			 		 		\begin{equation} \label{eq:JIP3couplingi}
- 			 		 		J_{IP_{3}-coupling_{i}}^{SMC-EC}= -P_{IP_{3}}(\IP_{i}-\IP_{j})
+ 			 		 		J_{IP_{3}-coupling_{i}}^{SMC-EC}= -\textcolor{red}{P_{IP_{3}}}(\IP_{i}-\IP_{j})
  			 		 		\end{equation}
  			 		\textbf{Code description}
 \begin{verbatim}
- du(idx.I_i, :) = J_IP3_coup_i - J_degrad_i;\\
- J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);\\
-  		J_degrad_i = p.k_d_i * I_i;
+ du(idx.I_i, :) = J_IP3_coup_i - J_degrad_i;
+ J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);
+  		J_degrad_i = p.k_d{_i} * I_i;
 \end{verbatim}
 
 
@@ -260,7 +260,7 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
  		%
  		Release of calcium from IP$_{3}$ sensitive stores in the SMC (in \uMps):
  		\begin{equation} \label{eq:IP3i}
- 		J_{IP_{3i}} = F_{i}\frac{\IP_{i}^{2}}{K_{ri}^{2}+\IP_{i}^{2}}
+ 		J_{IP_{3i}} = \textcolor{red}{F_{i}}\frac{\IP_{i}^{2}}{K_{ri}^{2}+\IP_{i}^{2}}
  		\end{equation}
  		%
  		\textbf{Code description}
@@ -271,13 +271,13 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
  		\centering
  		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
  		\hline
- 		 $F_{i}$      			& Maximal rate of activation-dependent calcium influx			& 0.23 \uMps				& \cite{Koenigsberger2006} \\
+ 		 $\textcolor{red}{F_{i}}$      			& Maximal rate of activation-dependent calcium influx			& 0.23 \uMps				& \cite{Koenigsberger2006} \\
  		$K_{ri}$				& Half-saturation constant for agonist-dependent calcium entry	& 1 \uM					& \cite{Koenigsberger2006} \\
 % 		$cGMP_1$				& shift parameter for cGMP regulatory effect	& 10.75  \uM					&   ME \\
 %		$cGMP_2$				& scaling parameter for cGMP regulatory effect	& 0.668 \uM					&   ME \\
  		$R_{K,i}$				& scaling parameter for membrane voltage regulatory effect on $K_{act_{i}}$	& ???   mV					&   ME \\
- 		$k_{di}$      			& Rate constant of IP$_{3}$ degradation	& 0.1 \pers	&\cite{Koenigsberger2006} \\
- 		 		$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+ 		$\textcolor{red}{k_{di}}$      			& Rate constant of IP$_{3}$ degradation	& 0.1 \pers	&\cite{Koenigsberger2006} \\
+ 		 		$\textcolor{red}{P_{IP_{3}}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
  		\hline
  		\end{tabular}
  		\label{tab:IP3i}
@@ -529,18 +529,18 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
 % 		J_{Ca^{2+}-coupling_{i}}^{SMC-EC}= -P_{Ca^{2+}}(\CaConsc-\CaConec)
 % 		\end{equation}
 % 		%
- 		\begin{table}[h!]
- 		\centering
- 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
- 		\hline
-% 		$G_{coup}$      		& Heterocellular electrical coupling coefficient		& 0.5 \pers	& ME \\
- 		$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
-% 		$P_{Ca^{2+}}$      		& Heterocellular $P_{Ca^{2+}}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
- 		\hline
- 		\end{tabular}
+% 		\begin{table}[h!]
+% 		\centering
+% 		\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
+% 		\hline
+%% 		$G_{coup}$      		& Heterocellular electrical coupling coefficient		& 0.5 \pers	& ME \\
+% 		$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+%% 		$P_{Ca^{2+}}$      		& Heterocellular $P_{Ca^{2+}}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+% 		\hline
+% 		\end{tabular}
 % 		\todo[inline]{We should note here that the membrane potential coupling $V_{coupling_{i}}^{SMC-EC}$ is an approximation that assumes the gradient of concentrations is negligible and hence only the membrane potential diffusion term  is non-zero determined from the electro-diffusion theory.}
- 		\label{tab:JCA3couplingi}
- 		\end{table}
+% 		\label{tab:JCA3couplingi}
+% 		\end{table}
 % 		\gls{K} concentration in the \gls{SMC} (in \uM):
 % 		\begin{equation} \label{eq:dkidt}
 % 		\dfrac{\mathrm{d} [K^+_{i}]}{\mathrm{d}t}  = J_{Na/K_{i}}  - J_{KIR_{i}} - J_{K_{i}}
@@ -752,10 +752,14 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
  			\begin{equation} \label{eq:dIjdt}
  			\dfrac{\mathrm{d}\IP_{j}}{\mathrm{d}t} =  J_{EC,IP_3}- J_{degrad_{j}}  - J^{SMC-EC}_{IP_{3}-coupling_{j}}
  			\end{equation}
+ 			 									IP$_{3}$ degradation (in \uMs):  
+ 			 			 									\begin{equation} \label{eq:Jdegradj}
+ 			 									 									J_{degrad_{j}}= \textcolor{red}{k_{dj}} \IP_{j}
+ 										 					\end{equation}
  			\textbf{Code Description}
  			\begin{verbatim}
- 			du(idx.I_j, :) = p.J_PLC - J_degrad_j - J_IP3_coup_i;\\
- 			J_degrad_j = p.k_d_j * I_j;\\
+ 			du(idx.I_j, :) = p.J_PLC - J_degrad_j - J_IP3_coup_i;
+ 			J_degrad_j = p.k_d_j * I_j;
  			J_IP3_coup_i = -p.P_IP3 * (I_i - I_j);
  			\end{verbatim}
  			\subsubsection*{Coupling}~\\
@@ -767,7 +771,7 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
  			%
  			Heterocellular IP$_{3}$ coupling between SMCs and ECs (in \uMs):
  			\begin{equation} \label{eq:JIP3couplingi}
- 			J_{IP_{3}-coupling_{i}}^{SMC-EC}= -P_{IP_{3}}(\IP_{i}-\IP_{j})
+ 			J_{IP_{3}-coupling_{i}}^{SMC-EC}= -\textcolor{red}{P_{IP_{3}}}(\IP_{i}-\IP_{j})
  			\end{equation}
  			%
  			Calcium coupling with EC (in \uMs):
@@ -780,7 +784,7 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
  			\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
  			\hline
  			$G_{coup}$      		& Heterocellular electrical coupling coefficient		& 0.5 \pers	& ME \\
- 			$P_{IP_{3}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
+ 			$\textcolor{red}{P_{IP_{3}}}$      		& Heterocellular IP$_{3}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
  			$P_{Ca^{2+}}$      		& Heterocellular $P_{Ca^{2+}}$ coupling coefficient	& 0.05 \pers	&  \cite{Koenigsberger2006} \\
  			\hline
  			\end{tabular}
@@ -830,24 +834,21 @@ Subscripts on variable such as concentrations denote the compartment, n=neuron, 
 % 									%
  									Release of calcium from IP$_{3}$-sensitive stores in the EC (in \uMps):
  									\begin{equation} \label{eq:JIP3j}
- 									J_{IP_{3j}} = F_{j}\frac{\IP_{j}^{2}}{K_{rj}^{2}+\IP_{j}^{2}}
+ 									J_{IP_{3j}} = \textcolor{red}{F_{j}}\frac{\IP_{j}^{2}}{K_{rj}^{2}+\IP_{j}^{2}}
  									\end{equation}
- 									IP$_{3}$ degradation (in \uMs):  
- 			 									\begin{equation} \label{eq:Jdegradj}
- 									 									J_{degrad_{j}}= k_{dj} \IP_{j}
-							 					\end{equation}
+
  									\textbf{Code Description}
  									\begin{verbatim}
- 									J_IP3_j = p.F_j * I_j.^2 ./ (p.K_r_j^2 + I_j.^2);\\
+ 									J_IP3_j = p.F_j * I_j.^2 ./ (p.K_r_j^2 + I_j.^2);
  									J_degrad_j = p.k_d_j * I_j;
  									\end{verbatim}
  									\begin{table}[h!]
  									\centering
  									\begin{tabular}{ p{0.09\linewidth}  >{\footnotesize} p{0.5\linewidth}  >{\footnotesize} p{0.27\linewidth} >{\footnotesize} p{0.03\linewidth} }
  									\hline
- 									 $F_{j}$      			& Maximal rate of activation-dependent calcium influx			& 0.23 \uMps	& \cite{Koenigsberger2006} \\
+ 									 $\textcolor{red}{F_{j}}$      			& Maximal rate of activation-dependent calcium influx			& 0.23 \uMps	& \cite{Koenigsberger2006} \\
  									$K_{rj}$				& Half-saturation constant for agonist-dependent calcium entry	& 1 \uM	 & \cite{Koenigsberger2006} \\
- 										$k_{dj}$      			& Rate constant of IP$_{3}$ degradation						 		& 0.1 \pers		& \cite{Koenigsberger2006} \\
+ 										$\textcolor{red}{k_{dj}}$      			& Rate constant of IP$_{3}$ degradation						 		& 0.1 \pers		& \cite{Koenigsberger2006} \\
  									\hline
  									\end{tabular}
  									\label{tab:IP3j}
