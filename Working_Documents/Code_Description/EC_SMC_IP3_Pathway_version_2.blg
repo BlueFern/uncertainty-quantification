@@ -14,11 +14,19 @@ Repeated entry---line 1609 of file mybibfile.bib
  :                           ,
 I'm skipping whatever remains of this entry
 Database file #3: /Users/timdavid/Documents/MendeleyDesktop/library.bib
+<<<<<<< Updated upstream
 Repeated entry---line 202 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
  : @article{Koenigsberger2006
  :                           ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 10557 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+=======
+Repeated entry---line 575 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+ : @article{Koenigsberger2006
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1840 of file /Users/timdavid/Documents/MendeleyDesktop/library.bib
+>>>>>>> Stashed changes
  : @article{Chang2013
  :                   ,
 I'm skipping whatever remains of this entry

@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: NVU_UQ_paper_1.aux
+The style file: KathisBibstyle.bst
+Database file #1: /Users/timdavid/Documents/MendeleyDesktop/library.bib
+Database file #2: library.bib
+Repeated entry---line 1533 of file library.bib
+ : @article{Buxton2004
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2738 of file library.bib
+ : @article{Filosa2007
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3011 of file library.bib
+ : @article{Farr2011
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3603 of file library.bib
+ : @article{Dormanns2015
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7289 of file library.bib
+ : @article{Zheng2010
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 11863 of file library.bib
+ : @article{Filosa2006
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 13789 of file library.bib
+ : @article{Ogawa1990
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 14005 of file library.bib
+ : @article{Mathias2017a
+ :                      ,
+I'm skipping whatever remains of this entry
+You've used 21 entries,
+            2714 wiz_defined-function locations,
+            750 strings with 9948 characters,
+and the built_in function-call counts, 17305 in all, are:
+= -- 1402
+> -- 788
+< -- 62
++ -- 301
+- -- 280
+* -- 1456
+:= -- 2399
+add.period$ -- 21
+call.type$ -- 21
+change.case$ -- 198
+chr.to.int$ -- 22
+cite$ -- 21
+duplicate$ -- 1255
+empty$ -- 1127
+format.name$ -- 348
+if$ -- 3480
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 240
+newline$ -- 67
+num.names$ -- 84
+pop$ -- 437
+preamble$ -- 1
+purify$ -- 177
+quote$ -- 0
+skip$ -- 644
+stack$ -- 0
+substring$ -- 951
+swap$ -- 913
+text.length$ -- 57
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 189
+warning$ -- 0
+while$ -- 127
+width$ -- 0
+write$ -- 234
+(There were 8 error messages)

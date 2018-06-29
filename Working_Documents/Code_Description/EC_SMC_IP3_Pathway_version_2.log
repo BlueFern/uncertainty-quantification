@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.26)  10 MAY 2018 17:44
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.26)  11 JUN 2018 15:31
+>>>>>>> Stashed changes
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1166,7 +1170,11 @@ t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1000.pfb>
+<<<<<<< Updated upstream
 Output written on EC_SMC_IP3_Pathway_version_2.pdf (7 pages, 246636 bytes).
+=======
+Output written on EC_SMC_IP3_Pathway_version_2.pdf (7 pages, 246760 bytes).
+>>>>>>> Stashed changes
 PDF statistics:
  197 PDF objects out of 1000 (max. 8388607)
  164 compressed objects within 2 object streams
