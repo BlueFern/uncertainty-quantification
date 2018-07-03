@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: NVU_UQ_paper_1.aux
+The style file: KathisBibstyle.bst
+Database file #1: library.bib
+Warning--I didn't find a database entry for "Mathias2018"
+You've used 20 entries,
+            2714 wiz_defined-function locations,
+            746 strings with 10314 characters,
+and the built_in function-call counts, 16884 in all, are:
+= -- 1353
+> -- 802
+< -- 59
++ -- 306
+- -- 286
+* -- 1431
+:= -- 2348
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 195
+chr.to.int$ -- 21
+cite$ -- 20
+duplicate$ -- 1211
+empty$ -- 1086
+format.name$ -- 349
+if$ -- 3384
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 235
+newline$ -- 64
+num.names$ -- 80
+pop$ -- 429
+preamble$ -- 1
+purify$ -- 175
+quote$ -- 0
+skip$ -- 621
+stack$ -- 0
+substring$ -- 920
+swap$ -- 886
+text.length$ -- 55
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 180
+warning$ -- 0
+while$ -- 121
+width$ -- 0
+write$ -- 223
+(There was 1 warning)

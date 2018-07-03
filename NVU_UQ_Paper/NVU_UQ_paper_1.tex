@@ -1,0 +1,299 @@
+\documentclass[12pt]{article}
+\usepackage{xcolor,graphicx,import,fullpage,textcomp,colortbl,array,pgfplots,lscape,todonotes,booktabs,dsfont,marvosym,ulem} \usepackage[fleqn]{amsmath}% textgreek
+\usepackage{graphicx,subcaption,caption,pgfplots}
+	\newlength\figureheight
+	\newlength\figurewidth
+\definecolor{grey}{gray}{0.5}
+\definecolor{lightgrey}{gray}{0.8}
+\usepackage[numbers]{natbib} %[numbers]
+%\usepackage[papersize={85cm,30cm},left=2cm,top=2cm]{geometry}
+%\usepackage[a3paper,left=2cm,top=4cm,bottom=4cm]{geometry}
+
+
+%if you are annoyed of the colored boxes the hyperlinks in the pdf file uncomment this instead of the plain hyperref package above:
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage{NVC} %calls the style package NVC.sty created by Loes and Evert
+\usepackage{glossaries,textgreek,bm}
+\usepackage{hyperref}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage[toc,page]{appendix}
+\newglossary[slg]{symbolslist}{syi}{syg}{List of symbols} %Generate a list of symboles
+\renewcommand*{\glspostdescription}{} %Remove the dot at the end of glossary descriptions
+\makeglossaries %Activate glossary commands
+\usepackage{glossaryEntries}
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\definecolor{darkred}{rgb}{.8,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\newcommand{\add}[1]{\textcolor{darkgreen}{\uline{#1}}}
+\newcommand{\remove}[1]{\textcolor{darkred}{\sout{#1}}}
+% \Add{} and \Del{} Corrections and \Mark{}
+%\usepackage[active,new,noold,marker]{xrcs}
+%%%%%%%%%%%%
+\newcommand{\ca}{Ca$^{\text{\scriptsize 2+}}$}
+\newcommand{\ip}{IP$_{\text{\scriptsize 3}}$ }
+\newcommand{\jplc}{J$_{\text{\scriptsize PLC}_{\text{\scriptsize agonist}}}$}
+\newcommand{\na}{Na$^{\text{\scriptsize +}}$}
+\newcommand{\pot}{K$^{\text{\scriptsize +}}$}
+\newcommand{\cl}{Cl$^{\text{\scriptsize -}}$}
+\newcommand{\kca}{K$_{\text{\scriptsize Ca}}$}
+\linespread{2.0}\include{./glossary}
+\newcommand{\psec}{s$^{-1}$\xspace}
+\begin{document}
+\title{Analysing High-Dimensional Neuroscience Models: Neurovascular Coupling. }
+\author{ Tim David$^{1}$, Pierre Gremaud$^{2}$, Joey Hart$^{2}$\\
+\textit{1.Department of Mechanical Engineering,} \\
+\textit{University of Canterbury, New Zealand}\\
+\textit{2.Department of Mathematics,}\\
+\textit{North Carolina State University, Rayleigh, NC}\\
+}
+\maketitle
+\thispagestyle{empty}
+
+%\newpage
+%\textbf{BlueFern Supercomputing Unit, University of Canterbury, New Zealand}
+\begin{abstract}
+abstract here 
+\end{abstract}
+%\listoftodos
+%\tableofcontents
+%\newpage
+\section{INTRODUCTION}
+During the last two decades \gls{fmri} has proven to be an established tool in studying the human brain. This is especially true in the case of the \gls{bold} signal, where changes in blood oxygen levels can be detected via the magnetic signal  \cite{Ogawa1990}. However due to the constraint on the resolution of \gls{bold}, \gls{fmri} methodology has not been used extensively to study the underlying cellular neural architecture and their associated cerebral functions. Complex models that address this important relationship and constructing a detailed compartmental model with the relevant cell types involved will allow simulations relating certain brain functions performed in a region to its \gls{fmri} \gls{bold} response. The \gls{nvc} mechanism, the cerebral metabolic rate of oxygen consumption, and the \gls{cbv} are known to contribute to the \gls{fmri} \gls{bold} response \citep{Buxton2004}, however a thorough understanding of these factors has yet to be fully established.
+
+The \gls{nvc} response, the ability to locally adjust vascular resistance as a function of neuronal activity, is believed to be mediated by a number of different signalling mechanisms. \citet{Roy1890} first proposed a  mechanism based on a metabolic negative feedback theory. According to this theory, neural activity leads to a drop in oxygen or glucose levels and increases in CO$_2$, adenosine, and lactate levels. All of these signals could dilate arterioles and hence were believed to be part of the neurovascular response. However, recent experiments illustrated that the \gls{nvc} response is partially independent of these metabolic signals \citep{Leithner2010, Lindauer2010, Mintun2001, Powers1996, Makani2010}. An alternative to this theory was proposed where the neuron releases signalling molecules to directly or indirectly affect the blood flow. Many mechanisms such as the \gls{pot} signalling mechanism \cite{Filosa2006}, the \gls{no} signalling mechanism or the arachidonic acid to \gls{eet} pathway are found to contribute to the neurovascular response \citep{Attwell2010}.
+
+The \gls{pot} signalling mechanism of \gls{nvc} seems to be supported by significant evidence, although new evidence shows that the endfoot astrocytic \gls{ca} could play a significant role. The \gls{pot} signalling hypothesis mainly utilises the astrocyte,  positioned to enable the communication between the neurons and the local perfusing blood vessels. The astrocyte and the \glspl{ec} surrounding the perfusing vessel lumen exhibit a striking similarity in ion channel expression and thus can enable control of the \gls{smc} from both the neuronal and blood vessel components \citep{Longden2015}. Whenever there is neuronal activation \gls{pot} ions are released into the \gls{ecs} and \gls{sc}. The astrocyte is depolarised by taking up \gls{pot} released by the neuron and releases it into the \gls{pvs} via the endfeet through the BK channels \citep{Filosa2007}. This increase in \gls{ecs} \gls{pot} concentration ($3-10$ mM) near the arteriole hyperpolarises the \gls{smc} through the \gls{kir} channel, effectively closing the voltage-gated \gls{ca} channel, reducing smooth muscle cytosolic \gls{ca} and thereby causing dilation. Higher \gls{pot} concentrations in the \gls{pvs} cause contraction due to the reverse flux of the \gls{kir} channel \citep{Farr2011}. 
+
+Amidst the difficulty in monitoring and measuring the rapid changes in metabolic demands in the highly heterogeneous brain, speculative estimates of the relative demands of the cerebral processes that require energy were given based on different experimental data by \citet{Ames2000}. As per the estimate, the vegetative processes that maintain the homeostasis including protein synthesis accounted for $10-15$\% of the total energy consumption. The costliest function seems to be in  restoring the ionic gradients during neural activation. The \gls{sodpot} exchange pump is estimated to consume $40-50$\%, while the \gls{ca} influx from organelles and extracellular fluid consumes $3-7$\%. The processing of neurotransmitters such as uptake or synthesis consumes $10-20$\%, while the intracellular signalling systems which includes activation and inactivation of proteins consumes $20-30$\%. The rest of the energy is estimated to be consumed by the axonal and dendritic transport in both directions.
+
+Previous work \cite{Mathias2018} has provided  the construction of an experimentally validated numerical (\textit{in silico}) model based on experimental data to simulate the \gls{fmri} \gls{bold} signal associated with \gls{nvc} along with the associated metabolic and blood volume responses. An existing neuron model \citep{Mathias2017, Mathias2017a} has been extended to include an additional transient \gls{na} ion channel (NaT) expressed in the neuron, and integrated into a complex \gls{nvc} model \citep{Dormanns2015, Dormanns2016, Kenny2017a}. This present model is based on the hypothesis that the \gls{pot} signalling mechanism of \gls{nvc} is the primary contributor to the vascular response and the \gls{sodpot} exchange pump in the neuron is the primary consumer of oxygen during neural activation. The model contains 160 parameters, most of which come from non-human experiments. \\
+Such a complex model constructed with a high-dimensional parameter space is not easily amenable to sensitivity analyses considering the significant computing resource required. Indeed no formal theory exists which allows direct mathematical investigation of the variability of the large dimensional parameter vector and the resulting output. 
+From a purely physiological perspective an understanding of the dominant cellular mechanisms resulting in cerebral tissue perfusion after neuronal stimulation would be of particular interest. \\
+  
+  We have used the \gls{cbf} change from the experimental data \cite{Zheng2010} taken from the rat barrel cortex. 
+\section{Methodology}
+some text here
+\subsection{Simulated Data}
+We use a square pulse of 10 seconds duration for stimulation such that the resulting output (after a substantial number of realizations) can be analysed in a formal manner. We assume that stimulation occurs for $t_1\le t \le t_2$.  
+\subsection{QoIs}
+We analyse 7 quantities of interest (QoIs) with respect to the 10 second square stimulation pulse. They are defined as follows.
+\begin{enumerate}
+\item As a representation of the volumetric flow rate in the cerebral tissue
+\begin{equation}
+\frac{1}{t_2-t_1}\int_{t_1}^{t_2}\left(\frac{R(s)}{R_0}\right)^4ds \label{vol_flow}
+\end{equation}
+ 
+\item ECS potassium has a distinct effect on the flux into the Neuron. Hence we look at the average and the maximum.
+\begin{eqnarray}
+[K^+]_{max,ECS} \label{K_ECS_Max} \\
+ \frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{ECS}(s)ds \label{K_ECS_Mean}
+\end{eqnarray}
+\item ECS potassium has a distinct effect on the flux into the astrocyte. Hence we look at the average and the maximum.
+\begin{eqnarray}
+[K^+]_{max,AC} \label{K_AC_Max} \\
+\frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{AC}(s)ds \label{K_AC_Mean}
+\end{eqnarray}
+\item the combined concentration of the actin myosin complex, both phosphorylated and unphosphorylated, determines the effect stress due to the contraction for the smooth muscle cell. 
+\begin{eqnarray}
+[AM+AM_p]_{min} \label{AM_AMp_Min}
+\end{eqnarray}
+
+\item The phase lag between neuronal stimulation and the radius changed effects a number of markers. Notably the BOLD signal, hence we choose to investigate
+ the time, $\tau$, to min value of $AM_p$
+ \begin{eqnarray}
+ \tau = t_{min}-t_1 \label{AMp_Time_to_Min}
+ \end{eqnarray}
+\end{enumerate}
+
+\subsection{Experimental Data}
+We repeat analysis of the 7 QoI's listed above 
+
+\section{Results}
+This section contains numerical results for 14 QoI's, 7 using a square pulse stimulus and 7 using the experimental data stimulus. The section is organized into 7 subsection where each subsection contains 2 sub-subsections with the results using the square pulse stimulus and experimental data stimulus. For each case we report results using a linear regression and Multivariate Adaptive Regression Splines surrogate models. The predictive capabilities and variable importance metrics are given for each surrogate and the results are compared.
+
+\newpage
+
+\subsection{QoI \eqref{vol_flow}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+\newpage
+
+\subsection{QoI \eqref{K_ECS_Max}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+\newpage
+\subsection{QoI \eqref{K_ECS_Mean}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+\newpage
+\subsection{QoI \eqref{K_AC_Max}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+\newpage
+\subsection{QoI \eqref{K_AC_Mean}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+\newpage
+\subsection{QoI \eqref{AM_AMp_Min}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+\newpage
+\subsection{QoI \eqref{AMp_Time_to_Min}}
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular.eps}
+\end{figure}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental.eps}
+\end{figure}
+
+
+
+\section{Discussion}
+\section{Conclusion}
+\bibliographystyle{KathisBibstyle} % no .sty!
+\bibliography{library}
+
+\end{document}
