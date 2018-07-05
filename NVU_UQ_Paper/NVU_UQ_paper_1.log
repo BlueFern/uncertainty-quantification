@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  3 JUL 2018 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 JUL 2018 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1247,7 +1247,7 @@ ctangular.eps>
 (epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=243, 4
+<Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=283, 4
 72.76625pt x 400.49625pt>
 File: Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -1269,7 +1269,7 @@ _Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=244, 479.7925p
+<Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=284, 479.7925p
 t x 386.44376pt>
 File: Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1292,7 +1292,7 @@ n_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=245,
+<Figures/Vol_Flow_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=285,
  472.76625pt x 400.49625pt>
 File: Figures/Vol_Flow_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
@@ -1315,7 +1315,7 @@ s>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=246, 479.792
+<Figures/Vol_Flow_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=286, 479.792
 5pt x 386.44376pt>
 File: Figures/Vol_Flow_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1324,10 +1324,18 @@ e (type pdf)
 Package pdftex.def Info: Figures/Vol_Flow_QoI_MARS_VI_Rectangular-eps-converted
 -to.pdf used on input line 126.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [8 <./Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <./
-Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/Vol_Flo
-w_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/Vol_Flow_QoI
-_MARS_VI_Rectangular-eps-converted-to.pdf>]
+
+Overfull \hbox (37.03844pt too wide) in paragraph at lines 133--146
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <./F
+igures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/Vol_Flow
+_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/Vol_Flow_QoI_
+MARS_VI_Rectangular-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_LR_Prediction_Experim
 ental.eps>
 (epstopdf)                    date: 2018-07-03 11:52:35
@@ -1339,17 +1347,17 @@ ental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_LR_Pr
 ediction_Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_Prediction_E
 xperimental.eps>
-(epstopdf)             \includegraphics on input line 135.
+(epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=284, 
+<Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=326, 
 472.76625pt x 400.49625pt>
 File: Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-co
-nverted-to.pdf used on input line 135.
+nverted-to.pdf used on input line 156.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_LR_VI_Experimental.ep
 s>
@@ -1362,17 +1370,17 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_LR_VI
 _Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_VI_Experimental.eps>
 
-(epstopdf)             \includegraphics on input line 136.
+(epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=285, 479.7925
+<Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=327, 479.7925
 pt x 386.44376pt>
 File: Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-
-to.pdf used on input line 136.
+to.pdf used on input line 157.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_MARS_Prediction_Exper
 imental.eps>
@@ -1385,17 +1393,17 @@ imental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_MARS_
 Prediction_Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_MARS_Predicti
 on_Experimental.eps>
-(epstopdf)             \includegraphics on input line 137.
+(epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=286
+<Figures/Vol_Flow_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=328
 , 472.76625pt x 400.49625pt>
 File: Figures/Vol_Flow_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/Vol_Flow_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_MARS_Prediction_Experimental-eps-
-converted-to.pdf used on input line 137.
+converted-to.pdf used on input line 158.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_MARS_VI_Experimental.
 eps>
@@ -1408,41 +1416,49 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_MARS_
 VI_Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_MARS_VI_Experimental.
 eps>
-(epstopdf)             \includegraphics on input line 138.
+(epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=287, 479.79
+<Figures/Vol_Flow_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=329, 479.79
 25pt x 386.44376pt>
 File: Figures/Vol_Flow_QoI_MARS_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/Vol_Flow_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_MARS_VI_Experimental-eps-converte
-d-to.pdf used on input line 138.
+d-to.pdf used on input line 159.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [9 <./Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> <.
-/Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/Vol_F
-low_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/Vol_Flow_
-QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
+
+Overfull \hbox (6.3582pt too wide) in paragraph at lines 166--179
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> <./
+Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/Vol_Fl
+ow_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/Vol_Flow_Q
+oI_MARS_VI_Experimental-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 143.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 143.
+(hyperref)                removing `\hbox' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 143.
+(hyperref)                removing `\mathsurround' on input line 185.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 185.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 185.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 185.
 
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_LR_Prediction_Rectan
 gular.eps>
@@ -1455,17 +1471,17 @@ gular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_LR_P
 rediction_Rectangular-eps-converted-to.pdf Figures/K_ECS_Max_QoI_LR_Prediction_
 Rectangular.eps>
-(epstopdf)             \includegraphics on input line 149.
+(epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=327, 
+<Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=371, 
 472.76625pt x 400.49625pt>
 File: Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-co
-nverted-to.pdf used on input line 149.
+nverted-to.pdf used on input line 191.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_LR_VI_Rectangular.ep
 s>
@@ -1478,17 +1494,17 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_LR_V
 I_Rectangular-eps-converted-to.pdf Figures/K_ECS_Max_QoI_LR_VI_Rectangular.eps>
 
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=328, 479.7925
+<Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=372, 479.7925
 pt x 386.44376pt>
 File: Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-
-to.pdf used on input line 150.
+to.pdf used on input line 192.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_MARS_Prediction_Rect
 angular.eps>
@@ -1501,17 +1517,17 @@ angular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_MARS
 _Prediction_Rectangular-eps-converted-to.pdf Figures/K_ECS_Max_QoI_MARS_Predict
 ion_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 151.
+(epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=329
+<Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=373
 , 472.76625pt x 400.49625pt>
 File: Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular-eps-
-converted-to.pdf used on input line 151.
+converted-to.pdf used on input line 193.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_MARS_VI_Rectangular.
 eps>
@@ -1524,22 +1540,30 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_MARS
 _VI_Rectangular-eps-converted-to.pdf Figures/K_ECS_Max_QoI_MARS_VI_Rectangular.
 eps>
-(epstopdf)             \includegraphics on input line 152.
+(epstopdf)             \includegraphics on input line 194.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=330, 479.79
+<Figures/K_ECS_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=374, 479.79
 25pt x 386.44376pt>
 File: Figures/K_ECS_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/K_ECS_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_MARS_VI_Rectangular-eps-converte
-d-to.pdf used on input line 152.
+d-to.pdf used on input line 194.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [10 <./Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <
-./Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_EC
-S_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_ECS_Ma
-x_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 201--215
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <./Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <.
+/Figures/K_ECS_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_ECS
+_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_ECS_Max
+_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_LR_Prediction_Experi
 mental.eps>
 (epstopdf)                    date: 2018-07-03 11:47:31
@@ -1551,17 +1575,17 @@ mental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_LR_P
 rediction_Experimental-eps-converted-to.pdf Figures/K_ECS_Max_QoI_LR_Prediction
 _Experimental.eps>
-(epstopdf)             \includegraphics on input line 161.
+(epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=368,
+<Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=414,
  472.76625pt x 400.49625pt>
 File: Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-c
-onverted-to.pdf used on input line 161.
+onverted-to.pdf used on input line 225.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_LR_VI_Experimental.e
 ps>
@@ -1574,17 +1598,17 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_LR_V
 I_Experimental-eps-converted-to.pdf Figures/K_ECS_Max_QoI_LR_VI_Experimental.ep
 s>
-(epstopdf)             \includegraphics on input line 162.
+(epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=369, 479.792
+<Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=415, 479.792
 5pt x 386.44376pt>
 File: Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted
--to.pdf used on input line 162.
+-to.pdf used on input line 226.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_MARS_Prediction_Expe
 rimental.eps>
@@ -1597,17 +1621,17 @@ rimental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_MARS
 _Prediction_Experimental-eps-converted-to.pdf Figures/K_ECS_Max_QoI_MARS_Predic
 tion_Experimental.eps>
-(epstopdf)             \includegraphics on input line 163.
+(epstopdf)             \includegraphics on input line 227.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=37
-0, 472.76625pt x 400.49625pt>
+<Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=41
+6, 472.76625pt x 400.49625pt>
 File: Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental-eps
--converted-to.pdf used on input line 163.
+-converted-to.pdf used on input line 227.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_MARS_VI_Experimental
 .eps>
@@ -1620,41 +1644,45 @@ Package epstopdf Info: Source file: <Figures/K_ECS_Max_QoI_MARS_VI_Experimental
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Max_QoI_MARS
 _VI_Experimental-eps-converted-to.pdf Figures/K_ECS_Max_QoI_MARS_VI_Experimenta
 l.eps>
-(epstopdf)             \includegraphics on input line 164.
+(epstopdf)             \includegraphics on input line 228.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=371, 479.7
+<Figures/K_ECS_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=417, 479.7
 925pt x 386.44376pt>
 File: Figures/K_ECS_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/K_ECS_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Max_QoI_MARS_VI_Experimental-eps-convert
-ed-to.pdf used on input line 164.
+ed-to.pdf used on input line 228.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [11 <./Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> 
-<./Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K_
-ECS_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_ECS
-_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./Figures/K_ECS_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> <
+./Figures/K_ECS_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K_E
+CS_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_ECS_
+Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 168.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 168.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 168.
+(hyperref)                removing `\hbox' on input line 254.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 168.
+(hyperref)                removing `\mathsurround' on input line 254.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 168.
+(hyperref)                removing `\z@' on input line 254.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 254.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 254.
 
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Recta
 ngular.eps>
@@ -1662,27 +1690,22 @@ ngular.eps>
 (epstopdf)                    size: 222333 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Recta
 ngular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:52
+(epstopdf)                    size: 71582 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 Prediction_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_Predictio
 n_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 174.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-
-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps)...ex
-ecuted safely (allowed).
+(epstopdf)             \includegraphics on input line 260.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Recta
-ngular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:52
-(epstopdf)                    size: 71582 bytes.
-
-<Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=410,
+<Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=458,
  472.76625pt x 400.49625pt>
 File: Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-c
-onverted-to.pdf used on input line 174.
+onverted-to.pdf used on input line 260.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.e
 ps>
@@ -1690,27 +1713,22 @@ ps>
 (epstopdf)                    size: 30255 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-e
 ps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:52
+(epstopdf)                    size: 9648 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 VI_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.ep
 s>
-(epstopdf)             \includegraphics on input line 175.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-conv
-erted-to.pdf Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps)...executed safely (a
-llowed).
+(epstopdf)             \includegraphics on input line 261.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-e
-ps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:52
-(epstopdf)                    size: 9648 bytes.
-
-<Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=411, 479.792
+<Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=459, 479.792
 5pt x 386.44376pt>
 File: Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted
--to.pdf used on input line 175.
+-to.pdf used on input line 261.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_MARS_Prediction_Rec
 tangular.eps>
@@ -1718,27 +1736,22 @@ tangular.eps>
 (epstopdf)                    size: 222297 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_MARS_Prediction_Rec
 tangular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:53
+(epstopdf)                    size: 71469 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_MAR
 S_Prediction_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_MARS_Predi
 ction_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 176.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangula
-r-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular.eps).
-..executed safely (allowed).
+(epstopdf)             \includegraphics on input line 262.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_MARS_Prediction_Rec
-tangular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:53
-(epstopdf)                    size: 71469 bytes.
-
-<Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=41
-2, 472.76625pt x 400.49625pt>
+<Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=46
+0, 472.76625pt x 400.49625pt>
 File: Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular-eps
--converted-to.pdf used on input line 176.
+-converted-to.pdf used on input line 262.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular
 .eps>
@@ -1746,59 +1759,57 @@ Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular
 (epstopdf)                    size: 29082 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular
 -eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:53
+(epstopdf)                    size: 9165 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_MAR
 S_VI_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_MARS_VI_Rectangula
 r.eps>
-(epstopdf)             \includegraphics on input line 177.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular-eps-co
-nverted-to.pdf Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular.eps)...executed safel
-y (allowed).
+(epstopdf)             \includegraphics on input line 263.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular
--eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:53
-(epstopdf)                    size: 9165 bytes.
-
-<Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=413, 479.7
+<Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=461, 479.7
 925pt x 386.44376pt>
 File: Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular-eps-convert
-ed-to.pdf used on input line 177.
+ed-to.pdf used on input line 263.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [12 <./Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> 
-<./Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_
-ECS_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_ECS
-_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 270--283
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <
+./Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_E
+CS_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_ECS_
+Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Exper
 imental.eps>
 (epstopdf)                    date: 2018-07-03 11:50:09
 (epstopdf)                    size: 148111 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Exper
 imental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:54
+(epstopdf)                    size: 50097 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 Prediction_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_Predicti
 on_Experimental.eps>
-(epstopdf)             \includegraphics on input line 186.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental
--eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps)...
-executed safely (allowed).
+(epstopdf)             \includegraphics on input line 293.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Exper
-imental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:54
-(epstopdf)                    size: 50097 bytes.
-
-<Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=452
+<Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=502
 , 471.7625pt x 400.49625pt>
 File: Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-
-converted-to.pdf used on input line 186.
+converted-to.pdf used on input line 293.
 (pdftex.def)             Requested size: 230.18253pt x 195.41377pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_VI_Experimental.
 eps>
@@ -1806,27 +1817,22 @@ eps>
 (epstopdf)                    size: 30226 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_LR_VI_Experimental-
 eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:54
+(epstopdf)                    size: 9657 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 VI_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_VI_Experimental.
 eps>
-(epstopdf)             \includegraphics on input line 187.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-con
-verted-to.pdf Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps)...executed safely 
-(allowed).
+(epstopdf)             \includegraphics on input line 294.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_LR_VI_Experimental-
-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:54
-(epstopdf)                    size: 9657 bytes.
-
-<Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=453, 479.79
+<Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=503, 479.79
 25pt x 386.44376pt>
 File: Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converte
-d-to.pdf used on input line 187.
+d-to.pdf used on input line 294.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_MARS_Prediction_Exp
 erimental.eps>
@@ -1834,27 +1840,22 @@ erimental.eps>
 (epstopdf)                    size: 148118 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_MARS_Prediction_Exp
 erimental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:55
+(epstopdf)                    size: 49967 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_MAR
 S_Prediction_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_MARS_Pred
 iction_Experimental.eps>
-(epstopdf)             \includegraphics on input line 188.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_MARS_Prediction_Experiment
-al-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental.eps
-)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 295.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_MARS_Prediction_Exp
-erimental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:55
-(epstopdf)                    size: 49967 bytes.
-
-<Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=4
-54, 471.7625pt x 400.49625pt>
+<Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=5
+04, 471.7625pt x 400.49625pt>
 File: Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental-ep
-s-converted-to.pdf used on input line 188.
+s-converted-to.pdf used on input line 295.
 (pdftex.def)             Requested size: 230.18253pt x 195.41377pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_MARS_VI_Experimenta
 l.eps>
@@ -1862,51 +1863,54 @@ l.eps>
 (epstopdf)                    size: 29089 bytes
 (epstopdf)             Output file: <Figures/K_ECS_Mean_QoI_MARS_VI_Experimenta
 l-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:55
+(epstopdf)                    size: 9171 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_MAR
 S_VI_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_MARS_VI_Experimen
 tal.eps>
-(epstopdf)             \includegraphics on input line 189.
-runsystem(repstopdf --outfile=Figures/K_ECS_Mean_QoI_MARS_VI_Experimental-eps-c
-onverted-to.pdf Figures/K_ECS_Mean_QoI_MARS_VI_Experimental.eps)...executed saf
-ely (allowed).
+(epstopdf)             \includegraphics on input line 296.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_ECS_Mean_QoI_MARS_VI_Experimenta
-l-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:55
-(epstopdf)                    size: 9171 bytes.
-
-<Figures/K_ECS_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=455, 479.
+<Figures/K_ECS_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=505, 479.
 7925pt x 386.44376pt>
 File: Figures/K_ECS_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf Graphic 
 file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_MARS_VI_Experimental-eps-conver
-ted-to.pdf used on input line 189.
+ted-to.pdf used on input line 296.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [13 <./Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
- <./Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/
-K_ECS_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_
-ECS_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 304--317
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13 <./Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> 
+<./Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K
+_ECS_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_E
+CS_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 193.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 193.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 193.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 193.
+(hyperref)                removing `\hbox' on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 193.
+(hyperref)                removing `\mathsurround' on input line 322.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 322.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 322.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 322.
 
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_LR_Prediction_Rectang
 ular.eps>
@@ -1914,27 +1918,22 @@ ular.eps>
 (epstopdf)                    size: 225216 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_LR_Prediction_Rectang
 ular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:56
+(epstopdf)                    size: 72194 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_LR_Pr
 ediction_Rectangular-eps-converted-to.pdf Figures/K_AC_Max_QoI_LR_Prediction_Re
 ctangular.eps>
-(epstopdf)             \includegraphics on input line 199.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-ep
-s-converted-to.pdf Figures/K_AC_Max_QoI_LR_Prediction_Rectangular.eps)...execut
-ed safely (allowed).
+(epstopdf)             \includegraphics on input line 328.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_LR_Prediction_Rectang
-ular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:56
-(epstopdf)                    size: 72194 bytes.
-
-<Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=497, 4
+<Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=547, 4
 77.785pt x 403.5075pt>
 File: Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Graph
 ic file (type pdf)
 
 <use Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-con
-verted-to.pdf used on input line 199.
+verted-to.pdf used on input line 328.
 (pdftex.def)             Requested size: 230.18253pt x 194.39561pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_LR_VI_Rectangular.eps
 >
@@ -1942,26 +1941,21 @@ Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_LR_VI_Rectangular.eps
 (epstopdf)                    size: 29904 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps
 -converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:56
+(epstopdf)                    size: 9661 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_LR_VI
 _Rectangular-eps-converted-to.pdf Figures/K_AC_Max_QoI_LR_VI_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 200.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-conver
-ted-to.pdf Figures/K_AC_Max_QoI_LR_VI_Rectangular.eps)...executed safely (allow
-ed).
+(epstopdf)             \includegraphics on input line 329.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps
--converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:56
-(epstopdf)                    size: 9661 bytes.
-
-<Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=498, 479.7925p
+<Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=548, 479.7925p
 t x 386.44376pt>
 File: Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic file 
 (type pdf)
 
 <use Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-t
-o.pdf used on input line 200.
+o.pdf used on input line 329.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_MARS_Prediction_Recta
 ngular.eps>
@@ -1969,27 +1963,22 @@ ngular.eps>
 (epstopdf)                    size: 225212 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_MARS_Prediction_Recta
 ngular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:57
+(epstopdf)                    size: 72357 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_
 Prediction_Rectangular-eps-converted-to.pdf Figures/K_AC_Max_QoI_MARS_Predictio
 n_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 201.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular-
-eps-converted-to.pdf Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular.eps)...ex
-ecuted safely (allowed).
+(epstopdf)             \includegraphics on input line 330.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_MARS_Prediction_Recta
-ngular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:57
-(epstopdf)                    size: 72357 bytes.
-
-<Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=499,
+<Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=549,
  477.785pt x 403.5075pt>
 File: Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular-eps-c
-onverted-to.pdf used on input line 201.
+onverted-to.pdf used on input line 330.
 (pdftex.def)             Requested size: 230.18253pt x 194.39561pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_MARS_VI_Rectangular.e
 ps>
@@ -1997,59 +1986,57 @@ ps>
 (epstopdf)                    size: 29360 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_MARS_VI_Rectangular-e
 ps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:57
+(epstopdf)                    size: 9187 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_
 VI_Rectangular-eps-converted-to.pdf Figures/K_AC_Max_QoI_MARS_VI_Rectangular.ep
 s>
-(epstopdf)             \includegraphics on input line 202.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_VI_Rectangular-eps-conv
-erted-to.pdf Figures/K_AC_Max_QoI_MARS_VI_Rectangular.eps)...executed safely (a
-llowed).
+(epstopdf)             \includegraphics on input line 331.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_MARS_VI_Rectangular-e
-ps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:57
-(epstopdf)                    size: 9187 bytes.
-
-<Figures/K_AC_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=500, 479.792
+<Figures/K_AC_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=550, 479.792
 5pt x 386.44376pt>
 File: Figures/K_AC_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/K_AC_Max_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_MARS_VI_Rectangular-eps-converted
--to.pdf used on input line 202.
+-to.pdf used on input line 331.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [14 <./Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <.
-/Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_M
-ax_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_Max_Qo
-I_MARS_VI_Rectangular-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 338--351
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./Figures/K_AC_Max_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <./
+Figures/K_AC_Max_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_Ma
+x_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_Max_QoI
+_MARS_VI_Rectangular-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_LR_Prediction_Experim
 ental.eps>
 (epstopdf)                    date: 2018-07-03 11:41:34
 (epstopdf)                    size: 151518 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_LR_Prediction_Experim
 ental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:58
+(epstopdf)                    size: 51186 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_LR_Pr
 ediction_Experimental-eps-converted-to.pdf Figures/K_AC_Max_QoI_LR_Prediction_E
 xperimental.eps>
-(epstopdf)             \includegraphics on input line 211.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_LR_Prediction_Experimental-e
-ps-converted-to.pdf Figures/K_AC_Max_QoI_LR_Prediction_Experimental.eps)...exec
-uted safely (allowed).
+(epstopdf)             \includegraphics on input line 361.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_LR_Prediction_Experim
-ental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:58
-(epstopdf)                    size: 51186 bytes.
-
-<Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=539, 
+<Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=590, 
 478.78876pt x 402.50375pt>
 File: Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-co
-nverted-to.pdf used on input line 211.
+nverted-to.pdf used on input line 361.
 (pdftex.def)             Requested size: 230.18253pt x 193.50668pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_LR_VI_Experimental.ep
 s>
@@ -2057,27 +2044,22 @@ s>
 (epstopdf)                    size: 31030 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_LR_VI_Experimental-ep
 s-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:58
+(epstopdf)                    size: 9703 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_LR_VI
 _Experimental-eps-converted-to.pdf Figures/K_AC_Max_QoI_LR_VI_Experimental.eps>
 
-(epstopdf)             \includegraphics on input line 212.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-conve
-rted-to.pdf Figures/K_AC_Max_QoI_LR_VI_Experimental.eps)...executed safely (all
-owed).
+(epstopdf)             \includegraphics on input line 362.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_LR_VI_Experimental-ep
-s-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:58
-(epstopdf)                    size: 9703 bytes.
-
-<Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=540, 479.7925
+<Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=591, 479.7925
 pt x 386.44376pt>
 File: Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-
-to.pdf used on input line 212.
+to.pdf used on input line 362.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_MARS_Prediction_Exper
 imental.eps>
@@ -2085,27 +2067,22 @@ imental.eps>
 (epstopdf)                    size: 151507 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_MARS_Prediction_Exper
 imental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:59
+(epstopdf)                    size: 51080 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_
 Prediction_Experimental-eps-converted-to.pdf Figures/K_AC_Max_QoI_MARS_Predicti
 on_Experimental.eps>
-(epstopdf)             \includegraphics on input line 213.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_Prediction_Experimental
--eps-converted-to.pdf Figures/K_AC_Max_QoI_MARS_Prediction_Experimental.eps)...
-executed safely (allowed).
+(epstopdf)             \includegraphics on input line 363.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_MARS_Prediction_Exper
-imental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:59
-(epstopdf)                    size: 51080 bytes.
-
-<Figures/K_AC_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=541
+<Figures/K_AC_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=592
 , 478.78876pt x 402.50375pt>
 File: Figures/K_AC_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/K_AC_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_MARS_Prediction_Experimental-eps-
-converted-to.pdf used on input line 213.
+converted-to.pdf used on input line 363.
 (pdftex.def)             Requested size: 230.18253pt x 193.50668pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Max_QoI_MARS_VI_Experimental.
 eps>
@@ -2113,51 +2090,54 @@ eps>
 (epstopdf)                    size: 29083 bytes
 (epstopdf)             Output file: <Figures/K_AC_Max_QoI_MARS_VI_Experimental-
 eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:15:59
+(epstopdf)                    size: 9163 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_
 VI_Experimental-eps-converted-to.pdf Figures/K_AC_Max_QoI_MARS_VI_Experimental.
 eps>
-(epstopdf)             \includegraphics on input line 214.
-runsystem(repstopdf --outfile=Figures/K_AC_Max_QoI_MARS_VI_Experimental-eps-con
-verted-to.pdf Figures/K_AC_Max_QoI_MARS_VI_Experimental.eps)...executed safely 
-(allowed).
+(epstopdf)             \includegraphics on input line 364.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Max_QoI_MARS_VI_Experimental-
-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:15:59
-(epstopdf)                    size: 9163 bytes.
-
-<Figures/K_AC_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=542, 479.79
+<Figures/K_AC_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=593, 479.79
 25pt x 386.44376pt>
 File: Figures/K_AC_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/K_AC_Max_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Max_QoI_MARS_VI_Experimental-eps-converte
-d-to.pdf used on input line 214.
+d-to.pdf used on input line 364.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [15 <./Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> <
-./Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K_AC
-_Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_AC_Max
-_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 371--384
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./Figures/K_AC_Max_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> <.
+/Figures/K_AC_Max_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K_AC_
+Max_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_AC_Max_
+QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 218.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 218.
+(hyperref)                removing `\hbox' on input line 389.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 218.
+(hyperref)                removing `\mathsurround' on input line 389.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 389.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 389.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 389.
 
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_LR_Prediction_Rectan
 gular.eps>
@@ -2165,27 +2145,22 @@ gular.eps>
 (epstopdf)                    size: 224614 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_LR_Prediction_Rectan
 gular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:00
+(epstopdf)                    size: 72467 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_P
 rediction_Rectangular-eps-converted-to.pdf Figures/K_AC_Mean_QoI_LR_Prediction_
 Rectangular.eps>
-(epstopdf)             \includegraphics on input line 224.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-e
-ps-converted-to.pdf Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular.eps)...exec
-uted safely (allowed).
+(epstopdf)             \includegraphics on input line 395.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_LR_Prediction_Rectan
-gular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:00
-(epstopdf)                    size: 72467 bytes.
-
-<Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=582, 
+<Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=635, 
 476.78125pt x 402.50375pt>
 File: Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-co
-nverted-to.pdf used on input line 224.
+nverted-to.pdf used on input line 395.
 (pdftex.def)             Requested size: 230.18253pt x 194.32353pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_LR_VI_Rectangular.ep
 s>
@@ -2193,27 +2168,22 @@ s>
 (epstopdf)                    size: 30236 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_LR_VI_Rectangular-ep
 s-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:01
+(epstopdf)                    size: 9828 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_V
 I_Rectangular-eps-converted-to.pdf Figures/K_AC_Mean_QoI_LR_VI_Rectangular.eps>
 
-(epstopdf)             \includegraphics on input line 225.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-conve
-rted-to.pdf Figures/K_AC_Mean_QoI_LR_VI_Rectangular.eps)...executed safely (all
-owed).
+(epstopdf)             \includegraphics on input line 396.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_LR_VI_Rectangular-ep
-s-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:01
-(epstopdf)                    size: 9828 bytes.
-
-<Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=583, 479.7925
+<Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=636, 479.7925
 pt x 386.44376pt>
 File: Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-
-to.pdf used on input line 225.
+to.pdf used on input line 396.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_MARS_Prediction_Rect
 angular.eps>
@@ -2221,27 +2191,22 @@ angular.eps>
 (epstopdf)                    size: 224603 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_MARS_Prediction_Rect
 angular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:01
+(epstopdf)                    size: 72429 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS
 _Prediction_Rectangular-eps-converted-to.pdf Figures/K_AC_Mean_QoI_MARS_Predict
 ion_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 226.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular
--eps-converted-to.pdf Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular.eps)...
-executed safely (allowed).
+(epstopdf)             \includegraphics on input line 397.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_MARS_Prediction_Rect
-angular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:01
-(epstopdf)                    size: 72429 bytes.
-
-<Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=584
+<Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=637
 , 476.78125pt x 402.50375pt>
 File: Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular-eps-
-converted-to.pdf used on input line 226.
+converted-to.pdf used on input line 397.
 (pdftex.def)             Requested size: 230.18253pt x 194.32353pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_MARS_VI_Rectangular.
 eps>
@@ -2249,59 +2214,57 @@ eps>
 (epstopdf)                    size: 29603 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-
 eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:02
+(epstopdf)                    size: 9195 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS
 _VI_Rectangular-eps-converted-to.pdf Figures/K_AC_Mean_QoI_MARS_VI_Rectangular.
 eps>
-(epstopdf)             \includegraphics on input line 227.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-eps-con
-verted-to.pdf Figures/K_AC_Mean_QoI_MARS_VI_Rectangular.eps)...executed safely 
-(allowed).
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-
-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:02
-(epstopdf)                    size: 9195 bytes.
-
-<Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=585, 479.79
+<Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=638, 479.79
 25pt x 386.44376pt>
 File: Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_MARS_VI_Rectangular-eps-converte
-d-to.pdf used on input line 227.
+d-to.pdf used on input line 398.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [16 <./Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <
-./Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_AC
-_Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_Mea
-n_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 405--418
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16 <./Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <.
+/Figures/K_AC_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_
+Mean_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/K_AC_Mean
+_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_LR_Prediction_Experi
 mental.eps>
 (epstopdf)                    date: 2018-07-03 11:44:47
 (epstopdf)                    size: 152018 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_LR_Prediction_Experi
 mental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:02
+(epstopdf)                    size: 51109 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_P
 rediction_Experimental-eps-converted-to.pdf Figures/K_AC_Mean_QoI_LR_Prediction
 _Experimental.eps>
-(epstopdf)             \includegraphics on input line 236.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-
-eps-converted-to.pdf Figures/K_AC_Mean_QoI_LR_Prediction_Experimental.eps)...ex
-ecuted safely (allowed).
+(epstopdf)             \includegraphics on input line 428.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_LR_Prediction_Experi
-mental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:02
-(epstopdf)                    size: 51109 bytes.
-
-<Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=625,
+<Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=678,
  474.77374pt x 403.5075pt>
 File: Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-c
-onverted-to.pdf used on input line 236.
+onverted-to.pdf used on input line 428.
 (pdftex.def)             Requested size: 230.18253pt x 195.63318pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_LR_VI_Experimental.e
 ps>
@@ -2309,27 +2272,22 @@ ps>
 (epstopdf)                    size: 30223 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_LR_VI_Experimental-e
 ps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:03
+(epstopdf)                    size: 9851 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_V
 I_Experimental-eps-converted-to.pdf Figures/K_AC_Mean_QoI_LR_VI_Experimental.ep
 s>
-(epstopdf)             \includegraphics on input line 237.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-conv
-erted-to.pdf Figures/K_AC_Mean_QoI_LR_VI_Experimental.eps)...executed safely (a
-llowed).
+(epstopdf)             \includegraphics on input line 429.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_LR_VI_Experimental-e
-ps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:03
-(epstopdf)                    size: 9851 bytes.
-
-<Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=626, 479.792
+<Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=679, 479.792
 5pt x 386.44376pt>
 File: Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted
--to.pdf used on input line 237.
+-to.pdf used on input line 429.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_MARS_Prediction_Expe
 rimental.eps>
@@ -2337,27 +2295,22 @@ rimental.eps>
 (epstopdf)                    size: 152018 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_MARS_Prediction_Expe
 rimental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:03
+(epstopdf)                    size: 51237 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS
 _Prediction_Experimental-eps-converted-to.pdf Figures/K_AC_Mean_QoI_MARS_Predic
 tion_Experimental.eps>
-(epstopdf)             \includegraphics on input line 238.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS_Prediction_Experimenta
-l-eps-converted-to.pdf Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental.eps).
-..executed safely (allowed).
+(epstopdf)             \includegraphics on input line 430.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_MARS_Prediction_Expe
-rimental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:03
-(epstopdf)                    size: 51237 bytes.
-
-<Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=62
-7, 474.77374pt x 403.5075pt>
+<Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=68
+0, 474.77374pt x 403.5075pt>
 File: Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental-eps
--converted-to.pdf used on input line 238.
+-converted-to.pdf used on input line 430.
 (pdftex.def)             Requested size: 230.18253pt x 195.63318pt.
 Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_MARS_VI_Experimental
 .eps>
@@ -2365,51 +2318,54 @@ Package epstopdf Info: Source file: <Figures/K_AC_Mean_QoI_MARS_VI_Experimental
 (epstopdf)                    size: 29604 bytes
 (epstopdf)             Output file: <Figures/K_AC_Mean_QoI_MARS_VI_Experimental
 -eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:04
+(epstopdf)                    size: 9197 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS
 _VI_Experimental-eps-converted-to.pdf Figures/K_AC_Mean_QoI_MARS_VI_Experimenta
 l.eps>
-(epstopdf)             \includegraphics on input line 239.
-runsystem(repstopdf --outfile=Figures/K_AC_Mean_QoI_MARS_VI_Experimental-eps-co
-nverted-to.pdf Figures/K_AC_Mean_QoI_MARS_VI_Experimental.eps)...executed safel
-y (allowed).
+(epstopdf)             \includegraphics on input line 431.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/K_AC_Mean_QoI_MARS_VI_Experimental
--eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:04
-(epstopdf)                    size: 9197 bytes.
-
-<Figures/K_AC_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=628, 479.7
+<Figures/K_AC_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=681, 479.7
 925pt x 386.44376pt>
 File: Figures/K_AC_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/K_AC_Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_AC_Mean_QoI_MARS_VI_Experimental-eps-convert
-ed-to.pdf used on input line 239.
+ed-to.pdf used on input line 431.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [17 <./Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> 
-<./Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K_
-AC_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_AC_
-Mean_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 438--451
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./Figures/K_AC_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> <
+./Figures/K_AC_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/K_A
+C_Mean_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/K_AC_M
+ean_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 243.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 243.
+(hyperref)                removing `\hbox' on input line 456.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 243.
+(hyperref)                removing `\mathsurround' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 456.
 
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Recta
 ngular.eps>
@@ -2417,27 +2373,22 @@ ngular.eps>
 (epstopdf)                    size: 223380 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Recta
 ngular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:04
+(epstopdf)                    size: 71743 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 Prediction_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_Predictio
 n_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 249.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-
-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps)...ex
-ecuted safely (allowed).
+(epstopdf)             \includegraphics on input line 462.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Recta
-ngular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:04
-(epstopdf)                    size: 71743 bytes.
-
-<Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=668,
+<Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=722,
  474.77374pt x 400.49625pt>
 File: Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-c
-onverted-to.pdf used on input line 249.
+onverted-to.pdf used on input line 462.
 (pdftex.def)             Requested size: 230.18253pt x 194.17322pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.e
 ps>
@@ -2445,27 +2396,22 @@ ps>
 (epstopdf)                    size: 31203 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-e
 ps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:05
+(epstopdf)                    size: 9661 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 VI_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.ep
 s>
-(epstopdf)             \includegraphics on input line 250.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-conv
-erted-to.pdf Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps)...executed safely (a
-llowed).
+(epstopdf)             \includegraphics on input line 463.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-e
-ps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:05
-(epstopdf)                    size: 9661 bytes.
-
-<Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=669, 479.792
+<Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=723, 479.792
 5pt x 386.44376pt>
 File: Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted
--to.pdf used on input line 250.
+-to.pdf used on input line 463.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_MARS_Prediction_Rec
 tangular.eps>
@@ -2473,27 +2419,22 @@ tangular.eps>
 (epstopdf)                    size: 223396 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_MARS_Prediction_Rec
 tangular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:05
+(epstopdf)                    size: 71571 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_MAR
 S_Prediction_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_MARS_Predi
 ction_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 251.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangula
-r-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular.eps).
-..executed safely (allowed).
+(epstopdf)             \includegraphics on input line 464.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_MARS_Prediction_Rec
-tangular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:05
-(epstopdf)                    size: 71571 bytes.
-
-<Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=67
-0, 474.77374pt x 400.49625pt>
+<Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, id=72
+4, 474.77374pt x 400.49625pt>
 File: Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular-eps
--converted-to.pdf used on input line 251.
+-converted-to.pdf used on input line 464.
 (pdftex.def)             Requested size: 230.18253pt x 194.17322pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular
 .eps>
@@ -2501,59 +2442,57 @@ Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular
 (epstopdf)                    size: 29612 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular
 -eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:06
+(epstopdf)                    size: 9193 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_MAR
 S_VI_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_MARS_VI_Rectangula
 r.eps>
-(epstopdf)             \includegraphics on input line 252.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular-eps-co
-nverted-to.pdf Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular.eps)...executed safel
-y (allowed).
+(epstopdf)             \includegraphics on input line 465.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular
--eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:06
-(epstopdf)                    size: 9193 bytes.
-
-<Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=671, 479.7
+<Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=725, 479.7
 925pt x 386.44376pt>
 File: Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular-eps-convert
-ed-to.pdf used on input line 252.
+ed-to.pdf used on input line 465.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [18 <./Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> 
-<./Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/AM
-_AMp_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/AM_AM
-p_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 473--486
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18 <./Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <
+./Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/AM_
+AMp_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf> <./Figures/AM_AMp
+_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Exper
 imental.eps>
 (epstopdf)                    date: 2018-07-03 11:34:10
 (epstopdf)                    size: 148045 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Exper
 imental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:06
+(epstopdf)                    size: 49861 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 Prediction_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_Predicti
 on_Experimental.eps>
-(epstopdf)             \includegraphics on input line 261.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental
--eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps)...
-executed safely (allowed).
+(epstopdf)             \includegraphics on input line 496.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Exper
-imental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:06
-(epstopdf)                    size: 49861 bytes.
-
-<Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=710
+<Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=766
 , 474.77374pt x 400.49625pt>
 File: Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-
-converted-to.pdf used on input line 261.
+converted-to.pdf used on input line 496.
 (pdftex.def)             Requested size: 230.18253pt x 194.17322pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_VI_Experimental.
 eps>
@@ -2561,27 +2500,22 @@ eps>
 (epstopdf)                    size: 29457 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_LR_VI_Experimental-
 eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:07
+(epstopdf)                    size: 9668 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 VI_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_VI_Experimental.
 eps>
-(epstopdf)             \includegraphics on input line 262.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-con
-verted-to.pdf Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps)...executed safely 
-(allowed).
+(epstopdf)             \includegraphics on input line 497.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_LR_VI_Experimental-
-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:07
-(epstopdf)                    size: 9668 bytes.
-
-<Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=711, 479.79
+<Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=767, 479.79
 25pt x 386.44376pt>
 File: Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converte
-d-to.pdf used on input line 262.
+d-to.pdf used on input line 497.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_MARS_Prediction_Exp
 erimental.eps>
@@ -2589,27 +2523,22 @@ erimental.eps>
 (epstopdf)                    size: 148037 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_MARS_Prediction_Exp
 erimental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:07
+(epstopdf)                    size: 49876 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_MAR
 S_Prediction_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_MARS_Pred
 iction_Experimental.eps>
-(epstopdf)             \includegraphics on input line 263.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_MARS_Prediction_Experiment
-al-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental.eps
-)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_MARS_Prediction_Exp
-erimental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:07
-(epstopdf)                    size: 49876 bytes.
+(epstopdf)             \includegraphics on input line 498.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf, id=7
-12, 474.77374pt x 400.49625pt>
+68, 474.77374pt x 400.49625pt>
 File: Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental-ep
-s-converted-to.pdf used on input line 263.
+s-converted-to.pdf used on input line 498.
 (pdftex.def)             Requested size: 230.18253pt x 194.17322pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_MARS_VI_Experimenta
 l.eps>
@@ -2617,51 +2546,54 @@ l.eps>
 (epstopdf)                    size: 29892 bytes
 (epstopdf)             Output file: <Figures/AM_AMp_Min_QoI_MARS_VI_Experimenta
 l-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:08
+(epstopdf)                    size: 9221 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_MAR
 S_VI_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_MARS_VI_Experimen
 tal.eps>
-(epstopdf)             \includegraphics on input line 264.
-runsystem(repstopdf --outfile=Figures/AM_AMp_Min_QoI_MARS_VI_Experimental-eps-c
-onverted-to.pdf Figures/AM_AMp_Min_QoI_MARS_VI_Experimental.eps)...executed saf
-ely (allowed).
+(epstopdf)             \includegraphics on input line 499.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AM_AMp_Min_QoI_MARS_VI_Experimenta
-l-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:08
-(epstopdf)                    size: 9221 bytes.
-
-<Figures/AM_AMp_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=713, 479.
+<Figures/AM_AMp_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=769, 479.
 7925pt x 386.44376pt>
 File: Figures/AM_AMp_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf Graphic 
 file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_MARS_VI_Experimental-eps-conver
-ted-to.pdf used on input line 264.
+ted-to.pdf used on input line 499.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
- [19 <./Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
- <./Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/
-AM_AMp_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/AM
-_AMp_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
+
+Overfull \hbox (33.60014pt too wide) in paragraph at lines 506--519
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19 <./Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf> 
+<./Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf> <./Figures/A
+M_AMp_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf> <./Figures/AM_
+AMp_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 268.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 268.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 268.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 268.
+(hyperref)                removing `\hbox' on input line 524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 268.
+(hyperref)                removing `\mathsurround' on input line 524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 524.
 
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_LR_Prediction_
 Rectangular.eps>
@@ -2669,28 +2601,23 @@ Rectangular.eps>
 (epstopdf)                    size: 223095 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_LR_Prediction_
 Rectangular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:08
+(epstopdf)                    size: 63584 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_LR_Prediction_Rectangular-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR
 _Prediction_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 274.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectang
-ular-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular
-.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_LR_Prediction_
-Rectangular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:08
-(epstopdf)                    size: 63584 bytes.
+(epstopdf)             \includegraphics on input line 530.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id
-=755, 472.76625pt x 400.49625pt>
+=811, 472.76625pt x 400.49625pt>
 File: Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf
 >
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular-
-eps-converted-to.pdf used on input line 274.
+eps-converted-to.pdf used on input line 530.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangu
 lar.eps>
@@ -2698,27 +2625,22 @@ lar.eps>
 (epstopdf)                    size: 31224 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangu
 lar-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:09
+(epstopdf)                    size: 9714 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_LR_VI_Rectangular-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR_VI_Rect
 angular.eps>
-(epstopdf)             \includegraphics on input line 275.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular-eps
--converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular.eps)...executed
- safely (allowed).
+(epstopdf)             \includegraphics on input line 531.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangu
-lar-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:09
-(epstopdf)                    size: 9714 bytes.
-
-<Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=756, 47
+<Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=812, 47
 9.7925pt x 386.44376pt>
 File: Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular-eps-conv
-erted-to.pdf used on input line 275.
+erted-to.pdf used on input line 531.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_MARS_Predictio
 n_Rectangular.eps>
@@ -2726,28 +2648,23 @@ n_Rectangular.eps>
 (epstopdf)                    size: 223068 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_MARS_Predictio
 n_Rectangular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:09
+(epstopdf)                    size: 63295 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_MARS_Prediction_Rectangular-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_
 MARS_Prediction_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 276.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Recta
-ngular-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectang
-ular.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_MARS_Predictio
-n_Rectangular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:09
-(epstopdf)                    size: 63295 bytes.
+(epstopdf)             \includegraphics on input line 532.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.pdf, 
-id=757, 472.76625pt x 400.49625pt>
+id=813, 472.76625pt x 400.49625pt>
 File: Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.
 pdf Graphic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectangular-eps-converted-to.p
 df>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectangula
-r-eps-converted-to.pdf used on input line 276.
+r-eps-converted-to.pdf used on input line 532.
 (pdftex.def)             Requested size: 230.18253pt x 194.99821pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectan
 gular.eps>
@@ -2755,27 +2672,22 @@ gular.eps>
 (epstopdf)                    size: 30045 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectan
 gular-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:10
+(epstopdf)                    size: 9216 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_MARS_VI_Rectangular-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_MARS_VI_
 Rectangular.eps>
-(epstopdf)             \includegraphics on input line 277.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular-e
-ps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular.eps)...exec
-uted safely (allowed).
+(epstopdf)             \includegraphics on input line 533.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectan
-gular-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:10
-(epstopdf)                    size: 9216 bytes.
-
-<Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=758, 
+<Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf, id=814, 
 479.7925pt x 386.44376pt>
 File: Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular-eps-co
-nverted-to.pdf used on input line 277.
+nverted-to.pdf used on input line 533.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 
 [20 <./Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.p
@@ -2788,28 +2700,23 @@ Experimental.eps>
 (epstopdf)                    size: 150611 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_LR_Prediction_
 Experimental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:10
+(epstopdf)                    size: 46041 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_LR_Prediction_Experimental-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_L
 R_Prediction_Experimental.eps>
-(epstopdf)             \includegraphics on input line 286.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experim
-ental-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experiment
-al.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_LR_Prediction_
-Experimental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:10
-(epstopdf)                    size: 46041 bytes.
+(epstopdf)             \includegraphics on input line 544.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, i
-d=797, 471.7625pt x 400.49625pt>
+d=852, 471.7625pt x 400.49625pt>
 File: Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experimental-eps-converted-to.p
 df Graphic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pd
 f>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experimental
--eps-converted-to.pdf used on input line 286.
+-eps-converted-to.pdf used on input line 544.
 (pdftex.def)             Requested size: 230.18253pt x 195.41377pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_LR_VI_Experime
 ntal.eps>
@@ -2817,27 +2724,22 @@ ntal.eps>
 (epstopdf)                    size: 29462 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_LR_VI_Experime
 ntal-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:11
+(epstopdf)                    size: 9698 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_LR_VI_Experimental-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR_VI_Exp
 erimental.eps>
-(epstopdf)             \includegraphics on input line 287.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental-ep
-s-converted-to.pdf Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental.eps)...execut
-ed safely (allowed).
+(epstopdf)             \includegraphics on input line 545.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_LR_VI_Experime
-ntal-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:11
-(epstopdf)                    size: 9698 bytes.
-
-<Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=798, 4
+<Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=853, 4
 79.7925pt x 386.44376pt>
 File: Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf Graph
 ic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental-eps-con
-verted-to.pdf used on input line 287.
+verted-to.pdf used on input line 545.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_MARS_Predictio
 n_Experimental.eps>
@@ -2845,28 +2747,23 @@ n_Experimental.eps>
 (epstopdf)                    size: 150610 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_MARS_Predictio
 n_Experimental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:11
+(epstopdf)                    size: 45765 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_MARS_Prediction_Experimental-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI
 _MARS_Prediction_Experimental.eps>
-(epstopdf)             \includegraphics on input line 288.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Exper
-imental-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experi
-mental.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_MARS_Predictio
-n_Experimental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:11
-(epstopdf)                    size: 45765 bytes.
+(epstopdf)             \includegraphics on input line 546.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.pdf,
- id=799, 471.7625pt x 400.49625pt>
+ id=854, 471.7625pt x 400.49625pt>
 File: Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experimental-eps-converted-to
 .pdf Graphic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experimental-eps-converted-to.
 pdf>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experiment
-al-eps-converted-to.pdf used on input line 288.
+al-eps-converted-to.pdf used on input line 546.
 (pdftex.def)             Requested size: 230.18253pt x 195.41377pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_to_Min_QoI_MARS_VI_Experi
 mental.eps>
@@ -2874,27 +2771,22 @@ mental.eps>
 (epstopdf)                    size: 29076 bytes
 (epstopdf)             Output file: <Figures/AMp_Time_to_Min_QoI_MARS_VI_Experi
 mental-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-07-03 12:16:12
+(epstopdf)                    size: 9175 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_to_Min_Qo
 I_MARS_VI_Experimental-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_MARS_VI
 _Experimental.eps>
-(epstopdf)             \includegraphics on input line 289.
-runsystem(repstopdf --outfile=Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental-
-eps-converted-to.pdf Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental.eps)...ex
-ecuted safely (allowed).
+(epstopdf)             \includegraphics on input line 547.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <Figures/AMp_Time_to_Min_QoI_MARS_VI_Experi
-mental-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-03 12:16:12
-(epstopdf)                    size: 9175 bytes.
-
-<Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=800,
+<Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf, id=855,
  479.7925pt x 386.44376pt>
 File: Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental-eps-c
-onverted-to.pdf used on input line 289.
+onverted-to.pdf used on input line 547.
 (pdftex.def)             Requested size: 230.18253pt x 185.39655pt.
 
 (./NVU_UQ_paper_1.bbl [21 <./Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experime
@@ -2916,27 +2808,22 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
- (./NVU_UQ_paper_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 557.
+ [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 557.
 
-
-Package rerunfilecheck Warning: File `NVU_UQ_paper_1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `NVU_UQ_paper_1.out':
-(rerunfilecheck)             Before: E30A42C69892E68901AD01F3CDC842EF;1177
-(rerunfilecheck)             After:  536B459749E3C051CA1968452493DD13;2037.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
+(./NVU_UQ_paper_1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 557.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 557.
+Package rerunfilecheck Info: File `NVU_UQ_paper_1.out' has not changed.
+(rerunfilecheck)             Checksum: 536B459749E3C051CA1968452493DD13;2037.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 557.
  ) 
 Here is how much of TeX's memory you used:
- 36854 strings out of 493014
- 805933 string characters out of 6133351
- 961163 words of memory out of 5000000
- 39602 multiletter control sequences out of 15000+600000
+ 36904 strings out of 493014
+ 806700 string characters out of 6133351
+ 1033256 words of memory out of 5000000
+ 39628 multiletter control sequences out of 15000+600000
  16473 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,94p,1948b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3003,10 +2890,10 @@ texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on NVU_UQ_paper_1.pdf (25 pages, 1918809 bytes).
+Output written on NVU_UQ_paper_1.pdf (37 pages, 1937570 bytes).
 PDF statistics:
- 925 PDF objects out of 1000 (max. 8388607)
- 710 compressed objects within 8 object streams
- 117 named destinations out of 1000 (max. 500000)
- 445 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1036 PDF objects out of 1200 (max. 8388607)
+ 808 compressed objects within 9 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 525 words of extra memory for PDF output out of 10000 (max. 10000000)
 
