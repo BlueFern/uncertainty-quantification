@@ -110,7 +110,7 @@ We analyse 7 quantities of interest (QoIs) with respect to the 10 second square 
 We repeat analysis of the 7 QoI's listed above 
 
 \section{Results}
-This section contains numerical results for 14 QoI's, 7 using a square pulse stimulus and 7 using the experimental data stimulus. The section is organized into 7 subsection where each subsection contains 2 sub-subsections with the results using the square pulse stimulus and experimental data stimulus. For each case we report results using a linear regression and Multivariate Adaptive Regression Splines surrogate models. The predictive capabilities and variable importance metrics are given for each surrogate and the results are compared.
+This section contains numerical results for 14 QoI's, 7 using a square pulse stimulus and 7 using the experimental data stimulus. The section is organized into 7 subsection where each subsection contains 2 sub-subsections with the results using the square pulse stimulus and experimental data stimulus. For each case we report results using a linear regression to screen out unimportant variables followed by a Polynomial Chaos expansion (PCE) fit on the subset of variables which linear regression deemed as important. The normalized absolute value of linear regression coefficients and the PCE's Sobol' indices are given.
 
 \newpage
 
@@ -146,16 +146,6 @@ Index & Identification & Total Sobol' Index & LR Importance \\
 
 \subsubsection{Experimental Data Stimulus}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
-\end{figure}
-
-Tabular data in Table~\ref{qoi_vol_flow_ex}.
-
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
@@ -170,15 +160,135 @@ Index & Identification & Total Sobol' Index & LR Importance \\
 \label{qoi_vol_flow_ex}
 \end{table}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
+\end{figure}
+
+Tabular data in Table~\ref{qoi_vol_flow_ex}.
+
 \newpage
 
 \subsection{QoI \eqref{K_ECS_Max} ($K_{ECS}$ Max)}
 
+\newpage
+
 \subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_SI_Rectangular.eps}
+\end{figure}
+
+Tabular data in Table~\ref{K_ECS_Max_rec}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+Index & Identification & Total Sobol' Index & LR Importance \\
+61 & gKleak\_d in Neuron & 0.2517 & 0.0777\\
+62 & 0.143 in m4alpha and m4 beta & 0.2143 & 0.0684\\
+94 & 34.9 in m2alpha & 0.1600 & 0.0458\\
+63 & 5.67 in m4alpha and m4 beta & 0.1332 & 0.0539\\
+75 & 34.9 in m6alpha & 0.0823 & 0.0490\\
+\end{tabular}
+\caption{$K_{ECS}$ Max rectangular data stimulus}
+\label{K_ECS_Max_rec}
+\end{table}
+
+\newpage
 
 \subsubsection{Experimental Data Stimulus}
 
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+Index & Identification & Total Sobol' Index & LR Importance \\
+61 & gKleak\_d in Neuron &  0.3663 &0.0790\\
+94 & 34.9 in m2alpha & 0.1668 &0.0519\\
+98 & 1.25 in m2beta & 0.0717 &0.0320\\
+75 & 34.9 in m6alpha & 0.0654 &0.0355\\
+62 & 0.143 in m4alpha and m4 beta & 0.0548 &0.0317\\
+\end{tabular}
+\caption{$K_{ECS}$ Max experimental data stimulus}
+\label{K_ECS_Max_ex}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_SI_Experimental.eps}
+\end{figure}
+
+Tabular data in Table~\ref{K_ECS_Max_ex}.
+
+\newpage
+
 \subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
+
+\newpage
+
+\subsubsection{Rectangular Pulse Stimulus}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}
+\end{figure}
+
+Tabular data in Table~\ref{K_ECS_Mean_rec}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+Index & Identification & Total Sobol' Index & LR Importance \\
+62 & 0.143 in m4alpha and m4 beta &  0.3731 & 0.1019\\
+63 & 5.67 in m4alpha and m4 beta & 0.2455 & 0.0834\\
+61 & gKleak\_d in Neuron & 0.2036 & 0.0909\\
+75 & 34.9 in m6alpha & 0.1218 & 0.0626\\
+116 & dhod in Neuron &  0.0351 & 0.0312\\
+\end{tabular}
+\caption{$K_{ECS}$ Mean rectangular data stimulus}
+\label{K_ECS_Mean_rec}
+\end{table}
+
+\newpage
+
+\subsubsection{Experimental Data Stimulus}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+Index & Identification & Total Sobol' Index & LR Importance \\
+62 & 0.143 in m4alpha and m4 beta & 0.3671 & 0.0993\\
+61 & gKleak\_d in Neuron &  0.2489 & 0.0986\\
+63 & 5.67 in m4alpha and m4 beta & 0.2283 &  0.0723\\
+75 & 34.9 in m6alpha & 0.1076 & 0.0632\\
+116 & dhod in Neuron &  0.0255 & 0.0281\\
+\end{tabular}
+\caption{$K_{ECS}$ Mean experimental data stimulus}
+\label{K_ECS_Mean_ex}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
+\end{figure}
+
+Tabular data in Table~\ref{K_ECS_Mean_ex}.
 
 \subsubsection{Rectangular Pulse Stimulus}
 
