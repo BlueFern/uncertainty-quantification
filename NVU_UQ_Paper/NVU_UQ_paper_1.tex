@@ -77,40 +77,41 @@ some text here
 \subsection{Simulated Data}
 We use a square pulse of 10 seconds duration for stimulation such that the resulting output (after a substantial number of realizations) can be analysed in a formal manner. We assume that stimulation occurs for $t_1\le t \le t_2$.  
 \subsection{QoIs}
-We analyse 7 quantities of interest (QoIs) with respect to the 10 second square stimulation pulse. They are defined as follows.
+We analyse 3 quantities of interest (QoIs) with respect to the 10 second square stimulation pulse. They are defined as follows.
 \begin{enumerate}
+\item ECS potassium has a distinct effect on the flux into the Neuron. Hence we look at the average.
+\begin{eqnarray}
+%[K^+]_{max,ECS} \label{K_ECS_Max} \\
+ \frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{ECS}(s)ds \label{K_ECS_Mean}
+\end{eqnarray}
+
 \item As a representation of the volumetric flow rate in the cerebral tissue
 \begin{equation}
 \frac{1}{t_2-t_1}\int_{t_1}^{t_2}\left(\frac{R(s)}{R_0}\right)^4ds \label{vol_flow}
 \end{equation}
  
-\item ECS potassium has a distinct effect on the flux into the Neuron. Hence we look at the average and the maximum.
-\begin{eqnarray}
-[K^+]_{max,ECS} \label{K_ECS_Max} \\
- \frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{ECS}(s)ds \label{K_ECS_Mean}
-\end{eqnarray}
-\item ECS potassium has a distinct effect on the flux into the astrocyte. Hence we look at the average and the maximum.
-\begin{eqnarray}
-[K^+]_{max,AC} \label{K_AC_Max} \\
-\frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{AC}(s)ds \label{K_AC_Mean}
-\end{eqnarray}
+%\item ECS potassium has a distinct effect on the flux into the astrocyte. Hence we look at the average and the maximum.
+%\begin{eqnarray}
+%[K^+]_{max,AC} \label{K_AC_Max} \\
+%\frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{AC}(s)ds \label{K_AC_Mean}
+%\end{eqnarray}
 \item the combined concentration of the actin myosin complex, both phosphorylated and unphosphorylated, determines the effect stress due to the contraction for the smooth muscle cell. 
 \begin{eqnarray}
 [AM+AM_p]_{min} \label{AM_AMp_Min}
 \end{eqnarray}
 
-\item The phase lag between neuronal stimulation and the radius changed effects a number of markers. Notably the BOLD signal, hence we choose to investigate
- the time, $\tau$, to min value of $AM_p$
- \begin{eqnarray}
- \tau = t_{min}-t_1 \label{AMp_Time_to_Min}
- \end{eqnarray}
+%\item The phase lag between neuronal stimulation and the radius changed effects a number of markers. Notably the BOLD signal, hence we choose to investigate
+% the time, $\tau$, to min value of $AM_p$
+% \begin{eqnarray}
+% \tau = t_{min}-t_1 \label{AMp_Time_to_Min}
+% \end{eqnarray}
 \end{enumerate}
 
 \subsection{Experimental Data}
-We repeat analysis of the 7 QoI's listed above 
+We repeat analysis of the 3 QoI's listed above 
 
 \section{Results}
-This section contains numerical results for 14 QoI's, 7 using a square pulse stimulus and 7 using the experimental data stimulus. The section is organized into 7 subsection where each subsection contains 2 sub-subsections with the results using the square pulse stimulus and experimental data stimulus. For each case we report results using a linear regression to screen out unimportant variables followed by a Polynomial Chaos expansion (PCE) fit on the subset of variables which linear regression deemed as important. The normalized absolute value of linear regression coefficients and the PCE's Sobol' indices are given.
+This section contains numerical results for 6 QoI's, 3 using a square pulse stimulus and 3 using the experimental data stimulus. The section is organized into 3 subsection where each subsection contains 2 sub-subsections with the results using the square pulse stimulus and experimental data stimulus. For each case we report results using a linear regression to screen out unimportant variables followed by a Polynomial Chaos expansion (PCE) fit on the subset of variables which linear regression deemed as important. The normalized absolute value of linear regression coefficients and the PCE's Sobol' indices are given.
 
 Things we'll need to add:
 \begin{enumerate}
@@ -122,769 +123,122 @@ Things we'll need to add:
 \end{enumerate}
 
 \newpage
+\subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}\\
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
+\caption{Top row: results with a rectangular pulse stimulus; bottom row: results with experimental data stimulus. From left to right, linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\vspace{-.5 cm}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
+62 & 0.143 in m4alpha and m4 beta &  0.3744 & 0.3683\\
+63 & 5.67 in m4alpha and m4 beta & 0.2446 & 0.2307\\
+61 & gKleak\_d in Neuron & 0.2025 & 0.2485\\
+75 & 34.9 in m6alpha & 0.1217 & 0.1070\\
+116 & dhod in Neuron &  0.0348 & 0.0257\\
+\end{tabular}
+\caption{$K_{ECS}$ Mean}
+\vspace{-1.5 cm}
+\label{K_ECS_Mean}
+\end{table}
+
+\newpage
 
 \subsection{QoI \eqref{vol_flow} (volumetric flow rate)}
 
-\subsubsection{Rectangular Pulse Stimulus}
-
 \begin{figure}[h]
 \centering
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps}\\
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
+\caption{Top row: results with a rectangular pulse stimulus; bottom row: results with experimental data stimulus. From left to right, linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\vspace{-.5 cm}
 \end{figure}
-
-Tabular data in Table~\ref{qoi_vol_flow_rec}.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-141 &  z\_4 in SMCEC &  0.4372 & 0.1050\\
-158 & n\_cross in WallMechanics & 0.3057 & 0.0998\\
- 139 & z\_2 in SMCEC & 0.1271 & 0.0282\\
- 142 & z\_5 in SMCEC & 0.0350 & 0.0261\\
-  136 & G\_K\_i in SMCEC & 0.0301 & 0.0317\\
+Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
+141 &  z\_4 in SMCEC &  0.4353 & 0.4445\\
+158 & n\_cross in WallMechanics & 0.3045 & 0.3398\\
+ 139 & z\_2 in SMCEC & 0.1267 & 0.0478\\
+ 142 & z\_5 in SMCEC & 0.0347 & 0.0347\\
+  136 & G\_K\_i in SMCEC & 0.0302 & 0.0359\\
 \end{tabular}
-\caption{volumetric flow rate rectangular data stimulus}
-\label{qoi_vol_flow_rec}
+\caption{volumetric flow rate}
+\vspace{-1.5 cm}
+\label{qoi_vol_flow}
 \end{table}
-
-\newpage
-
-\subsubsection{Experimental Data Stimulus}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-141 &  z\_4 in SMCEC & 0.4490 & 0.0975\\
-158 & n\_cross in WallMechanics & 0.3374 & 0.1040\\
- 139 & z\_2 in SMCEC & 0.0480 & 0.0244\\
-   136 & G\_K\_i in SMCEC & 0.0359 & 0.0347\\
- 142 & z\_5 in SMCEC & 0.0348 & 0.0256\\
-\end{tabular}
-\caption{volumetric flow rate experimental data stimulus}
-\label{qoi_vol_flow_ex}
-\end{table}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
-\end{figure}
-
-Tabular data in Table~\ref{qoi_vol_flow_ex}.
-
-\newpage
-
-\subsection{QoI \eqref{K_ECS_Max} ($K_{ECS}$ Max)}
-
-\newpage
-
-\subsubsection{Rectangular Pulse Stimulus}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Rectangular.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_SI_Rectangular.eps}
-\end{figure}
-
-Tabular data in Table~\ref{K_ECS_Max_rec}.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-61 & gKleak\_d in Neuron & 0.2517 & 0.0777\\
-62 & 0.143 in m4alpha and m4 beta & 0.2143 & 0.0684\\
-94 & 34.9 in m2alpha & 0.1600 & 0.0458\\
-63 & 5.67 in m4alpha and m4 beta & 0.1332 & 0.0539\\
-75 & 34.9 in m6alpha & 0.0823 & 0.0490\\
-\end{tabular}
-\caption{$K_{ECS}$ Max rectangular data stimulus}
-\label{K_ECS_Max_rec}
-\end{table}
-
-\newpage
-
-\subsubsection{Experimental Data Stimulus}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-61 & gKleak\_d in Neuron &  0.3663 &0.0790\\
-94 & 34.9 in m2alpha & 0.1668 &0.0519\\
-98 & 1.25 in m2beta & 0.0717 &0.0320\\
-75 & 34.9 in m6alpha & 0.0654 &0.0355\\
-62 & 0.143 in m4alpha and m4 beta & 0.0548 &0.0317\\
-\end{tabular}
-\caption{$K_{ECS}$ Max experimental data stimulus}
-\label{K_ECS_Max_ex}
-\end{table}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Experimental.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_PCE_SI_Experimental.eps}
-\end{figure}
-
-Tabular data in Table~\ref{K_ECS_Max_ex}.
-
-\newpage
-
-\subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
-
-\newpage
-
-\subsubsection{Rectangular Pulse Stimulus}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}
-\end{figure}
-
-Tabular data in Table~\ref{K_ECS_Mean_rec}.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-62 & 0.143 in m4alpha and m4 beta &  0.3731 & 0.1019\\
-63 & 5.67 in m4alpha and m4 beta & 0.2455 & 0.0834\\
-61 & gKleak\_d in Neuron & 0.2036 & 0.0909\\
-75 & 34.9 in m6alpha & 0.1218 & 0.0626\\
-116 & dhod in Neuron &  0.0351 & 0.0312\\
-\end{tabular}
-\caption{$K_{ECS}$ Mean rectangular data stimulus}
-\label{K_ECS_Mean_rec}
-\end{table}
-
-\newpage
-
-\subsubsection{Experimental Data Stimulus}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-62 & 0.143 in m4alpha and m4 beta & 0.3671 & 0.0993\\
-61 & gKleak\_d in Neuron &  0.2489 & 0.0986\\
-63 & 5.67 in m4alpha and m4 beta & 0.2283 &  0.0723\\
-75 & 34.9 in m6alpha & 0.1076 & 0.0632\\
-116 & dhod in Neuron &  0.0255 & 0.0281\\
-\end{tabular}
-\caption{$K_{ECS}$ Mean experimental data stimulus}
-\label{K_ECS_Mean_ex}
-\end{table}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
-\end{figure}
-
-Tabular data in Table~\ref{K_ECS_Mean_ex}.
-
-\subsubsection{Rectangular Pulse Stimulus}
-
-\subsubsection{Experimental Data Stimulus}
-
-\subsection{QoI \eqref{K_AC_Max} ($K_{AC}$ Max)}
-
-\subsubsection{Rectangular Pulse Stimulus}
-
-\subsubsection{Experimental Data Stimulus}
-
-\subsection{QoI \eqref{K_AC_Mean}($K_{AC}$ Mean)}
-
-\subsubsection{Rectangular Pulse Stimulus}
-
-\subsubsection{Experimental Data Stimulus}
 
 \newpage
 \subsection{QoI \eqref{AM_AMp_Min} ($AM+AM_p$ Min)}
 
-\subsubsection{Rectangular Pulse Stimulus}
-
 \begin{figure}[h]
 \centering
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.eps}\\
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Experimental.eps}
+\caption{Top row: results with a rectangular pulse stimulus; bottom row: results with experimental data stimulus. From left to right, linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\vspace{-.5 cm}
 \end{figure}
-
-Tabular data in Table~\ref{qoi_AM_AMp_Min_rec}.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-141 & z\_4 in SMCEC & 0.7133 & 0.1191\\
-139 &  z\_2 in SMCEC & 0.1681 & 0.0386\\
-142 & z\_5 in SMCEC & 0.0574 & 0.0331\\
-158 & n\_cross in WallMechanics & 0.0467 & 0.0675\\
-140 & z\_3 in SMCEC & 0.0190 & 0.0215\\
+Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
+141 & z\_4 in SMCEC & 0.7095 & 0.6485\\
+139 &  z\_2 in SMCEC & 0.1681 & 0.1465\\
+142 & z\_5 in SMCEC & 0.0569 & 0.0341\\
+158 & n\_cross in WallMechanics & 0.0463 & 0.0645\\
+140 & z\_3 in SMCEC & 0.0189 & 0.0463\\
 \end{tabular}
-\caption{$AM+AM_p$ Min rectangular data stimulus}
-\label{qoi_AM_AMp_Min_rec}
+\caption{$AM+AM_p$ Min}
+\vspace{-1.5 cm}
+\label{qoi_AM_AMp_Min}
 \end{table}
 
 \newpage
-
-\subsubsection{Experimental Data Stimulus}
+\subsection{$AM_p$ Time Lag}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Curves.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_Lag_Histogram.eps}
+\caption{$AM_p$ curves on the left and a histogram of the time lags on the right.}
 \end{figure}
 
-Tabular data in Table~\ref{qoi_AM_AMp_Min_ex}.
-  
-\begin{table}[h]
+\subsection{Radius Time Lag}
+
+\begin{figure}[h]
 \centering
-\begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index & LR Importance \\
-141 & z\_4 in SMCEC & 0.6488 & 0.1101\\
-139 &  z\_2 in SMCEC & 0.1456 & 0.0362\\
-158 & n\_cross in WallMechanics &  0.0641 & 0.0582\\
-140 & z\_3 in SMCEC & 0.0462 & 0.0206\\
-137 & F\_KIR\_i in SMCEC & 0.0384 & 0.0177\\
-\end{tabular}
-\caption{$AM+AM_p$ Min experimental data stimulus}
-\label{qoi_AM_AMp_Min_ex}
-\end{table}
+\includegraphics[width=.49 \textwidth]{Figures/Radius_Curves.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Radius_Time_Lag_Histogram.eps}
+\caption{Radius curves on the left and a histogram of the time lags on the right.}
+\end{figure}
 
-\newpage
-\subsection{QoI \eqref{AMp_Time_to_Min} ($AM_p$ Time Lag)}
-
-\subsubsection{Rectangular Pulse Stimulus}
-
-
-\subsubsection{Experimental Data Stimulus}
-
-
-%\subsection{QoI \eqref{vol_flow} (volumetric flow rate)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 7.2813\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.1360
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_vol_flow_rec}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%   120 & 5.5 in Buff\_e ODE & 0.1755 & 0.0612 & 3\\
-%   141 & z\_4 in SMCEC &  0.0955 & 0.3226 & 1\\
-%   158 & n\_cross in WallMechanics & 0.0903 & 0.2854 & 2\\
-%   121 & 1.09 in Buff\_e ODE & 0.0552 & 0.0311 & 7\\
-%   139 & z\_2 in SMCEC & 0.0326 & 0.0495 & 4\\
-%   136 & G\_K\_i in SMCEC & 0.0313 & 0.0412 & 6\\
-%   142 & z\_5 in SMCEC & 0.0295 & 0.0418 & 5\\
-%   135 & F\_NaK\_i in SMCEC & 0.0247 & 0.0244 & 11\\
-%   156 & K\_7 in WallMechanics & 0.0247 & 0.0284 & 8\\
-%   157 & gamma\_cross in WallMechanics & 0.0229 & 0.0275 & 9
-%\end{tabular}
-%\caption{(volumetric flow rate rectangular pulse stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_vol_flow_rec}
-%\end{table}
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 7.0278\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.1407
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_vol_flow_ex}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%   120 & 5.5 in Buff\_e ODE & 0.1663 & 0.0626 & 3\\
-%   158 & n\_cross in WallMechanics  & 0.0755 & 0.3309 & 1\\
-%   141 & z\_4 in SMCEC & 0.0729 & 0.3270 & 2\\
-%   121 & 1.09 in Buff\_e ODE & 0.0490 & 0.0423 & 4\\
-%   136 & G\_K\_i in SMCEC & 0.0252 & 0.0335 & 6\\
-%   139 & z\_2 in SMCEC & 0.0239 & 0.0382 & 5\\
-%   142 & z\_5 in SMCEC & 0.0237 & 0.0285 & 7\\
-%   135 & F\_NaK\_i in SMCEC & 0.0229 & 0.0212 & 10\\
-%   156 & K\_7 in WallMechanics & 0.0190 & 0.0212 & 11\\
-%   140 & z\_3 in SMCEC & 0.0186 & 0.0266 & 8\\
-%\end{tabular}
-%\caption{(volumetric flow rate experimental data stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_vol_flow_ex}
-%\end{table}
-%
-%\newpage
-%
-%\subsection{QoI \eqref{K_ECS_Max} ($K_{ECS}$ Max)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 18.7430\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0532
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_ECS_Max_rec}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%
-%61 & gKleak\_d in Neuron & 0.0752 &  0.2037 & 2\\
-%62 & 0.143 in m4alpha and m4 beta & 0.0742 & 0.2218 & 1\\
-%120 & 5.5 in Buff\_e ODE & 0.0641 & 0 & none\\
-%63 &   5.67 in m4alpha and m4 beta & 0.0631 & 0.1673 & 3\\
-%75 & 34.9 in m6alpha & 0.0570 & 0.1349 & 4\\
-%116 & dhod in Neuron & 0.0299 & 0.0802 & 5\\
-%94 & 34.9 in m2alpha & 0.0295 & 0.0647 & 6\\
-%76 & 0.2 in m6alpha & 0.0284 & 0.0317 &7\\
-%97 & 0.025 in m2beta & 0.0252 & 0.0097 & 12\\
-%98 & 1.25 in m2beta & 0.0239 & 0.0203 & 10\\
-%\end{tabular}
-%\caption{ ($K_{ECS}$ Max rectangular pulse stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_ECS_Max_rec}
-%\end{table}
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Max_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 15.5412\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0642
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_ECS_Max_ex}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE & 0.1099 & 0 & none\\
-%94 & 34.9 in m2alpha & 0.0740 & 0.2584 & 2\\
-%61 & gKleak\_d in Neuron & 0.0590 &  0.3023 & 1\\ 
-%121 & 1.09 in Buff\_e ODE & 0.0487 & 0 &  none\\
-%98 & 1.25 in m2beta & 0.0341 &  0.0698 & 3\\
-%97 & 0.025 in m2beta & 0.0258 & 0.0547 & 7\\
-%96 & 0.25 in m2beta & 0.0243 &  0.0624 & 6\\
-%93 & 0.016 in m2alpha & 0.0241 & 0.0670 & 4\\
-%75 & 34.9 in m6alpha & 0.0187 & 0.0349 & 8\\
-%119 & B0 & 0.0161 & 0 & none
-%\end{tabular}
-%\caption{ ($K_{ECS}$ Max experimental data stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_ECS_Max_ex}
-%\end{table}
-%
-%
-%\newpage
-%\subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 25.2001\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0396
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_ECS_Mean_rec}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%62 & 0.143 in m4alpha and m4 beta &  0.1078 & 0.2854 & 1\\
-%61 & gKleak\_d in Neuron & 0.0912 & 0.2117 & 2\\
-%120 & 5.5 in Buff\_e ODE & 0.0906 & 0.0107 & 10\\
-%63 &   5.67 in m4alpha and m4 beta & 0.0878 & 0.2088 & 3\\
-%75 & 34.9 in m6alpha & 0.0691 & 0.1320 & 4\\
-%116 & dhod in Neuron & 0.0372 & 0.0409 & 5\\
-%76 & 0.2 in m6alpha & 0.0335 & 0.0380 & 6\\
-%121 & 1.09 in Buff\_e ODE & 0.0249 & none & \\
-%74 & 0.016 in m6alpha & 0.0188 & 0.0114 & 9\\
-%78 & 0.025 in m6beta & 0.0186 & 0.0079 & 13\\
-%\end{tabular}
-%\caption{($K_{ECS}$ Mean rectangular pulse stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_ECS_Mean_rec}
-%\end{table}
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 26.9065\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0371
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_ECS_Mean_ex}.
-%
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%62 & 0.143 in m4alpha and m4 beta &  0.1043 & 0.2817 & 1\\
-%61 & gKleak\_d in Neuron & 0.0954 & 0.2357 &  2\\
-%63 &   5.67 in m4alpha and m4 beta & 0.0827 & 0.1929 & 3\\
-%120 & 5.5 in Buff\_e ODE & 0.0781 & 0.0105 & 10\\
-%75 & 34.9 in m6alpha & 0.0648 & 0.1232 & 4\\
-%76 & 0.2 in m6alpha & 0.0349 & 0.0473 & 5\\
-%116 & dhod in Neuron & 0.0331 & 0.0040 & 6\\
-%121 & 1.09 in Buff\_e ODE & 0.0227 & 0.0040 & 14\\
-%78 & 0.025 in m6beta & 0.0183 &  0.0065 & 13\\
-%79 & 1.25 in m6beta & 0.0168 & 0.0110 & 9\\
-%\end{tabular}
-%\caption{($K_{ECS}$ Mean experimental data stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_ECS_Mean_ex}
-%\end{table}
-%
-%\newpage
-%\subsection{QoI \eqref{K_AC_Max} ($K_{AC}$ Max)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 52.9239\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0189
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_AC_Max_rec}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE & 0.2455 & 0.3379 & 1\\
-%121 & 1.09 in Buff\_e ODE & 0.0749 & 0.2155 & 2\\
-%62 & 0.143 in m4alpha and m4 beta &  0.0362 & 0.1237 & 3\\
-%63 &   5.67 in m4alpha and m4 beta & 0.0286 & 0.0941 & 4\\
-%75 & 34.9 in m6alpha & 0.0285 & 0.0732 & 5\\
-%61 & gKleak\_d in Neuron & 0.0270 & 0.0595 & 6\\
-%97 & 0.025 in m2beta & 0.0126 & 0 & none\\
-%76 & 0.2 in m6alpha & 0.0117 &  0.0186 & 8\\
-%74 & 0.016 in m6alpha & 0.0106 & 0 & none\\
-%95 & 0.2 in m2alpha & 0.0104 & 0 & none\\
-%\end{tabular}
-%\caption{ ($K_{AC}$ Max rectangular pulse stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_AC_Max_rec}
-%\end{table}
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Max_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 61.0599\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0164
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_AC_Max_ex}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE & 0.1654 & 0.2521 & 1\\
-%94 & 34.9 in m2alpha & 0.0450 & 0.1545 & 3\\
-%121 & 1.09 in Buff\_e ODE &  0.0427 & 0.2221 & 2\\
-%61 & gKleak\_d in Neuron & 0.0366 & 0.1032 & 4\\
-%98 & 1.25 in m2beta & 0.0197 & 0.0430 & 6\\
-%93 & 0.016 in m2alpha & 0.0180 & 0.0182 & 12\\
-%97 & 0.025 in m2beta & 0.0176 &  0 & none\\
-%75 & 34.9 in m6alpha & 0.0176 & 0.0470 & 5\\
-%95 & 0.2 in m2alpha & 0.0176 & 0 & none\\
-%62 & 0.143 in m4alpha and m4 beta &  0.0174 & 0.0329 & 8\\
-%\end{tabular}
-%\caption{ ($K_{AC}$ Max experimental data stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_AC_Max_ex}
-%\end{table}
-%
-%\newpage
-%\subsection{QoI \eqref{K_AC_Mean}($K_{AC}$ Mean)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 50.1762\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0199
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_AC_Mean_rec}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE & 0.2892 &  0.3871 & 1\\
-%121 & 1.09 in Buff\_e ODE & 0.0724 & 0.2228 & 2\\
-%62 & 0.143 in m4alpha and m4 beta & 0.0328 &  0.1194 & 3\\
-%63 &   5.67 in m4alpha and m4 beta & 0.0250 & 0.0900 & 4\\
-%75 & 34.9 in m6alpha & 0.0230 & 0.0550 & 5\\
-%61 & gKleak\_d in Neuron & 0.0188 & 0.0345 & 6\\
-%73 & 0.07 in J\_NMDA\_K\_d & 0.0104 & 0.0153 & 8\\
-%141 & z\_4 in SMCEC & 0.0099 & 0 & none\\
-%74 & 0.016 in m6alpha & 0.0099 & 0 & none\\
-%76 & 0.2 in m6alpha & 0.0083 & 0.0146 & 10\\
-%\end{tabular}
-%\caption{($K_{AC}$ Mean rectangular pulse stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_AC_Mean_rec}
-%\end{table}
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/K_AC_Mean_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 52.0033\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.0192
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_K_AC_Mean_ex}.
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE &  0.2799 & 0.3867 & 1\\
-%121 & 1.09 in Buff\_e ODE & 0.0720 & 0.2413 & 2\\
-%62 & 0.143 in m4alpha and m4 beta & 0.0335 & 0.1141 & 3\\
-%63 &   5.67 in m4alpha and m4 beta &  0.0242 & 0.0805 & 4\\
-%75 & 34.9 in m6alpha & 0.0181 & 0.0499 & 5\\
-%61 & gKleak\_d in Neuron & 0.0131 & 0.0396 & 6\\
-%74 & 0.016 in m6alpha & 0.0114 & 0 & none\\
-%73 & 0.07 in J\_NMDA\_K\_d & 0.0103 & 0.0184 & 8\\
-%125 & v\_6 in Astrocyte & 0.0096 & 0 & none\\
-%94 & 34.9 in m2alpha  & 0.0093 & 0 & none\\
-%\end{tabular}
-%\caption{($K_{AC}$ Mean experimental data stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_K_AC_Mean_ex}
-%\end{table}
-%
-%\newpage
-%\subsection{QoI \eqref{AM_AMp_Min} ($AM+AM_p$ Min)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 4.9681\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.1972
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_AM_AMp_Min_rec}.
-%
-% 
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE & 0.1970 & 0.0871 & 3\\
-%141 & z\_4 in SMCEC & 0.1005 & 0.3960 & 1\\
-%121 & 1.09 in Buff\_e ODE & 0.0627 & 0.0442 & 6\\
-%158 & n\_cross in WallMechanics & 0.0617 & 0.1801 & 2\\
-%139 & z\_2 in SMCEC & 0.0362 & 0.0671 & 4\\
-%142 & z\_5 in SMCEC & 0.0320 & 0.0503 & 5\\
-%140 & z\_3 in SMCEC & 0.0253 & 0.0385 & 7\\
-%62 & 0.143 in m4alpha and m4 beta & 0.0243 & 0.0358 & 8\\
-%136 & G\_K\_i in SMCEC & 0.0215 & 0.0200 & 10\\
-%75 & 34.9 in m6alpha & 0.0194 & 0 & none\\
-%\end{tabular}
-%\caption{($AM+AM_p$ Min rectangular pulse stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_AM_AMp_Min_rec}
-%\end{table}
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 5.7237\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.1720
-%\end{eqnarray*}
-%
-%Tabular data in Table~\ref{qoi_AM_AMp_Min_ex}.
-% 
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{ccccc}
-%Index & Identification & LR Importance & MARS Importance & MARS Ranking \\
-%120 & 5.5 in Buff\_e ODE & 0.1470 & 0.0565 & 4\\
-%141 & z\_4 in SMCEC & 0.0783 & 0.4063 & 1\\
-%158 & n\_cross in WallMechanics & 0.0612 & 0.2605 & 2\\
-%121 & 1.09 in Buff\_e ODE & 0.0503 & 0.0312 & 6\\
-%139 & z\_2 in SMCEC & 0.0293 & 0.0638 & 3\\ 
-%142 & z\_5 in SMCEC & 0.0272 & 0.0456 & 5\\ 
-%94 & 34.9 in m2alpha & 0.0195 & 0 & none \\
-%63 &   5.67 in m4alpha and m4 beta &  0.0193 &  0.0224 & 9\\
-%156 & K\_7 in WallMechanics & 0.0179 & 0.0227 & 8\\
-%62 & 0.143 in m4alpha and m4 beta & 0.0171 & 0.0182 & 10\\
-%\end{tabular}
-%\caption{($AM+AM_p$ Min experimental data stimulus) The importance of the parameters is assessed in two ways; ``LR Importance" is the absolute value of the linear regression coefficient normalized so that the sum of all indices equals 1 and ``MARS Importance" is delGCV measure build in MARS normalized so that the sum of all indices equals 1. The parameters are ordered according to the results from linear regression and the ordering of parameters by MARS is given in the ``MARS Ranking" column. The ``Index" column is indexing of the parameters in the code (primarily for Joey's use) and the ``Identification column" is the description of the parameter.}
-%\label{qoi_AM_AMp_Min_ex}
-%\end{table}
-%
-%\newpage
-%\subsection{QoI \eqref{AMp_Time_to_Min} ($AM_p$ Time Lag)}
-%
-%\subsubsection{Rectangular Pulse Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_VI_Rectangular.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Rectangular.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_VI_Rectangular.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 2.3430\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.3924
-%\end{eqnarray*}
-%
-%The surrogate model is poor, I need to work more on this QoI.
-%
-%\newpage
-%
-%\subsubsection{Experimental Data Stimulus}
-%
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_LR_VI_Experimental.eps}\\
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_Prediction_Experimental.eps}
-%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_to_Min_QoI_MARS_VI_Experimental.eps}
-%\end{figure}
-%
-%\begin{eqnarray*}
-%\frac{\mu(\text{model})}{\sigma(\text{model})} = 2.2446\\
-%\frac{\vert \vert \text{model}-\mu(\text{model}) \vert \vert_2 }{\vert \vert \text{model}\vert \vert_2 } = 0.4066
-%\end{eqnarray*}
-%
-%The surrogate model is poor, I need to work more on this QoI.
 
 \section{Discussion}
 \section{Conclusion}
