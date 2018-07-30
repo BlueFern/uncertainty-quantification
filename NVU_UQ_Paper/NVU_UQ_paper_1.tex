@@ -73,11 +73,9 @@ From a purely physiological perspective an understanding of the dominant cellula
   
   We have used the \gls{cbf} change from the experimental data \cite{Zheng2010} taken from the rat barrel cortex. 
 \section{Methodology}
-some text here
-\subsection{Simulated Data}
-We use a square pulse of 10 seconds duration for stimulation such that the resulting output (after a substantial number of realizations) can be analysed in a formal manner. We assume that stimulation occurs for $t_1\le t \le t_2$.  
+The ODE system is solved using ode15s in Matlab with relative and absolute tolerances set too $10^{-4}$.
 \subsection{QoIs}
-We analyse 3 quantities of interest (QoIs) with respect to the 10 second square stimulation pulse. They are defined as follows.
+We analyse 3 quantities of interest (QoIs) with respect to two different stimulations, a 10 second square stimulation pulse and a 16 second stimulus used in lab experiments. Assuming the stimulation occurs for $t_1\le t \le t_2$, the QoIs are defined are defined as follows.
 \begin{enumerate}
 \item ECS potassium has a distinct effect on the flux into the Neuron. Hence we look at the average.
 \begin{eqnarray}
@@ -107,22 +105,16 @@ We analyse 3 quantities of interest (QoIs) with respect to the 10 second square 
 % \end{eqnarray}
 \end{enumerate}
 
-\subsection{Experimental Data}
-We repeat analysis of the 3 QoI's listed above 
+In addition, we analysed the average concentration of AC potassium, but it exhibited very small variation with respect to the parameters so we do not report any additional results for this QoI.
+
+\subsection{Surrogate models and Sobol' indices}
+DESCRIBE THE SURROGATES AND SOBOL' INDICES
 
 \section{Results}
-This section contains numerical results for 6 QoI's, 3 using a square pulse stimulus and 3 using the experimental data stimulus. The section is organized into 3 subsection where each subsection contains 2 sub-subsections with the results using the square pulse stimulus and experimental data stimulus. For each case we report results using a linear regression to screen out unimportant variables followed by a Polynomial Chaos expansion (PCE) fit on the subset of variables which linear regression deemed as important. The normalized absolute value of linear regression coefficients and the PCE's Sobol' indices are given.
+This section details our approach to varying the parameters and contains numerical results for the 3 QoI's, with both the square pulse stimulus and the experimental data stimulus for each. The section is organized in four subsections, one on the parameter sampling and one for each of the three QoI's.
 
-Things we'll need to add:
-\begin{enumerate}
-\item[$\bullet$] Discussion of ODE solver
-\item[$\bullet$] Discussion of how the parameter distribution is determined
-\item[$\bullet$] Discussion of how the solution regimes were sorted
-\item[$\bullet$] Discussion of which parameters determine the solution regime
-\item[$\bullet$] Discussion of the surrogate models and Sobol' indices
-\end{enumerate}
-
-\newpage
+\subsection{Parameter sampling}
+Parameter distributions are determined by first assuming independence of the parameters and assigning each parameter a uniform distribution with +- 10\% uncertainty around its nominal value. In really, some parameters are correlated but we do not know the correlation structure a priori. We attempt to run the model for 919 different parameter samples with no stimulus applied, i.e. simulating the steady state. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters which are highly influential in determining the behavior of the solution. The blue \*'s indicate samples where the solver terminated prematurely, the yellow +'s indicate samples where an unstable steady state was observed, the red $\circ$'s indicate samples where the solution remained in steady state. A very clear (and strong) correlation is observed between these parameters which has significant influence on the behavior of the solution.
 
 \begin{figure}[h]
 \centering
@@ -130,7 +122,12 @@ Things we'll need to add:
 \includegraphics[width=.4 \textwidth]{Figures/First_Iteration_Samples.eps}
 \caption{Left: examples of stable (red) and unstable (black) steady state solutions. Right: samples of the buffer parameters using uniform independent sampling. A blue \* indicates the sample yielded a premature termination of the solver, a yellow + indicates the sample yielded an unstable steady state, a red $\circ$ indicates the sample yielded a stable steady state.}
 \vspace{-.5 cm}
+\label{steady_states}
 \end{figure}
+
+Having observed a clear structure in the parameter space, we use the samples which remained in steady state to fit a bivariate distribution with beta marginals and a Frank copula. The experiment was repeat by sampling the two correlated parameters with the bivariate distribution and all other parameter from their original uniform distributions. The samples yielding steady state solutions where collected, a bivariate distribution fit to them, and the experimented was repeated. After three additional iterations we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This distribution is used for all subsequent analysis.
+
+Having determined a reasonable parameter distribution by analyzing the steady state solutions, we sample from this distribution and run the model with a stimulus applied (in two separate cases, the 10 second rectangular pulse and the 16 second stimulus from experimental data). This results in solutions exhibiting three different physiological regimes; they are displayed in Figure~\ref{solution_regimes} where the radius is plotted as a function of time. The leftmost panel corresponds to the typical case when the radius increases in response to the stimulus; the center panel corresponds to an atypical case where the radius has an initial decrease in response to the stimulus; the right panel corresponds to another atypical case where the radius reaches another steady state an does not decrease after the stimulus is removed.
 
 \begin{figure}[h]
 \centering
@@ -138,10 +135,13 @@ Things we'll need to add:
 \includegraphics[width=.3 \textwidth]{Figures/Decrease_with_Stim_Curves.eps}
 \includegraphics[width=.3 \textwidth]{Figures/Higher_Steady_State.eps}
 \caption{Radii corresponding to samples (using the rectangular pulse stimulus). Left: curves an an increase in response to the stimulus; center: curves with a decrease in response to the stimulus; right: curves which settle in a different steady state.}
+\label{solution_regimes}
 \vspace{-.5 cm}
 \end{figure}
 
+This study focus on the typical case so we remove samples where the radius does not increase in response to the stimulus and decrease when it is removed. This processing yields 660 samples for analysis when the rectangular pulse stimulus is applied and 438 samples when the stimulus from experimental data is applied. The results presented below use these samples.
 
+ADD A DISCUSSION OF WHICH PARAMETERS ARE MOST INFLUENTIAL IN DETERMINING THE SOLUTION REGIME
 
 
 \newpage
@@ -243,6 +243,7 @@ Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
 \end{table}
 
 \newpage
+\section{Extra figures we probably won't include}
 \subsection{$AM_p$ Time Lag}
 
 \begin{figure}[h]
