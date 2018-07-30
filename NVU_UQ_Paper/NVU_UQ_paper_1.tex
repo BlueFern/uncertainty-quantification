@@ -69,13 +69,24 @@ Amidst the difficulty in monitoring and measuring the rapid changes in metabolic
 
 Previous work \cite{Mathias2018} has provided  the construction of an experimentally validated numerical (\textit{in silico}) model based on experimental data to simulate the \gls{fmri} \gls{bold} signal associated with \gls{nvc} along with the associated metabolic and blood volume responses. An existing neuron model \citep{Mathias2017, Mathias2017a} has been extended to include an additional transient \gls{na} ion channel (NaT) expressed in the neuron, and integrated into a complex \gls{nvc} model \citep{Dormanns2015, Dormanns2016, Kenny2017a}. This present model is based on the hypothesis that the \gls{pot} signalling mechanism of \gls{nvc} is the primary contributor to the vascular response and the \gls{sodpot} exchange pump in the neuron is the primary consumer of oxygen during neural activation. The model contains 160 parameters, most of which come from non-human experiments. \\
 Such a complex model constructed with a high-dimensional parameter space is not easily amenable to sensitivity analyses considering the significant computing resource required. Indeed no formal theory exists which allows direct mathematical investigation of the variability of the large dimensional parameter vector and the resulting output. 
-From a purely physiological perspective an understanding of the dominant cellular mechanisms resulting in cerebral tissue perfusion after neuronal stimulation would be of particular interest. \\
+From a purely physiological perspective an understanding of the dominant cellular mechanisms resulting in cerebral tissue perfusion after neuronal stimulation would be of particular interest.
   
   We have used the \gls{cbf} change from the experimental data \cite{Zheng2010} taken from the rat barrel cortex. 
+  
+ INTRODUCE NOTATION AND TERMINOLOGY WE CAN REFER TOO THROUGHOUT THE ARTICLE
+  
 \section{Methodology}
-The ODE system is solved using ode15s in Matlab with relative and absolute tolerances set too $10^{-4}$.
+The ODE system is solved using ode15s in Matlab with relative and absolute tolerances of $10^{-4}$.
 \subsection{QoIs}
-We analyse 3 quantities of interest (QoIs) with respect to two different stimulations, a 10 second square stimulation pulse and a 16 second stimulus used in lab experiments. Assuming the stimulation occurs for $t_1\le t \le t_2$, the QoIs are defined are defined as follows.
+We analyse 3 quantities of interest (QoIs) with respect to two different stimulations, a 10 second square stimulation pulse and a 16 second stimulus used in lab experiments. They are displayed in Figure~\ref{input_stimuli}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=.4 \textwidth]{Figures/Rectangular_Stimulus.eps}
+\includegraphics[width=.4 \textwidth]{Figures/Experimental_Stimulus.eps}
+\caption{Left: rectangular pulse input stimulus; right: stimulus used in lab experiments.}
+\label{input_stimuli}
+\end{figure}
+ Assuming the stimulation occurs for $t_1\le t \le t_2$, the QoIs are defined as follows.
 \begin{enumerate}
 \item ECS potassium has a distinct effect on the flux into the Neuron. Hence we look at the average.
 \begin{eqnarray}
@@ -93,7 +104,7 @@ We analyse 3 quantities of interest (QoIs) with respect to two different stimula
 %[K^+]_{max,AC} \label{K_AC_Max} \\
 %\frac{1}{t_2-t_1}\int_{t_1}^{t_2}[K^+]_{AC}(s)ds \label{K_AC_Mean}
 %\end{eqnarray}
-\item the combined concentration of the actin myosin complex, both phosphorylated and unphosphorylated, determines the effect stress due to the contraction for the smooth muscle cell. 
+\item The combined concentration of the actin myosin complex, both phosphorylated and unphosphorylated, determines the effect stress due to the contraction for the smooth muscle cell. 
 \begin{eqnarray}
 [AM+AM_p]_{min} \label{AM_AMp_Min}
 \end{eqnarray}
@@ -105,7 +116,7 @@ We analyse 3 quantities of interest (QoIs) with respect to two different stimula
 % \end{eqnarray}
 \end{enumerate}
 
-In addition, we analysed the average concentration of AC potassium, but it exhibited very small variation with respect to the parameters so we do not report any additional results for this QoI.
+In addition, we consider the average concentration of AC potassium. It exhibits very small variation with respect to the parameters so we do not report any additional results for this QoI.
 
 \subsection{Surrogate models and Sobol' indices}
 DESCRIBE THE SURROGATES AND SOBOL' INDICES
@@ -114,20 +125,21 @@ DESCRIBE THE SURROGATES AND SOBOL' INDICES
 This section details our approach to varying the parameters and contains numerical results for the 3 QoI's, with both the square pulse stimulus and the experimental data stimulus for each. The section is organized in four subsections, one on the parameter sampling and one for each of the three QoI's.
 
 \subsection{Parameter sampling}
-Parameter distributions are determined by first assuming independence of the parameters and assigning each parameter a uniform distribution with +- 10\% uncertainty around its nominal value. In really, some parameters are correlated but we do not know the correlation structure a priori. We attempt to run the model for 919 different parameter samples with no stimulus applied, i.e. simulating the steady state. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters which are highly influential in determining the behavior of the solution. The blue \*'s indicate samples where the solver terminated prematurely, the yellow +'s indicate samples where an unstable steady state was observed, the red $\circ$'s indicate samples where the solution remained in steady state. A very clear (and strong) correlation is observed between these parameters which has significant influence on the behavior of the solution.
+Distributions for the parameters are not known a priori, nor are they able to be estimated from experimental data. The subsection below details our computational approach to determine a distribution for the parameters. The computation time required for model evaluations with a stimulus applied is too great for the computational approach below. Rather, we focus on properties of the solution when no stimulus is applied, i.e. the steady state solution(s). This affords the needed computational acceleration. 
+
+Parameter distributions are determined by first assuming independence of the parameters and assigning each parameter a uniform distribution with +- 10\% uncertainty around its nominal value (larger amounts of uncertainty may be desirable but are not computationally feasible). Parameters are likely to be correlated but we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue * indicates a sample where the solver terminated prematurely, a yellow + indicates a sample where an unstable steady state was observed, a red $\circ$ indicates a sample where the solution remained in steady state. A very clear (and strong) correlation is observed between these parameters which has significant influence on the behavior of the solution.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=.4 \textwidth]{Figures/Steady_State_Curves.eps}
 \includegraphics[width=.4 \textwidth]{Figures/First_Iteration_Samples.eps}
 \caption{Left: examples of stable (red) and unstable (black) steady state solutions. Right: samples of the buffer parameters using uniform independent sampling. A blue \* indicates the sample yielded a premature termination of the solver, a yellow + indicates the sample yielded an unstable steady state, a red $\circ$ indicates the sample yielded a stable steady state.}
-\vspace{-.5 cm}
 \label{steady_states}
 \end{figure}
 
-Having observed a clear structure in the parameter space, we use the samples which remained in steady state to fit a bivariate distribution with beta marginals and a Frank copula. The experiment was repeat by sampling the two correlated parameters with the bivariate distribution and all other parameter from their original uniform distributions. The samples yielding steady state solutions where collected, a bivariate distribution fit to them, and the experimented was repeated. After three additional iterations we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This distribution is used for all subsequent analysis.
+Observing this correlation, we use the samples for which the radius remained in steady state to fit the two buffer parameters with a bivariate distribution with beta marginals and a Frank copula. The experiment was repeat by sampling the two correlated parameters with the bivariate distribution and all other parameter from their original uniform distributions. The samples yielding steady state solutions where collected, a bivariate distribution fit to them, and the experimented was repeated. After three additional iterations we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This distribution is used for all subsequent analysis. 
 
-Having determined a reasonable parameter distribution by analyzing the steady state solutions, we sample from this distribution and run the model with a stimulus applied (in two separate cases, the 10 second rectangular pulse and the 16 second stimulus from experimental data). This results in solutions exhibiting three different physiological regimes; they are displayed in Figure~\ref{solution_regimes} where the radius is plotted as a function of time. The leftmost panel corresponds to the typical case when the radius increases in response to the stimulus; the center panel corresponds to an atypical case where the radius has an initial decrease in response to the stimulus; the right panel corresponds to another atypical case where the radius reaches another steady state an does not decrease after the stimulus is removed.
+Samples are drawn and the model, with a stimulus applied (in two separate cases, the 10 second rectangular pulse and the 16 second stimulus from experimental data), is run for each sample. This results in solutions exhibiting three different physiological regimes; they are displayed in Figure~\ref{solution_regimes} where the radius is plotted as a function of time. The leftmost panel corresponds to the typical case when the radius increases in response to the stimulus and then decreases when it is removed; the center panel corresponds to an atypical case where the radius has an initial decrease in response to the stimulus; the right panel corresponds to another atypical case where the radius reaches another steady state an does not decrease after the stimulus is removed.
 
 \begin{figure}[h]
 \centering
@@ -136,7 +148,6 @@ Having determined a reasonable parameter distribution by analyzing the steady st
 \includegraphics[width=.3 \textwidth]{Figures/Higher_Steady_State.eps}
 \caption{Radii corresponding to samples (using the rectangular pulse stimulus). Left: curves an an increase in response to the stimulus; center: curves with a decrease in response to the stimulus; right: curves which settle in a different steady state.}
 \label{solution_regimes}
-\vspace{-.5 cm}
 \end{figure}
 
 This study focus on the typical case so we remove samples where the radius does not increase in response to the stimulus and decrease when it is removed. This processing yields 660 samples for analysis when the rectangular pulse stimulus is applied and 438 samples when the stimulus from experimental data is applied. The results presented below use these samples.
@@ -147,6 +158,7 @@ ADD A DISCUSSION OF WHICH PARAMETERS ARE MOST INFLUENTIAL IN DETERMINING THE SOL
 \newpage
 \subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
 
+ADD AN INTERPRETATION OF THE FIGURE AND TABLE
 
 \begin{figure}[h]
 \centering
@@ -181,6 +193,8 @@ Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
 
 \subsection{QoI \eqref{vol_flow} (volumetric flow rate)}
 
+ADD AN INTERPRETATION OF THE FIGURE AND TABLE
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
@@ -212,6 +226,8 @@ Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
 
 \newpage
 \subsection{QoI \eqref{AM_AMp_Min} ($AM+AM_p$ Min)}
+
+ADD AN INTERPRETATION OF THE FIGURE AND TABLE
 
 \begin{figure}[h]
 \centering
@@ -264,7 +280,11 @@ Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
 
 
 \section{Discussion}
+ADD A DISCUSSION OF THE RESULTS IN TERMS OF THEIR PHYSIOLOGICAL INTERPRETATION
+
 \section{Conclusion}
+conclusion goes here
+
 \bibliographystyle{KathisBibstyle} % no .sty!
 \bibliography{library}
 
