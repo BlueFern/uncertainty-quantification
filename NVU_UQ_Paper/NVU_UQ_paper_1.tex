@@ -117,10 +117,32 @@ Things we'll need to add:
 \begin{enumerate}
 \item[$\bullet$] Discussion of ODE solver
 \item[$\bullet$] Discussion of how the parameter distribution is determined
+\item[$\bullet$] Discussion of how the solution regimes were sorted
 \item[$\bullet$] Discussion of which parameters determine the solution regime
-\item[$\bullet$] Discussion of how the data was processed
 \item[$\bullet$] Discussion of the surrogate models and Sobol' indices
 \end{enumerate}
+
+\newpage
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.4 \textwidth]{Figures/Steady_State_Curves.eps}
+\includegraphics[width=.4 \textwidth]{Figures/First_Iteration_Samples.eps}
+\caption{Left: examples of stable (red) and unstable (black) steady state solutions. Right: samples of the buffer parameters using uniform independent sampling. A blue \* indicates the sample yielded a premature termination of the solver, a yellow + indicates the sample yielded an unstable steady state, a red $\circ$ indicates the sample yielded a stable steady state.}
+\vspace{-.5 cm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.3 \textwidth]{Figures/Increase_with_Stim_Curves.eps}
+\includegraphics[width=.3 \textwidth]{Figures/Decrease_with_Stim_Curves.eps}
+\includegraphics[width=.3 \textwidth]{Figures/Higher_Steady_State.eps}
+\caption{Radii corresponding to samples (using the rectangular pulse stimulus). Left: curves an an increase in response to the stimulus; center: curves with a decrease in response to the stimulus; right: curves which settle in a different steady state.}
+\vspace{-.5 cm}
+\end{figure}
+
+
+
 
 \newpage
 \subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
