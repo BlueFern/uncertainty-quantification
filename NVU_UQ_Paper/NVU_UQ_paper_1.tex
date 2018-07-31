@@ -45,7 +45,7 @@
 \textit{1.Department of Mechanical Engineering,} \\
 \textit{University of Canterbury, New Zealand}\\
 \textit{2.Department of Mathematics,}\\
-\textit{North Carolina State University, Rayleigh, NC}\\
+\textit{North Carolina State University, Raleigh, NC}\\
 }
 \maketitle
 \thispagestyle{empty}
@@ -123,12 +123,12 @@ There are a plurality of methods which may be used to analyse the sensitivity of
 \begin{eqnarray*}
 \beta_0 + \sum\limits_{k=1}^{160} \beta_k \theta_k
 \end{eqnarray*}
-is fit using the sample data and the sensitivity of the linear model with respect to $\theta_k$ is defined as
+is fit to sample data (collected by running the model for various parameter samples) and the sensitivity of the linear model with respect to $\theta_k$ is defined as
 \begin{eqnarray*}
 L_k = \frac{\vert \beta_k \vert}{\sum\limits_{j=1}^{160} \vert \beta_j \vert}, \qquad k=1,2,\dots,160.
 \end{eqnarray*}
 
-In order to fit a nonlinear surrogate model, we reduce the parameter space to only the $\theta_k$'s such that $L_k>0.01$. Then a sparse Polynomial Chaos (PC) surrogate is fit using the sample data with the parameters $\{\theta_{k_i}\}_{i=1}^r$, where $L_{k_i}>0.01$, $i=1,2,\dots,r$. In Section~\ref{sec:results}, this reduction yields around $r=20$ parameters instead of the original 160. The PC surrogate is fit using the metamodel type \textit{PCE} in the UQLab \cite{uqlab}. The total Sobol' indices \cite{saltellitotalindex} of the PC surrogate are computed to yield a quantitative measure of importance for each $\theta_{k_i}$, $i=1,2,\dots,r$.
+In order to fit a nonlinear surrogate model, we reduce the parameter space to only the $\theta_k$'s such that $L_k>0.01$. Then a sparse Polynomial Chaos (PC) surrogate is fit using the sample data with the parameters $\{\theta_{k_i}\}_{i=1}^r$, where $L_{k_i}>0.01$, $i=1,2,\dots,r$. In Section~\ref{sec:results}, this reduction yields around $15-20$ parameters instead of the original 160. The PC surrogate is fit using the metamodel type \textit{PCE} in the UQLab \cite{uqlab}. The total Sobol' indices \cite{saltellitotalindex} of the PC surrogate are computed to yield a quantitative measure of importance for each $\theta_{k_i}$, $i=1,2,\dots,r$.
 
 This procedure of 
 \begin{enumerate}
@@ -136,7 +136,7 @@ This procedure of
 \item[(ii)] fitting a Polynomial Chaos surrogate using the smaller set of parameters,
 \item[(iii)] computing total Sobol' indices of the Polynomial Chaos surrogate,
 \end{enumerate}
-is used for each QoI we consider in this article. All surrogate models are validated using 10-fold cross validation.
+is used for each QoI considered in this article. All surrogate models are validated using 10-fold cross validation.
 
 \section{Results}
 \label{sec:results}
@@ -146,7 +146,7 @@ This section details our approach to varying the parameters and contains numeric
 \label{sec:param_sampling}
 Distributions for the parameters are not known a priori, nor are they able to be estimated from experimental data. The subsection below details our computational approach to determine a distribution for the parameters. The computation time required for model evaluations with a stimulus applied is too great for the computational approach below. Rather, we focus on properties of the solution when no stimulus is applied, i.e. the steady state solution(s). This affords the needed computational acceleration. 
 
-Parameter distributions are determined by first assuming independence of the parameters and assigning each parameter a uniform distribution with +- 10\% uncertainty around its nominal value (larger amounts of uncertainty may be desirable but are not computationally feasible). Parameters are likely to be correlated but we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue * indicates a sample where the solver terminated prematurely, a yellow + indicates a sample where an unstable steady state was observed, a red $\circ$ indicates a sample where the solution remained in steady state. A very clear (and strong) correlation is observed between these parameters which has significant influence on the behavior of the solution.
+Parameter distributions are determined by first assuming independence of the parameters and assigning each parameter a uniform distribution with +- 10\% uncertainty around its nominal value (larger amounts of uncertainty may be desirable but are not computationally feasible). Parameters are likely to be correlated but we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue * indicates a sample where the solver terminated prematurely, a yellow + indicates a sample where an unstable steady state was observed, a red $\circ$ indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed.
 
 \begin{figure}[h]
 \centering
@@ -156,7 +156,7 @@ Parameter distributions are determined by first assuming independence of the par
 \label{steady_states}
 \end{figure}
 
-Observing this correlation, we use the samples for which the radius remained in steady state to fit the two buffer parameters with a bivariate distribution with beta marginals and a Frank copula. The experiment was repeat by sampling the two correlated parameters with the bivariate distribution and all other parameter from their original uniform distributions. The samples yielding steady state solutions where collected, a bivariate distribution fit to them, and the experimented was repeated. After three additional iterations we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This distribution is used for all subsequent analysis. 
+Observing this correlation, we use the samples for which the radius remained in steady state to fit the two buffer parameters with a bivariate distribution with beta marginals and a Frank copula. The experiment was repeat by sampling the two correlated parameters with the bivariate distribution and all other parameter from their original uniform distributions. The samples yielding steady state solutions where collected, a bivariate distribution fit to them, and the experimented was repeated. After three additional iterations of this process we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This fitted distribution is used for all subsequent analysis. 
 
 Samples are drawn and the model, with a stimulus applied (in two separate cases, the 10 second rectangular pulse and the 16 second stimulus from experimental data), is run for each sample. This results in solutions exhibiting three different physiological regimes; they are displayed in Figure~\ref{solution_regimes} where the radius is plotted as a function of time. The leftmost panel corresponds to the typical case when the radius increases in response to the stimulus and then decreases when it is removed; the center panel corresponds to an atypical case where the radius has an initial decrease in response to the stimulus; the right panel corresponds to another atypical case where the radius reaches another steady state an does not decrease after the stimulus is removed.
 
@@ -169,7 +169,7 @@ Samples are drawn and the model, with a stimulus applied (in two separate cases,
 \label{solution_regimes}
 \end{figure}
 
-This study focus on the typical case so we remove samples where the radius does not increase in response to the stimulus and decrease when it is removed. This processing yields 660 samples for analysis when the rectangular pulse stimulus is applied and 438 samples when the stimulus from experimental data is applied. The results presented below use these samples.
+This article focuses on the typical case so we remove samples where the radius does not increase in response to the stimulus and decrease when it is removed. This processing yields 660 samples for analysis when the rectangular pulse stimulus is applied and 438 samples when the stimulus from experimental data is applied. The results presented below use these samples.
 
 ADD A DISCUSSION OF WHICH PARAMETERS ARE MOST INFLUENTIAL IN DETERMINING THE SOLUTION REGIME
 
@@ -244,7 +244,7 @@ Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
 
 \subsection{QoI \eqref{AM_AMp_Min} ($AM+AM_p$ Min)}
 
-Figure~\ref{fig:qoi_AM_AMp_Min} displays results for the minimum of the combined concentration of the actin myosin complex. As in the previous subsections, the linear and PC surrogate predictions and sensitivities are plotted for both the rectangular pulse and experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the 5 most important parameters and their total Sobol' indices.
+Figure~\ref{fig:qoi_AM_AMp_Min} displays results for the minimum of the combined concentration of the actin myosin complex. As in the previous subsections, the linear and PC surrogate predictions and sensitivities are plotted for both the rectangular pulse and experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the 5 most important parameters (ranked by the total Sobol' indices for the rectangular pulse stimulus) and their total Sobol' indices.
 
 \begin{figure}[h]
 \centering
@@ -260,7 +260,7 @@ Figure~\ref{fig:qoi_AM_AMp_Min} displays results for the minimum of the combined
 \label{fig:qoi_AM_AMp_Min}
 \end{figure}
 
-The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate but highlighting the nonlinearity of the QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are connected to the wall mechanics. Parameter 120 appears important in the linear surrogate but unimportant in the PC surrogate.
+The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate; this highlights the nonlinearity of the QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are related to the wall mechanics. Parameter 120 appears important in the linear surrogate but unimportant in the PC surrogate.
 
 \begin{table}[h]
 \centering
