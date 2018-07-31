@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Ames(2000)}]{Ames2000}
@@ -11,12 +11,12 @@
   and Newman, E.~a.} (\textbf{2010}): {Glial and neuronal control of brain
   blood flow.}, Nature, Vol. 468, No. 7321 pp. 232--243.
 
-\bibitem[{Buxton et~al.(2004)Buxton, Uludaǧ, Dubowitz, Liu, Uludağ, Dubowitz
-  and Liu}]{Buxton2004}
-\textbf{Buxton, R.~B.; Uludaǧ, K.; Dubowitz, D.~J.; Liu, T.~T.; Uludağ, K.;
-  Dubowitz, D.~J. and Liu, T.~T.} (\textbf{2004}): {Modeling the hemodynamic
-  response to brain activation}, NeuroImage, Vol.~23, No. SUPPL. 1 pp.
-  220--233.
+\bibitem[{Buxton et~al.(2004)Buxton, Uluda{\v g}, Dubowitz, Liu, Uluda{\u g},
+  Dubowitz and Liu}]{Buxton2004}
+\textbf{Buxton, R.~B.; Uluda{\v g}, K.; Dubowitz, D.~J.; Liu, T.~T.; Uluda{\u
+  g}, K.; Dubowitz, D.~J. and Liu, T.~T.} (\textbf{2004}): {Modeling the
+  hemodynamic response to brain activation}, NeuroImage, Vol.~23, No. SUPPL. 1
+  pp. 220--233.
 
 \bibitem[{Dormanns et~al.(2016)Dormanns, Brown and David}]{Dormanns2016}
 \textbf{Dormanns, K.; Brown, R.~G. and David, T.} (\textbf{2016}): {The role of
@@ -83,6 +83,11 @@
   membrane calcium ATPase.}, Journal of neurophysiology, Vol. 103, No.~2 pp.
   667--676.
 
+\bibitem[{Marelli and Sudret(2014)}]{uqlab}
+\textbf{Marelli, S. and Sudret, B.} (\textbf{2014}): {UQLab}: A framework for
+  uncertainty quantification in {M}atlab, 2nd Int. Conf. on Vulnerability, Risk
+  Analysis and Management.
+
 \bibitem[{Mathias et~al.(2017{\natexlab{a}})Mathias, Plank and
   David}]{Mathias2017}
 \textbf{Mathias, E.~J.; Plank, M.~J. and David, T.}
@@ -120,6 +125,13 @@
 \textbf{Roy, C. S. C.~S. and Sherrington, C. S.~S.} (\textbf{1890}): {On the
   regulation of the blood-supply of the brain}, The Journal of physiology,
   Vol.~11, No. 1-2 p.~85.
+
+\bibitem[{Saltelli et~al.(2010)Saltelli, Annoni, Azzini, Campolongo, Ratto and
+  Tarantola}]{saltellitotalindex}
+\textbf{Saltelli, A.; Annoni, P.; Azzini, I.; Campolongo, F.; Ratto, M. and
+  Tarantola, S.} (\textbf{2010}): Variance based sensitivity analysis of model
+  output. design and estimator for the total sensitivity index, Computer
+  Physics Communications, Vol. 181 pp. 259--270.
 
 \bibitem[{Zheng et~al.(2010)Zheng, Pan, Harris, Billings, Coca, Berwick, Jones,
   Kennerley, Johnston, Martin, Devonshire and Mayhew}]{Zheng2010}
