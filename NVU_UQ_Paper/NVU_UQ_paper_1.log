@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  31 JUL 2018 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 AUG 2018 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1222,16 +1222,16 @@ Package epstopdf Info: Source file: <Figures/Rectangular_Stimulus.eps>
 (epstopdf)                    size: 5843 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Rectangular_Stimul
 us-eps-converted-to.pdf Figures/Rectangular_Stimulus.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Rectangular_Stimulus-eps-converted-to.pdf, id=196, 496.85625pt x 384.4
+<Figures/Rectangular_Stimulus-eps-converted-to.pdf, id=199, 496.85625pt x 384.4
 3625pt>
 File: Figures/Rectangular_Stimulus-eps-converted-to.pdf Graphic file (type pdf)
 
  <use Figures/Rectangular_Stimulus-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Rectangular_Stimulus-eps-converted-to.pdf used
- on input line 84.
+ on input line 86.
 (pdftex.def)             Requested size: 187.89914pt x 145.38336pt.
 Package epstopdf Info: Source file: <Figures/Experimental_Stimulus.eps>
 (epstopdf)                    date: 2018-07-30 17:10:47
@@ -1242,16 +1242,16 @@ d-to.pdf>
 (epstopdf)                    size: 13011 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Experimental_Stimu
 lus-eps-converted-to.pdf Figures/Experimental_Stimulus.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             \includegraphics on input line 87.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Experimental_Stimulus-eps-converted-to.pdf, id=197, 496.85625pt x 384.
+<Figures/Experimental_Stimulus-eps-converted-to.pdf, id=200, 496.85625pt x 384.
 43625pt>
 File: Figures/Experimental_Stimulus-eps-converted-to.pdf Graphic file (type pdf
 )
  <use Figures/Experimental_Stimulus-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Experimental_Stimulus-eps-converted-to.pdf use
-d on input line 85.
+d on input line 87.
 (pdftex.def)             Requested size: 187.89914pt x 145.38336pt.
  [5 <./Figures/Rectangular_Stimulus-eps-converted-to.pdf> <./Figures/Experiment
 al_Stimulus-eps-converted-to.pdf>] [6] [7] [8]
@@ -1264,15 +1264,15 @@ to.pdf>
 (epstopdf)                    size: 122619 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Steady_State_Curve
 s-eps-converted-to.pdf Figures/Steady_State_Curves.eps>
-(epstopdf)             \includegraphics on input line 153.
+(epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Steady_State_Curves-eps-converted-to.pdf, id=245, 487.8225pt x 395.477
+<Figures/Steady_State_Curves-eps-converted-to.pdf, id=251, 487.8225pt x 395.477
 5pt>
 File: Figures/Steady_State_Curves-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Steady_State_Curves-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Steady_State_Curves-eps-converted-to.pdf used 
-on input line 153.
+on input line 155.
 (pdftex.def)             Requested size: 187.89914pt x 152.3287pt.
 Package epstopdf Info: Source file: <Figures/First_Iteration_Samples.eps>
 (epstopdf)                    date: 2018-07-30 14:04:09
@@ -1283,16 +1283,16 @@ ted-to.pdf>
 (epstopdf)                    size: 48447 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/First_Iteration_Sa
 mples-eps-converted-to.pdf Figures/First_Iteration_Samples.eps>
-(epstopdf)             \includegraphics on input line 154.
+(epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/First_Iteration_Samples-eps-converted-to.pdf, id=246, 485.815pt x 384.
+<Figures/First_Iteration_Samples-eps-converted-to.pdf, id=252, 485.815pt x 384.
 43625pt>
 File: Figures/First_Iteration_Samples-eps-converted-to.pdf Graphic file (type p
 df)
  <use Figures/First_Iteration_Samples-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/First_Iteration_Samples-eps-converted-to.pdf u
-sed on input line 154.
+sed on input line 156.
 (pdftex.def)             Requested size: 187.89914pt x 148.68593pt.
  [9 <./Figures/Steady_State_Curves-eps-converted-to.pdf> <./Figures/First_Itera
 tion_Samples-eps-converted-to.pdf>]
@@ -1305,16 +1305,16 @@ erted-to.pdf>
 (epstopdf)                    size: 367615 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Increase_with_Stim
 _Curves-eps-converted-to.pdf Figures/Increase_with_Stim_Curves.eps>
-(epstopdf)             \includegraphics on input line 165.
+(epstopdf)             \includegraphics on input line 167.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Increase_with_Stim_Curves-eps-converted-to.pdf, id=263, 563.10374pt x 
+<Figures/Increase_with_Stim_Curves-eps-converted-to.pdf, id=269, 563.10374pt x 
 422.57875pt>
 File: Figures/Increase_with_Stim_Curves-eps-converted-to.pdf Graphic file (type
  pdf)
  <use Figures/Increase_with_Stim_Curves-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Increase_with_Stim_Curves-eps-converted-to.pdf
- used on input line 165.
+ used on input line 167.
 (pdftex.def)             Requested size: 140.92793pt x 105.75404pt.
 Package epstopdf Info: Source file: <Figures/Decrease_with_Stim_Curves.eps>
 (epstopdf)                    date: 2018-07-30 14:06:54
@@ -1325,16 +1325,16 @@ erted-to.pdf>
 (epstopdf)                    size: 311078 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Decrease_with_Stim
 _Curves-eps-converted-to.pdf Figures/Decrease_with_Stim_Curves.eps>
-(epstopdf)             \includegraphics on input line 166.
+(epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf, id=264, 563.10374pt x 
+<Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf, id=270, 563.10374pt x 
 422.57875pt>
 File: Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf Graphic file (type
  pdf)
  <use Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf
- used on input line 166.
+ used on input line 168.
 (pdftex.def)             Requested size: 140.92793pt x 105.75404pt.
 Package epstopdf Info: Source file: <Figures/Higher_Steady_State.eps>
 (epstopdf)                    date: 2018-07-30 14:06:48
@@ -1345,15 +1345,15 @@ to.pdf>
 (epstopdf)                    size: 233167 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Higher_Steady_Stat
 e-eps-converted-to.pdf Figures/Higher_Steady_State.eps>
-(epstopdf)             \includegraphics on input line 167.
+(epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Higher_Steady_State-eps-converted-to.pdf, id=265, 563.10374pt x 422.57
+<Figures/Higher_Steady_State-eps-converted-to.pdf, id=271, 563.10374pt x 422.57
 875pt>
 File: Figures/Higher_Steady_State-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Higher_Steady_State-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Higher_Steady_State-eps-converted-to.pdf used 
-on input line 167.
+on input line 169.
 (pdftex.def)             Requested size: 140.92793pt x 105.75404pt.
 
 
@@ -1362,35 +1362,35 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 176.
+(hyperref)                removing `\hbox' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 176.
+(hyperref)                removing `\mathsurround' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 176.
+(hyperref)                removing `\z@' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 176.
+(hyperref)                removing `\unskip' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 176.
+(hyperref)                removing `\@@italiccorr' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 176.
+(hyperref)                removing `math shift' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 176.
+(hyperref)                removing `subscript' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 176.
+(hyperref)                removing `math shift' on input line 178.
 
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Recta
 ngular.eps>
@@ -1403,17 +1403,17 @@ ngular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 Prediction_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_Predictio
 n_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 183.
+(epstopdf)             \includegraphics on input line 185.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=274,
+<Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=280,
  474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-c
-onverted-to.pdf used on input line 183.
+onverted-to.pdf used on input line 185.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.e
 ps>
@@ -1426,17 +1426,17 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 VI_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.ep
 s>
-(epstopdf)             \includegraphics on input line 184.
+(epstopdf)             \includegraphics on input line 186.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=275, 486.818
+<Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=281, 486.818
 76pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted
--to.pdf used on input line 184.
+-to.pdf used on input line 186.
 (pdftex.def)             Requested size: 112.74377pt x 90.88814pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_PCE_Prediction_Rect
 angular.eps>
@@ -1449,17 +1449,17 @@ angular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_PCE
 _Prediction_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_PCE_Predict
 ion_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 185.
+(epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=276
+<Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=282
 , 474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-
-converted-to.pdf used on input line 185.
+converted-to.pdf used on input line 187.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.
 eps>
@@ -1472,17 +1472,17 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_PCE
 _SI_Rectangular-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.
 eps>
-(epstopdf)             \includegraphics on input line 186.
+(epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=277, 480.79
+<Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=283, 480.79
 625pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converte
-d-to.pdf used on input line 186.
+d-to.pdf used on input line 188.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_Prediction_Exper
 imental.eps>
@@ -1495,17 +1495,17 @@ imental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 Prediction_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_Predicti
 on_Experimental.eps>
-(epstopdf)             \includegraphics on input line 187.
+(epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=278
+<Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=284
 , 474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-
-converted-to.pdf used on input line 187.
+converted-to.pdf used on input line 189.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_LR_VI_Experimental.
 eps>
@@ -1518,17 +1518,17 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_LR_
 VI_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_LR_VI_Experimental.
 eps>
-(epstopdf)             \includegraphics on input line 188.
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=279, 486.81
+<Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=285, 486.81
 876pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converte
-d-to.pdf used on input line 188.
+d-to.pdf used on input line 190.
 (pdftex.def)             Requested size: 112.74377pt x 90.88814pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_PCE_Prediction_Expe
 rimental.eps>
@@ -1541,17 +1541,17 @@ rimental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_PCE
 _Prediction_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_PCE_Predic
 tion_Experimental.eps>
-(epstopdf)             \includegraphics on input line 189.
+(epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
 
 <Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=28
-0, 474.77374pt x 392.46625pt>
+6, 474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental-eps
--converted-to.pdf used on input line 189.
+-converted-to.pdf used on input line 191.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_PCE_SI_Experimental
 .eps>
@@ -1564,24 +1564,24 @@ Package epstopdf Info: Source file: <Figures/K_ECS_Mean_QoI_PCE_SI_Experimental
 (epstopdf)             Command: <repstopdf --outfile=Figures/K_ECS_Mean_QoI_PCE
 _SI_Experimental-eps-converted-to.pdf Figures/K_ECS_Mean_QoI_PCE_SI_Experimenta
 l.eps>
-(epstopdf)             \includegraphics on input line 190.
+(epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=281, 480.7
+<Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=287, 480.7
 9625pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-convert
-ed-to.pdf used on input line 190.
+ed-to.pdf used on input line 192.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (11.82939pt too wide) in paragraph at lines 197--205
+Overfull \hbox (11.82939pt too wide) in paragraph at lines 199--207
  [][] 
  []
 
@@ -1593,23 +1593,23 @@ ase_with_Stim_Curves-eps-converted-to.pdf> <./Figures/Higher_Steady_State-eps-c
 onverted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 211.
+(hyperref)                removing `\hbox' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 211.
+(hyperref)                removing `\mathsurround' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 211.
+(hyperref)                removing `\z@' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 211.
+(hyperref)                removing `\unskip' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 211.
+(hyperref)                removing `\@@italiccorr' on input line 213.
 
 [12 <./Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf> <
 ./Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf> <./Figures/K_E
@@ -1630,17 +1630,17 @@ ular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_LR_Pr
 ediction_Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_Prediction_Re
 ctangular.eps>
-(epstopdf)             \includegraphics on input line 217.
+(epstopdf)             \includegraphics on input line 219.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=382, 4
+<Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=388, 4
 74.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Graph
 ic file (type pdf)
 
 <use Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-con
-verted-to.pdf used on input line 217.
+verted-to.pdf used on input line 219.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps
 >
@@ -1652,17 +1652,17 @@ Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps
 (epstopdf)                    size: 10096 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_LR_VI
 _Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 218.
+(epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=383, 486.81876
+<Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=389, 486.81876
 pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic file 
 (type pdf)
 
 <use Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-t
-o.pdf used on input line 218.
+o.pdf used on input line 220.
 (pdftex.def)             Requested size: 112.74377pt x 90.88814pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_PCE_Prediction_Rectan
 gular.eps>
@@ -1675,17 +1675,17 @@ gular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_PCE_P
 rediction_Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_PCE_Prediction_
 Rectangular.eps>
-(epstopdf)             \includegraphics on input line 219.
+(epstopdf)             \includegraphics on input line 221.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=384, 
+<Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=390, 
 474.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-co
-nverted-to.pdf used on input line 219.
+nverted-to.pdf used on input line 221.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_PCE_SI_Rectangular.ep
 s>
@@ -1698,17 +1698,17 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_PCE_S
 I_Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps>
 
-(epstopdf)             \includegraphics on input line 220.
+(epstopdf)             \includegraphics on input line 222.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=385, 480.7962
+<Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=391, 480.7962
 5pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-
-to.pdf used on input line 220.
+to.pdf used on input line 222.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_LR_Prediction_Experim
 ental.eps>
@@ -1721,17 +1721,17 @@ ental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_LR_Pr
 ediction_Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_Prediction_E
 xperimental.eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 223.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=386, 
+<Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=392, 
 474.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-co
-nverted-to.pdf used on input line 221.
+nverted-to.pdf used on input line 223.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_LR_VI_Experimental.ep
 s>
@@ -1744,17 +1744,17 @@ s-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_LR_VI
 _Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_VI_Experimental.eps>
 
-(epstopdf)             \includegraphics on input line 222.
+(epstopdf)             \includegraphics on input line 224.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=387, 486.8187
+<Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=393, 486.8187
 6pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-
-to.pdf used on input line 222.
+to.pdf used on input line 224.
 (pdftex.def)             Requested size: 112.74377pt x 90.88814pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_PCE_Prediction_Experi
 mental.eps>
@@ -1767,17 +1767,17 @@ mental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_PCE_P
 rediction_Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_PCE_Prediction
 _Experimental.eps>
-(epstopdf)             \includegraphics on input line 223.
+(epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=388,
+<Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=394,
  474.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-c
-onverted-to.pdf used on input line 223.
+onverted-to.pdf used on input line 225.
 (pdftex.def)             Requested size: 112.74377pt x 93.19373pt.
 Package epstopdf Info: Source file: <Figures/Vol_Flow_QoI_PCE_SI_Experimental.e
 ps>
@@ -1790,17 +1790,17 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/Vol_Flow_QoI_PCE_S
 I_Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_PCE_SI_Experimental.ep
 s>
-(epstopdf)             \includegraphics on input line 224.
+(epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=389, 480.796
+<Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=395, 480.796
 25pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted
--to.pdf used on input line 224.
+-to.pdf used on input line 226.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 
 
@@ -1811,35 +1811,35 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 245.
+(hyperref)                removing `\hbox' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 245.
+(hyperref)                removing `\mathsurround' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 245.
+(hyperref)                removing `\z@' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 245.
+(hyperref)                removing `\unskip' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 245.
+(hyperref)                removing `\@@italiccorr' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 245.
+(hyperref)                removing `math shift' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 245.
+(hyperref)                removing `subscript' on input line 247.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 245.
+(hyperref)                removing `math shift' on input line 247.
 
 [13]
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Recta
@@ -1853,17 +1853,17 @@ ngular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 Prediction_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_Predictio
 n_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 251.
+(epstopdf)             \includegraphics on input line 253.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=401,
+<Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=407,
  480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-c
-onverted-to.pdf used on input line 251.
+onverted-to.pdf used on input line 253.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.e
 ps>
@@ -1876,17 +1876,17 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 VI_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.ep
 s>
-(epstopdf)             \includegraphics on input line 252.
+(epstopdf)             \includegraphics on input line 254.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=402, 486.818
+<Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=408, 486.818
 76pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted
--to.pdf used on input line 252.
+-to.pdf used on input line 254.
 (pdftex.def)             Requested size: 112.74377pt x 90.88814pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_PCE_Prediction_Rect
 angular.eps>
@@ -1899,17 +1899,17 @@ angular-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_PCE
 _Prediction_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_PCE_Predict
 ion_Rectangular.eps>
-(epstopdf)             \includegraphics on input line 253.
+(epstopdf)             \includegraphics on input line 255.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=403
+<Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=409
 , 480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-
-converted-to.pdf used on input line 253.
+converted-to.pdf used on input line 255.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.
 eps>
@@ -1922,17 +1922,17 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_PCE
 _SI_Rectangular-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.
 eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=404, 473.77
+<Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=410, 473.77
 pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converte
-d-to.pdf used on input line 254.
+d-to.pdf used on input line 256.
 (pdftex.def)             Requested size: 112.74377pt x 93.39134pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_Prediction_Exper
 imental.eps>
@@ -1945,17 +1945,17 @@ imental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 Prediction_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_Predicti
 on_Experimental.eps>
-(epstopdf)             \includegraphics on input line 255.
+(epstopdf)             \includegraphics on input line 257.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=405
+<Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=411
 , 480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-
-converted-to.pdf used on input line 255.
+converted-to.pdf used on input line 257.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_LR_VI_Experimental.
 eps>
@@ -1968,17 +1968,17 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_LR_
 VI_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_LR_VI_Experimental.
 eps>
-(epstopdf)             \includegraphics on input line 256.
+(epstopdf)             \includegraphics on input line 258.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=406, 486.81
+<Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=412, 486.81
 876pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converte
-d-to.pdf used on input line 256.
+d-to.pdf used on input line 258.
 (pdftex.def)             Requested size: 112.74377pt x 90.88814pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_PCE_Prediction_Expe
 rimental.eps>
@@ -1991,17 +1991,17 @@ rimental-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_PCE
 _Prediction_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_PCE_Predic
 tion_Experimental.eps>
-(epstopdf)             \includegraphics on input line 257.
+(epstopdf)             \includegraphics on input line 259.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=40
-7, 480.79625pt x 392.46625pt>
+<Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=41
+3, 480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps
--converted-to.pdf used on input line 257.
+-converted-to.pdf used on input line 259.
 (pdftex.def)             Requested size: 112.74377pt x 92.03195pt.
 Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_PCE_SI_Experimental
 .eps>
@@ -2014,17 +2014,17 @@ Package epstopdf Info: Source file: <Figures/AM_AMp_Min_QoI_PCE_SI_Experimental
 (epstopdf)             Command: <repstopdf --outfile=Figures/AM_AMp_Min_QoI_PCE
 _SI_Experimental-eps-converted-to.pdf Figures/AM_AMp_Min_QoI_PCE_SI_Experimenta
 l.eps>
-(epstopdf)             \includegraphics on input line 258.
+(epstopdf)             \includegraphics on input line 260.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=408, 473.7
+<Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=414, 473.7
 7pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-convert
-ed-to.pdf used on input line 258.
+ed-to.pdf used on input line 260.
 (pdftex.def)             Requested size: 112.74377pt x 93.39134pt.
 
 
@@ -2040,15 +2040,15 @@ nverted-to.pdf> <./Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pd
 f>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 282.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 280.
+(hyperref)                removing `subscript' on input line 282.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 280.
+(hyperref)                removing `math shift' on input line 282.
 
 Package epstopdf Info: Source file: <Figures/AMp_Curves.eps>
 (epstopdf)                    date: 2018-07-26 08:42:09
@@ -2058,14 +2058,14 @@ Package epstopdf Info: Source file: <Figures/AMp_Curves.eps>
 (epstopdf)                    size: 458081 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Curves-eps-con
 verted-to.pdf Figures/AMp_Curves.eps>
-(epstopdf)             \includegraphics on input line 284.
+(epstopdf)             \includegraphics on input line 286.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/AMp_Curves-eps-converted-to.pdf, id=479, 562.1pt x 421.575pt>
+<Figures/AMp_Curves-eps-converted-to.pdf, id=486, 562.1pt x 421.575pt>
 File: Figures/AMp_Curves-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/AMp_Curves-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AMp_Curves-eps-converted-to.pdf used on input 
-line 284.
+line 286.
 (pdftex.def)             Requested size: 230.18253pt x 172.63458pt.
 Package epstopdf Info: Source file: <Figures/AMp_Time_Lag_Histogram.eps>
 (epstopdf)                    date: 2018-07-26 08:42:35
@@ -2076,16 +2076,16 @@ ed-to.pdf>
 (epstopdf)                    size: 62677 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/AMp_Time_Lag_Histo
 gram-eps-converted-to.pdf Figures/AMp_Time_Lag_Histogram.eps>
-(epstopdf)             \includegraphics on input line 285.
+(epstopdf)             \includegraphics on input line 287.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf, id=480, 562.1pt x 421.575
+<Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf, id=487, 562.1pt x 421.575
 pt>
 File: Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf Graphic file (type pd
 f)
  <use Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf us
-ed on input line 285.
+ed on input line 287.
 (pdftex.def)             Requested size: 230.18253pt x 172.63458pt.
  [15]
 
@@ -2100,14 +2100,14 @@ Package epstopdf Info: Source file: <Figures/Radius_Curves.eps>
 (epstopdf)                    size: 347360 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Radius_Curves-eps-
 converted-to.pdf Figures/Radius_Curves.eps>
-(epstopdf)             \includegraphics on input line 293.
+(epstopdf)             \includegraphics on input line 295.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Radius_Curves-eps-converted-to.pdf, id=486, 562.1pt x 421.575pt>
+<Figures/Radius_Curves-eps-converted-to.pdf, id=492, 562.1pt x 421.575pt>
 File: Figures/Radius_Curves-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/Radius_Curves-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Radius_Curves-eps-converted-to.pdf used on inp
-ut line 293.
+ut line 295.
 (pdftex.def)             Requested size: 230.18253pt x 172.63458pt.
 Package epstopdf Info: Source file: <Figures/Radius_Time_Lag_Histogram.eps>
 (epstopdf)                    date: 2018-07-26 08:37:53
@@ -2118,16 +2118,16 @@ erted-to.pdf>
 (epstopdf)                    size: 62337 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figures/Radius_Time_Lag_Hi
 stogram-eps-converted-to.pdf Figures/Radius_Time_Lag_Histogram.eps>
-(epstopdf)             \includegraphics on input line 294.
+(epstopdf)             \includegraphics on input line 296.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf, id=487, 562.1pt x 421.
+<Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf, id=493, 562.1pt x 421.
 575pt>
 File: Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf Graphic file (type
  pdf)
  <use Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf
- used on input line 294.
+ used on input line 296.
 (pdftex.def)             Requested size: 230.18253pt x 172.63458pt.
 
 
@@ -2153,24 +2153,20 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
  (./NVU_UQ_paper_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
 Package rerunfilecheck Info: File `NVU_UQ_paper_1.out' has not changed.
 (rerunfilecheck)             Checksum: 0285DFA2257A9748244926E53423539A;867.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 307.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  ) 
 Here is how much of TeX's memory you used:
- 36740 strings out of 493014
- 797894 string characters out of 6133351
- 964409 words of memory out of 5000000
- 39533 multiletter control sequences out of 15000+600000
+ 36752 strings out of 493014
+ 798057 string characters out of 6133351
+ 964560 words of memory out of 5000000
+ 39542 multiletter control sequences out of 15000+600000
  16473 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,94p,1948b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2240,10 +2236,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on NVU_UQ_paper_1.pdf (21 pages, 2830432 bytes).
+Output written on NVU_UQ_paper_1.pdf (21 pages, 2831342 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
+ 96 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

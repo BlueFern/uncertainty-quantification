@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Ames(2000)}]{Ames2000}
@@ -48,6 +48,12 @@
   M.~K.; Aldrich, R.~W. and Nelson, M.~T.} (\textbf{2006}): {Local potassium
   signaling couples neuronal activity to vasodilation in the brain}, Nature
   neuroscience, Vol.~9, No.~11 pp. 1397--1403.
+
+\bibitem[{Hsieh et~al.(2018)Hsieh, Reisfeld, Bois and Chiu}]{gsa_pharm}
+\textbf{Hsieh, N.-H.; Reisfeld, B.; Bois, F.~Y. and Chiu, W.~A.}
+  (\textbf{2018}): Applying a global sensitivity analysis workflow to improve
+  the computational efficiencies in physiologically-based pharmacokinetic
+  modeling, Frontiers in Pharmacology, Vol.~9, No. 588.
 
 \bibitem[{Kenny et~al.(2017)Kenny, Plank and David}]{Kenny2017a}
 \textbf{Kenny, A.; Plank, M.~J. and David, T.} (\textbf{2017}): {The role of
@@ -132,6 +138,16 @@
   Tarantola, S.} (\textbf{2010}): Variance based sensitivity analysis of model
   output. design and estimator for the total sensitivity index, Computer
   Physics Communications, Vol. 181 pp. 259--270.
+
+\bibitem[{Sobie(2009)}]{lr_gsa}
+\textbf{Sobie, E.~A.} (\textbf{2009}): Parameter sensitivity analysis in
+  electrophysiological models using multivariable regression, Biophysical
+  Journal, Vol.~96 pp. 1264--1274.
+
+\bibitem[{Tenn{\o}e et~al.(2018)Tenn{\o}e, Halnes and Einevoll}]{uqpy}
+\textbf{Tenn{\o}e, S.; Halnes, G. and Einevoll, G.~T.} (\textbf{2018}):
+  Uncertainpy: A python toolbox for uncertainty quantification and sensitivity
+  analysis in computational neuroscience, http://dx.doi.org/10.1101/274779.
 
 \bibitem[{Zheng et~al.(2010)Zheng, Pan, Harris, Billings, Coca, Berwick, Jones,
   Kennerley, Johnston, Martin, Devonshire and Mayhew}]{Zheng2010}
