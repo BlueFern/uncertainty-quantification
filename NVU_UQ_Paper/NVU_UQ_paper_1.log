@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 AUG 2018 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  2 AUG 2018 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1225,7 +1225,7 @@ us-eps-converted-to.pdf Figures/Rectangular_Stimulus.eps>
 (epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Rectangular_Stimulus-eps-converted-to.pdf, id=199, 496.85625pt x 384.4
+<Figures/Rectangular_Stimulus-eps-converted-to.pdf, id=200, 496.85625pt x 384.4
 3625pt>
 File: Figures/Rectangular_Stimulus-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1245,7 +1245,7 @@ lus-eps-converted-to.pdf Figures/Experimental_Stimulus.eps>
 (epstopdf)             \includegraphics on input line 87.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Experimental_Stimulus-eps-converted-to.pdf, id=200, 496.85625pt x 384.
+<Figures/Experimental_Stimulus-eps-converted-to.pdf, id=201, 496.85625pt x 384.
 43625pt>
 File: Figures/Experimental_Stimulus-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1267,7 +1267,7 @@ s-eps-converted-to.pdf Figures/Steady_State_Curves.eps>
 (epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Steady_State_Curves-eps-converted-to.pdf, id=251, 487.8225pt x 395.477
+<Figures/Steady_State_Curves-eps-converted-to.pdf, id=253, 487.8225pt x 395.477
 5pt>
 File: Figures/Steady_State_Curves-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Steady_State_Curves-eps-converted-to.pdf>
@@ -1286,7 +1286,7 @@ mples-eps-converted-to.pdf Figures/First_Iteration_Samples.eps>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/First_Iteration_Samples-eps-converted-to.pdf, id=252, 485.815pt x 384.
+<Figures/First_Iteration_Samples-eps-converted-to.pdf, id=254, 485.815pt x 384.
 43625pt>
 File: Figures/First_Iteration_Samples-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1308,7 +1308,7 @@ _Curves-eps-converted-to.pdf Figures/Increase_with_Stim_Curves.eps>
 (epstopdf)             \includegraphics on input line 167.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Increase_with_Stim_Curves-eps-converted-to.pdf, id=269, 563.10374pt x 
+<Figures/Increase_with_Stim_Curves-eps-converted-to.pdf, id=271, 563.10374pt x 
 422.57875pt>
 File: Figures/Increase_with_Stim_Curves-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1328,7 +1328,7 @@ _Curves-eps-converted-to.pdf Figures/Decrease_with_Stim_Curves.eps>
 (epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf, id=270, 563.10374pt x 
+<Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf, id=272, 563.10374pt x 
 422.57875pt>
 File: Figures/Decrease_with_Stim_Curves-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1348,7 +1348,7 @@ e-eps-converted-to.pdf Figures/Higher_Steady_State.eps>
 (epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Higher_Steady_State-eps-converted-to.pdf, id=271, 563.10374pt x 422.57
+<Figures/Higher_Steady_State-eps-converted-to.pdf, id=273, 563.10374pt x 422.57
 875pt>
 File: Figures/Higher_Steady_State-eps-converted-to.pdf Graphic file (type pdf)
  <use Figures/Higher_Steady_State-eps-converted-to.pdf>
@@ -1406,7 +1406,7 @@ n_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 185.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=280,
+<Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=282,
  474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
@@ -1429,7 +1429,7 @@ s>
 (epstopdf)             \includegraphics on input line 186.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=281, 486.818
+<Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=283, 486.818
 76pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1452,7 +1452,7 @@ ion_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=282
+<Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=284
 , 474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1475,7 +1475,7 @@ eps>
 (epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=283, 480.79
+<Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=285, 480.79
 625pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1498,7 +1498,7 @@ on_Experimental.eps>
 (epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=284
+<Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=286
 , 474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1521,7 +1521,7 @@ eps>
 (epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=285, 486.81
+<Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=287, 486.81
 876pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1545,7 +1545,7 @@ tion_Experimental.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=28
-6, 474.77374pt x 392.46625pt>
+8, 474.77374pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf G
 raphic file (type pdf)
 
@@ -1567,7 +1567,7 @@ l.eps>
 (epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=287, 480.7
+<Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=289, 480.7
 9625pt x 392.46625pt>
 File: Figures/K_ECS_Mean_QoI_PCE_SI_Experimental-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1633,7 +1633,7 @@ ctangular.eps>
 (epstopdf)             \includegraphics on input line 219.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=388, 4
+<Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=390, 4
 74.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -1655,7 +1655,7 @@ _Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=389, 486.81876
+<Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=391, 486.81876
 pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1678,7 +1678,7 @@ Rectangular.eps>
 (epstopdf)             \includegraphics on input line 221.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=390, 
+<Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=392, 
 474.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1701,7 +1701,7 @@ I_Rectangular-eps-converted-to.pdf Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 222.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=391, 480.7962
+<Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=393, 480.7962
 5pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_SI_Rectangular-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1724,7 +1724,7 @@ xperimental.eps>
 (epstopdf)             \includegraphics on input line 223.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=392, 
+<Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=394, 
 474.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -1747,7 +1747,7 @@ _Experimental-eps-converted-to.pdf Figures/Vol_Flow_QoI_LR_VI_Experimental.eps>
 (epstopdf)             \includegraphics on input line 224.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=393, 486.8187
+<Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=395, 486.8187
 6pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1770,7 +1770,7 @@ _Experimental.eps>
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=394,
+<Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=396,
  474.77374pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf Gra
 phic file (type pdf)
@@ -1793,7 +1793,7 @@ s>
 (epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=395, 480.796
+<Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=397, 480.796
 25pt x 392.46625pt>
 File: Figures/Vol_Flow_QoI_PCE_SI_Experimental-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1856,7 +1856,7 @@ n_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 253.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=407,
+<Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf, id=409,
  480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular-eps-converted-to.pdf Gra
 phic file (type pdf)
@@ -1879,7 +1879,7 @@ s>
 (epstopdf)             \includegraphics on input line 254.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=408, 486.818
+<Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf, id=410, 486.818
 76pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_VI_Rectangular-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1902,7 +1902,7 @@ ion_Rectangular.eps>
 (epstopdf)             \includegraphics on input line 255.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=409
+<Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf, id=411
 , 480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1925,7 +1925,7 @@ eps>
 (epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=410, 473.77
+<Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf, id=412, 473.77
 pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1948,7 +1948,7 @@ on_Experimental.eps>
 (epstopdf)             \includegraphics on input line 257.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=411
+<Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf, id=413
 , 480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental-eps-converted-to.pdf Gr
 aphic file (type pdf)
@@ -1971,7 +1971,7 @@ eps>
 (epstopdf)             \includegraphics on input line 258.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=412, 486.81
+<Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf, id=414, 486.81
 876pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_LR_VI_Experimental-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1995,7 +1995,7 @@ tion_Experimental.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf, id=41
-3, 480.79625pt x 392.46625pt>
+5, 480.79625pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental-eps-converted-to.pdf G
 raphic file (type pdf)
 
@@ -2017,7 +2017,7 @@ l.eps>
 (epstopdf)             \includegraphics on input line 260.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=414, 473.7
+<Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf, id=416, 473.7
 7pt x 392.46625pt>
 File: Figures/AM_AMp_Min_QoI_PCE_SI_Experimental-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2060,7 +2060,7 @@ Package epstopdf Info: Source file: <Figures/AMp_Curves.eps>
 verted-to.pdf Figures/AMp_Curves.eps>
 (epstopdf)             \includegraphics on input line 286.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/AMp_Curves-eps-converted-to.pdf, id=486, 562.1pt x 421.575pt>
+<Figures/AMp_Curves-eps-converted-to.pdf, id=488, 562.1pt x 421.575pt>
 File: Figures/AMp_Curves-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/AMp_Curves-eps-converted-to.pdf>
@@ -2079,7 +2079,7 @@ gram-eps-converted-to.pdf Figures/AMp_Time_Lag_Histogram.eps>
 (epstopdf)             \includegraphics on input line 287.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf, id=487, 562.1pt x 421.575
+<Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf, id=489, 562.1pt x 421.575
 pt>
 File: Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -2102,7 +2102,7 @@ Package epstopdf Info: Source file: <Figures/Radius_Curves.eps>
 converted-to.pdf Figures/Radius_Curves.eps>
 (epstopdf)             \includegraphics on input line 295.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/Radius_Curves-eps-converted-to.pdf, id=492, 562.1pt x 421.575pt>
+<Figures/Radius_Curves-eps-converted-to.pdf, id=494, 562.1pt x 421.575pt>
 File: Figures/Radius_Curves-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/Radius_Curves-eps-converted-to.pdf>
@@ -2121,7 +2121,7 @@ stogram-eps-converted-to.pdf Figures/Radius_Time_Lag_Histogram.eps>
 (epstopdf)             \includegraphics on input line 296.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf, id=493, 562.1pt x 421.
+<Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf, id=495, 562.1pt x 421.
 575pt>
 File: Figures/Radius_Time_Lag_Histogram-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -2143,7 +2143,7 @@ I_PCE_Prediction_Experimental-eps-converted-to.pdf> <./Figures/AM_AMp_Min_QoI_P
 CE_SI_Experimental-eps-converted-to.pdf>] [17 <./Figures/AMp_Curves-eps-convert
 ed-to.pdf> <./Figures/AMp_Time_Lag_Histogram-eps-converted-to.pdf>] [18 <./Figu
 res/Radius_Curves-eps-converted-to.pdf> <./Figures/Radius_Time_Lag_Histogram-ep
-s-converted-to.pdf>] [19] [20])
+s-converted-to.pdf>] [19] [20] [21])
 
 Package natbib Warning: There were undefined citations.
 
@@ -2152,7 +2152,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[21]
+[22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
  (./NVU_UQ_paper_1.aux)
@@ -2163,10 +2163,10 @@ Package rerunfilecheck Info: File `NVU_UQ_paper_1.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  ) 
 Here is how much of TeX's memory you used:
- 36752 strings out of 493014
- 798057 string characters out of 6133351
- 964560 words of memory out of 5000000
- 39542 multiletter control sequences out of 15000+600000
+ 36757 strings out of 493014
+ 798141 string characters out of 6133351
+ 964627 words of memory out of 5000000
+ 39545 multiletter control sequences out of 15000+600000
  16473 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,94p,1948b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2236,10 +2236,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on NVU_UQ_paper_1.pdf (21 pages, 2831342 bytes).
+Output written on NVU_UQ_paper_1.pdf (22 pages, 2831891 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 529 compressed objects within 6 object streams
+ 98 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Ames(2000)}]{Ames2000}
@@ -148,6 +148,11 @@
 \textbf{Tenn{\o}e, S.; Halnes, G. and Einevoll, G.~T.} (\textbf{2018}):
   Uncertainpy: A python toolbox for uncertainty quantification and sensitivity
   analysis in computational neuroscience, http://dx.doi.org/10.1101/274779.
+
+\bibitem[{Witthoft et~al.(2013)Witthoft, Filosa and Karniadakis}]{Witthoft2013}
+\textbf{Witthoft, A.; Filosa, J.~A. and Karniadakis, G.~E.} (\textbf{2013}):
+  {Potassium buffering in the neurovascular unit: models and sensitivity
+  analysis}, Biophysical Journal, Vol. 105, No.~9 pp. 2046--2054.
 
 \bibitem[{Zheng et~al.(2010)Zheng, Pan, Harris, Billings, Coca, Berwick, Jones,
   Kennerley, Johnston, Martin, Devonshire and Mayhew}]{Zheng2010}
