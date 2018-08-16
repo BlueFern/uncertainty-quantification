@@ -52,15 +52,21 @@ Figure~\ref{fig:K_ECS_Mean} displays results for the average of the ECS potassiu
 \label{fig:K_ECS_Mean}
 \end{figure}
 
+    0.3715
+    0.2488
+    0.2092
+    0.1236
+    0.0371
+
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
 Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
-62 & 0.143 in m4alpha and m4 beta &  0.3744 & 0.3683\\
-63 & 5.67 in m4alpha and m4 beta & 0.2446 & 0.2307\\
-61 & gKleak\_d in Neuron & 0.2025 & 0.2485\\
-75 & 34.9 in m6alpha & 0.1217 & 0.1070\\
-116 & dhod in Neuron &  0.0348 & 0.0257\\
+62 & 0.143 in m4alpha and m4 beta &  0.3715 & 0.3682\\
+63 & 5.67 in m4alpha and m4 beta &  0.2488 & 0.2313\\
+61 & gKleak\_d in Neuron & 0.2092 & 0.2483\\
+75 & 34.9 in m6alpha & 0.1236 & 0.1068\\
+116 & dhod in Neuron &   0.0371 & 0.0256\\
 \end{tabular}
 \caption{Most influential parameters for the ECS potassium QoI.}
 \label{tab:K_ECS_Mean}
@@ -92,11 +98,11 @@ We again observe reasonably accurate fits by a linear surrogate and improved acc
 \centering
 \begin{tabular}{cccc}
 Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
-141 &  z\_4 in SMCEC &  0.4353 & 0.4445\\
-158 & n\_cross in WallMechanics & 0.3045 & 0.3398\\
- 139 & z\_2 in SMCEC & 0.1267 & 0.0478\\
- 142 & z\_5 in SMCEC & 0.0347 & 0.0347\\
-  136 & G\_K\_i in SMCEC & 0.0302 & 0.0359\\
+141 &  z\_4 in SMCEC & 0.4320 & 0.3871\\
+158 & n\_cross in WallMechanics & 0.3059 & 0.2948\\ 
+ 139 & z\_2 in SMCEC & 0.1371 & 0.1265\\
+ 142 & z\_5 in SMCEC & 0.0376 & 0.0350\\
+  136 & G\_K\_i in SMCEC & 0.0303 & 0.0300\\
 \end{tabular}
 \caption{Most influential parameters for the volumetric flow rate in the cerebral tissue QoI.}
 \label{tab:qoi_vol_flow}
@@ -126,11 +132,11 @@ The linear surrogate does not perform as well for this QoI; however, the PC surr
 \centering
 \begin{tabular}{cccc}
 Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
-141 & z\_4 in SMCEC & 0.7095 & 0.6485\\
-139 &  z\_2 in SMCEC & 0.1681 & 0.1465\\
-142 & z\_5 in SMCEC & 0.0569 & 0.0341\\
-158 & n\_cross in WallMechanics & 0.0463 & 0.0645\\
-140 & z\_3 in SMCEC & 0.0189 & 0.0463\\
+141 & z\_4 in SMCEC & 0.7091 & 0.6567\\
+139 &  z\_2 in SMCEC & 0.1682 & 0.1641\\
+142 & z\_5 in SMCEC & 0.0570 & 0.0332\\
+158 & n\_cross in WallMechanics & 0.0462 & 0.0651\\
+140 & z\_3 in SMCEC & 0.0188 &0.0130\\
 \end{tabular}
 \caption{Most influential parameters for the combined concentration of the actin myosin complex QoI.}
 \label{tab:qoi_AM_AMp_Min}
