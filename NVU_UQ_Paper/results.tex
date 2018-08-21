@@ -1,12 +1,13 @@
-\section{Results}
+\section{Numerical results}
 \label{sec:results}
-This section details our approach to varying the parameters and contains numerical results for the 3 QoI's, with both the square pulse stimulus and the experimental data stimulus for each. The section is organized in four subsections, one on the parameter sampling and one for each of the three QoI's.
+In three subsections below, we analyze  the sensitivity of each of the three QoIs. In the first subsection, we discuss  further the probabilistic distribution of the uncertain parameters.  
 
-\subsection{Parameter sampling}
+\subsection{Parameter distribution}
 \label{sec:param_sampling}
-Distributions for the parameters are not known a priori, nor are they able to be estimated from experimental data. The subsection below details our computational approach to determine a distribution for the parameters. The computation time required for model evaluations with a stimulus applied is too great for the computational approach below. Rather, we focus on properties of the solution when no stimulus is applied, i.e. the steady state solution(s). This affords the needed computational acceleration. 
 
-Parameter distributions are determined by first assuming independence of the parameters and assigning each parameter a uniform distribution with +- 10\% uncertainty around its nominal value (larger amounts of uncertainty may be desirable but are not computationally feasible). Parameters are likely to be correlated but we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue * indicates a sample where the solver terminated prematurely, a yellow + indicates a sample where an unstable steady state was observed, a red $\circ$ indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed.
+We now revisit our assumption that all the uncertain parameters are independent and uniformly distributed within $\pm 10\%$ of  their nominal value. We do so by conducting a study of the steady state solutions, i..e, we solve the ODE system (\ref{caboodle}) {\sl without} stimuli as this significantly speeds up computation; indeed, a similar study on the full dynamics proved to not be computationally feasible.  
+
+While parameters are likely to be correlated, we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue * indicates a sample where the solver terminated prematurely, a yellow + indicates a sample where an unstable steady state was observed, a red $\circ$ indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed.
 
 \begin{figure}[h]
 \centering
@@ -32,6 +33,9 @@ Samples are drawn and the model, with a stimulus applied (in two separate cases,
 This article focuses on the typical case so we remove samples where the radius does not increase in response to the stimulus and decrease when it is removed. This processing yields 660 samples for analysis when the rectangular pulse stimulus is applied and 438 samples when the stimulus from experimental data is applied. The results presented below use these samples.
 
 Exploration of the 660 retained samples indicate that atypical cases have higher probability when the parameter 34.9 in m2alpha is small; however, this parameter does not characterize the solution regime by itself; it is likely that the solution regime is characterized by a combination of several parameters. Further sampling and exploration is required to better understand the structure in parameter space which determine the solution regime.
+
+\todo[inline]{I do not think we need to display BOTH the results from with the synthetic and non-synthetic stimuli. We can certainly discuss results for both, but, in the eye ball norm, the GSA results for all three QoIs are essentially identical.} 
+
 
 \subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
 \label{sec:qoi_K_ECS_Mean}

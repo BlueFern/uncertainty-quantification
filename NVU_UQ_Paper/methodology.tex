@@ -47,8 +47,6 @@ q_3 = \min _{t, t_1\le t \le t_2} [AM+AM_p]. \label{AM_AMp_Min}
 
 An important decision (and delicate) {\sl modeling} decision  is how to describe the uncertainty attached to the parameter vector $\boldsymbol{\theta}$. Here, we give each $\theta_i$, $i=1,\dots, 160$, a nominal value $\bar \theta_i$ and assume each parameter to be uniformly distributed over the range of value $[0.9\, \bar\theta_i, 1.1 \,\bar\theta_i]$, i.e., within $\pm 10\%$ of the nominal value. All the parameters for now are assumed to be independent, an assumption we revisit and improve upon below. 
 
-\todo[inline]{SOME OF THE DISCUSSION OF THE "RESULT SECTION" ABOUT SAMPLING SHOULD BE MOVED HERE}
-
 A key  step in analyzing the dependency of a QoI $q = g(\boldsymbol{\theta})$ on its inputs is the evaluation of $g$ at $M$ samples $\boldsymbol\theta^k$, $k=1,\dots, M$, from the parameter distribution (where superscripts are used to refer to specific samples). 
 This is also the  main  computational bottleneck as it requires the numerical resolution of  the ODE system (\ref{caboodle})  by computing the $M$ solutions $\mathbf y^k$, $k=1,\dots , M$, corresponding to  the parameter samples. 
 While relatively large and stiff, the ODE system (\ref{caboodle}) can be  solved with standard tools and methods, here through the MATLAB routine ode15s  with relative and absolute tolerances of $10^{-4}$. The evaluation of the above QoIs themselves from the ODE solutions is straightforward and can be done at low cost.
@@ -85,28 +83,38 @@ To obtain a model with a more manageable size, we reduce the parameter space to 
 \begin{eqnarray}
 g(\theta_1, \dots, \theta_{160}) \approx h(\theta_{j_1}, \dots, \theta_{j_r}), \label{reddim}
 \end{eqnarray}
-where $h$ is obtained from $g$ by fixing any non-influential parameter $\theta_j$ in $g$  to its nominal value $\bar\theta_j$. In Section~\ref{sec:results}, this reduction yields around $15-20$ parameters instead of the original 160. 
-
+where $h$ is obtained from $g$ by fixing any non-influential parameter $\theta_j$ in $g$  to its nominal value $\bar\theta_j$. In Section~\ref{sec:results}, this reduction yields around 15-20 parameters instead of the original 160. We denote by $\hat{\boldsymbol{\theta}}$ the reduced parameter vector. 
 
 \subsection{Surrogate model}
 For any of the three considered QoIs, our information on the function $h$ defined (\ref{reddim}) consists of the set of sampled values $\{ h(\theta_{j_1}^k, \dots, \theta_{j_r}^k)\}$, $k=1, \dots, M$.  To facilitate the use of standard GSA tools, which may require derivatives or variance estimations, it is both convenient and computationally advantageous to construct an approximating function, i.e., a surrogate model. 
 We use a sparse Polynomial Chaos (PC) surrogate. This amounts to introducing a polynomial approximation of $h$ of the type
 \begin{eqnarray}
-h(\boldsymbol{\theta}) \approx \sum_{\boldsymbol{\alpha}} c_{\boldsymbol{\alpha}} \psi_{\boldsymbol{\alpha}}(\boldsymbol{\theta}) \label{pce}
+h(\hat{\boldsymbol{\theta}}) \approx H(\hat{\boldsymbol{\theta}}) \equiv \sum_{\boldsymbol{\alpha}} c_{\boldsymbol{\alpha}} \psi_{\boldsymbol{\alpha}}(\hat{\boldsymbol{\theta}}) \label{pce}
 \end{eqnarray}
 where the $\psi_{\boldsymbol{\alpha}}$'s are multivariate polynomials which are orthogonal with respect to the probability distribution function (PDF) $p_{\boldsymbol{\theta}}$ of $\boldsymbol{\theta}$, i.e.
 \begin{eqnarray}
 \int \psi_{\boldsymbol{\alpha}}(\mathbf x) \psi_{\boldsymbol{\beta}}(\mathbf x)\, p_{\boldsymbol{\theta}}(\mathbf x) \, d\mathbf{x} = \delta _{\boldsymbol{\alpha},\boldsymbol{\beta}} \label{ortho}
 \end{eqnarray}
-where $\boldsymbol{\alpha}$ and $\boldsymbol{\beta}$ are multi-indices and $\delta _{\boldsymbol{\alpha}}$ is the generalized Kronecker symbol. Due to our choice of distributions for $\boldsymbol{\theta}$, the $\psi_{\boldsymbol{\alpha}}$'s are essentially Legendre polynomials and the coefficients are computed through least-squares minimization. All surrogate models are validated using 10-fold cross validation.
+where $\boldsymbol{\alpha}$ and $\boldsymbol{\beta}$ are multi-indices and $\delta _{\boldsymbol{\alpha},\boldsymbol{\beta}}$ is the generalized Kronecker symbol. Due to our choice of distributions for $\boldsymbol{\theta}$, the $\psi_{\boldsymbol{\alpha}}$'s are essentially Legendre polynomials and the coefficients are computed through least-squares minimization. All surrogate models are validated using 10-fold cross validation.
 
 Polynomial chaos is by now a well documented method and we refer the readers for instance to the  UQLab \cite{uqlab} manual for more details. Incidentally, we make use of the implementation from  \cite{uqlab} in the results below. 
 
 
 \subsection{Global sensitivity analysis} 
+We use variance based GSA to assess the relative importance of the input parameters of $H$ in (\ref{pce}). In their simplest form,  the total Sobol' indices \cite{saltellitotalindex} apportion to uncertain parameters, or sets thereof, their relative contribution to the variance of the output. Indeed, thanks to the law of total variance, we can decompose the variance of $q = H(\hat{\boldsymbol{\theta}})$ as follows
+\begin{eqnarray}
+\operatorname{var}(q) = \operatorname{var}(\mathbb E[q|\hat{\boldsymbol{\theta}}_{\sim i}]) + \mathbb E[\operatorname{var}(q|\hat{\boldsymbol{\theta}}_{\sim i})], \label{ltv}
+\end{eqnarray}
+where $\hat{\boldsymbol{\theta}}_{\sim i}$ denotes all the parameters in $\hat{\boldsymbol{\theta}}$ except $\hat{\boldsymbol{\theta}}_i$. If we assume now that all the input parameters of $H$ are known with certainty, i.e,, if $\hat{\boldsymbol{\theta}}_{\sim i}$ is known, then the remaining variance of $q$ is simply given by 
+\begin{eqnarray*}
+\operatorname{var}(q) - \operatorname{var}(\mathbb E[q|\hat{\boldsymbol{\theta}}_{\sim i}]) = \mathbb E[\operatorname{var}(q|\hat{\boldsymbol{\theta}}_{\sim i})]. 
+\end{eqnarray*}
+This latter expression is thus a natural way of measuring how influential $\hat{\boldsymbol{\theta}}_i$ is; the corresponding total Sobol' index $S_{T_i}$ is but a scaled version of this
+\begin{eqnarray}
+S_{T_i} = \frac{\mathbb E[\operatorname{var}(q|\hat{\boldsymbol{\theta}}_{\sim i})]}{\operatorname{var}(q) }. \label{sobol}
+\end{eqnarray}
+The relevance of this basic definition can be extended to time dependent QoIs \cite{timegsa}, stochastic QoIs \cite{stogsa} or correlated parameters \cite{corvar}.
 
-\todo[inline]{still to do....}
 
-The total Sobol' indices \cite{saltellitotalindex} of the PC surrogate are computed to yield a quantitative measure of importance for each $\theta_{k_i}$, $i=1,2,\dots,r$.
 
 
