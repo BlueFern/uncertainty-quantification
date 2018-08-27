@@ -56,27 +56,21 @@ Figure~\ref{fig:K_ECS_Mean} displays results for the average of the ECS potassiu
 \label{fig:K_ECS_Mean}
 \end{figure}
 
-    0.3715
-    0.2488
-    0.2092
-    0.1236
-    0.0371
-
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
 Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
-62 & 0.143 in m4alpha and m4 beta &  0.3715 & 0.3682\\
-63 & 5.67 in m4alpha and m4 beta &  0.2488 & 0.2313\\
-61 & gKleak\_d in Neuron & 0.2092 & 0.2483\\
-75 & 34.9 in m6alpha & 0.1236 & 0.1068\\
-116 & dhod in Neuron &   0.0371 & 0.0256\\
+62 & 0.143 in m4alpha and m4 beta &  0.3738 & 0.3732\\
+63 & 5.67 in m4alpha and m4 beta &  0.2449 & 0.2297\\
+61 & gKleak\_d in Neuron &0.2074 & 0.2409\\
+75 & 34.9 in m6alpha & 0.1124 & 0.1112\\
+116 & dhod in Neuron & 0.0342 & 0.0226\\
 \end{tabular}
 \caption{Most influential parameters for the ECS potassium QoI.}
 \label{tab:K_ECS_Mean}
 \end{table}
 
-The results are similar for both the rectangular pulse and experimental data stimulus. In both cases, the QoI is approximated with reasonable accuracy by a linear model and with higher accuracy by the PC model. The most important parameters are shared in both cases. Notice that parameter 120 appears to be important in the linear model but unimportant in the PC model. This is because it is strongly correlated with parameter 121, see Figure~\ref{steady_states} and the discussion in Subsection~\ref{sec:param_sampling}, and as a result the coefficient in linear regression may be very large because its effect is offset by the effect of parameter 121. To decorrelate inputs, the PC surrogate is build with only parameter 120 instead of both 120 and 121. It subsequently has minimal importance.
+The results are similar for both the rectangular pulse and experimental data stimulus. In both cases, the QoI is approximated with reasonable accuracy by a linear model and with higher accuracy by the PC model. The most important parameters are shared in both cases. Notice that parameter 120 appears to be important in the linear model but less important in the PC model. This is because it is strongly correlated with parameter 121, see Figure~\ref{steady_states} and the discussion in Subsection~\ref{sec:param_sampling}, and as a result the coefficient in linear regression may be very large because its effect is offset by the effect of parameter 121. To decorrelate inputs, the PC surrogate is build with only parameter 120 instead of both 120 and 121. It subsequently has less importance.
 
 \subsection{QoI \eqref{vol_flow} (volumetric flow rate)}
 
@@ -96,17 +90,17 @@ Figure~\ref{fig:qoi_vol_flow} displays results for the volumetric flow rate in t
 \label{fig:qoi_vol_flow}
 \end{figure}
 
-We again observe reasonably accurate fits by a linear surrogate and improved accuracy by a PC surrogate. The surrogate predictions and important parameters for the rectangular pulse and experimental stimulus closely agree. The influential parameters for the volumetric flow rate in the cerebral tissue are different than those found to be influential for the ECS potassium. This is an unsurprising result. As in Subsection~\ref{sec:qoi_K_ECS_Mean}, parameter 120 appears important in the linear surrogate but unimportant in the PC surrogate.
+We again observe reasonably accurate fits by a linear surrogate and improved accuracy by a PC surrogate. The surrogate predictions and important parameters for the rectangular pulse and experimental stimulus closely agree. The influential parameters for the volumetric flow rate in the cerebral tissue are different than those found to be influential for the ECS potassium. This is an unsurprising result. As in Subsection~\ref{sec:qoi_K_ECS_Mean}, parameter 120 appears important in the linear surrogate but less important in the PC surrogate.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
 Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
-141 &  z\_4 in SMCEC & 0.4320 & 0.3871\\
-158 & n\_cross in WallMechanics & 0.3059 & 0.2948\\ 
- 139 & z\_2 in SMCEC & 0.1371 & 0.1265\\
- 142 & z\_5 in SMCEC & 0.0376 & 0.0350\\
-  136 & G\_K\_i in SMCEC & 0.0303 & 0.0300\\
+141 &  z\_4 in SMCEC & 0.4561 & 0.4420\\
+158 & n\_cross in WallMechanics & 0.3311 & 0.3544\\ 
+ 139 & z\_2 in SMCEC & 0.0529 & 0.0436\\
+ 142 & z\_5 in SMCEC &  0.0351 &0.0305\\
+  136 & G\_K\_i in SMCEC & 0.0305 &0.0362\\
 \end{tabular}
 \caption{Most influential parameters for the volumetric flow rate in the cerebral tissue QoI.}
 \label{tab:qoi_vol_flow}
@@ -130,37 +124,37 @@ Figure~\ref{fig:qoi_AM_AMp_Min} displays results for the minimum of the combined
 \label{fig:qoi_AM_AMp_Min}
 \end{figure}
 
-The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate; this highlights the nonlinearity of the QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are related to the wall mechanics. Parameter 120 appears important in the linear surrogate but unimportant in the PC surrogate.
+The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate; this highlights the nonlinearity of the QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are related to the wall mechanics. Parameter 120 appears important in the linear surrogate but less important in the PC surrogate.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{cccc}
 Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
-141 & z\_4 in SMCEC & 0.7091 & 0.6567\\
-139 &  z\_2 in SMCEC & 0.1682 & 0.1641\\
-142 & z\_5 in SMCEC & 0.0570 & 0.0332\\
-158 & n\_cross in WallMechanics & 0.0462 & 0.0651\\
-140 & z\_3 in SMCEC & 0.0188 &0.0130\\
+141 & z\_4 in SMCEC & 0.6203 & 0.6242\\
+158 & n\_cross in WallMechanics & 0.1488 &0.1239\\
+139 &  z\_2 in SMCEC & 0.0954 &0.0918\\
+142 & z\_5 in SMCEC & 0.0629 & 0.0644\\
+140 & z\_3 in SMCEC & 0.0273 &0.0261\\
 \end{tabular}
 \caption{Most influential parameters for the combined concentration of the actin myosin complex QoI.}
 \label{tab:qoi_AM_AMp_Min}
 \end{table}
 
-\section{Extra figures we probably won't include}
-\subsection{$AM_p$ Time Lag}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/AMp_Curves.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_Lag_Histogram.eps}
-\caption{$AM_p$ curves on the left and a histogram of the time lags on the right.}
-\end{figure}
-
-\subsection{Radius Time Lag}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=.49 \textwidth]{Figures/Radius_Curves.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Radius_Time_Lag_Histogram.eps}
-\caption{Radius curves on the left and a histogram of the time lags on the right.}
-\end{figure}
+%\section{Extra figures we probably won't include}
+%\subsection{$AM_p$ Time Lag}
+%
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=.49 \textwidth]{Figures/AMp_Curves.eps}
+%\includegraphics[width=.49 \textwidth]{Figures/AMp_Time_Lag_Histogram.eps}
+%\caption{$AM_p$ curves on the left and a histogram of the time lags on the right.}
+%\end{figure}
+%
+%\subsection{Radius Time Lag}
+%
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=.49 \textwidth]{Figures/Radius_Curves.eps}
+%\includegraphics[width=.49 \textwidth]{Figures/Radius_Time_Lag_Histogram.eps}
+%\caption{Radius curves on the left and a histogram of the time lags on the right.}
+%\end{figure}
