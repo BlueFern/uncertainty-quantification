@@ -16,9 +16,9 @@ The overall goal of our numerical study is to determine  which of the uncertain 
 
 
 \subsection{Numerical experimental setup}
-The numerical experiments solve (\ref{caboodle}) in the presence of short duration electrical stimuli as displayed in Figure~\ref{input_stimuli}.
+The numerical model outlined in sketch form in Figure \ref{fig:nvu20} is fully defined in the Supplementary Material  and has been developed over a number of years \cite{Farr2011,Dormanns2015,Dormanns2016b}. In order to develop a variation in radius following a neuronal stimulation an input current is used. The numerical experiments solve equation (\ref{caboodle}) in the presence of short duration electrical (current) stimuli as displayed in Figure~\ref{input_stimuli}. For the presented cases two input profiles are utilised. Firstly a rectangular pulse of width 10 seconds and magnitude  $I_{max}$ and secondly an experimental pulse sequence used in the work of \cite{Zheng2010} which has the same magnitude as the rectangular pulse but a duration of sixteen seconds followed by second pulse (which is not used in this analysis) . Further information about the experiment and the results can be found in \cite{Zheng2010}.  For this second case the stimulus was a current injection at the whisker pad. This induced an increase in neuronal activity in the somato-sensory cortex which subsequently , through the neurovascular pathway, produced a radius change R(t), allowing increased nutrients to perfuse into the cerebral tissue; the essence of neuro-vascular coupling. 
 
-\todo[inline]{EXPLAIN THIS BETTER, LINK TO SPECIFIC STATE VARIABLE AND MODEL}
+%\todo[inline]{EXPLAIN THIS BETTER, LINK TO SPECIFIC STATE VARIABLE AND MODEL}
 
 \begin{figure}[h]
 \centering
@@ -29,6 +29,7 @@ The numerical experiments solve (\ref{caboodle}) in the presence of short durati
 \end{figure}
 
  Assuming the stimulation occurs for $t_1\le t \le t_2$, the QoIs are defined as follows
+ \todo[inline]{What do we assume for the two times $t_1$ and $t_2$? Are they just the definition of the stimulation or do they start during the steady state condition and end after some prescribed time after the end of the simulation? }
  \begin{itemize}
 \item average ECS potassium 
 \begin{eqnarray}
