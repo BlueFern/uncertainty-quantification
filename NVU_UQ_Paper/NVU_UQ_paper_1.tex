@@ -1,4 +1,5 @@
-\documentclass[12pt]{article}
+\documentclass[smallextended]{svjour3}
+%\documentclass[10pt]{article}
 \usepackage{xcolor,graphicx,import,fullpage,textcomp,colortbl,array,pgfplots,lscape,todonotes,booktabs,dsfont,marvosym,ulem} \usepackage[fleqn]{amsmath}% textgreek
 \usepackage{graphicx,subcaption,caption,pgfplots,amsfonts}
 	\newlength\figureheight
@@ -9,7 +10,9 @@
 %\usepackage[papersize={85cm,30cm},left=2cm,top=2cm]{geometry}
 %\usepackage[a3paper,left=2cm,top=4cm,bottom=4cm]{geometry}
 
-
+\def\ns{\vspace{-.06truein}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\usepackage{multirow}
 %if you are annoyed of the colored boxes the hyperlinks in the pdf file uncomment this instead of the plain hyperref package above:
 \usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \usepackage{NVC} %calls the style package NVC.sty created by Loes and Evert
@@ -22,6 +25,7 @@
 \makeglossaries %Activate glossary commands
 \usepackage{glossaryEntries}
 \usepackage{amsmath}
+\usepackage{algorithm,algpseudocode}
 \numberwithin{equation}{section}
 \definecolor{darkred}{rgb}{.8,0,0}
 \definecolor{darkgreen}{rgb}{0,.6,0}
@@ -41,12 +45,9 @@
 \newcommand{\psec}{s$^{-1}$\xspace}
 \begin{document}
 \title{Analysing High-Dimensional Neuroscience Models: Neurovascular Coupling. }
-\author{ Tim David$^{1}$, Pierre Gremaud$^{2}$, Joey Hart$^{2}$\\
-\textit{1.Department of Mechanical Engineering,} \\
-\textit{University of Canterbury, New Zealand}\\
-\textit{2.Department of Mathematics,}\\
-\textit{North Carolina State University, Raleigh, NC}\\
-}
+\author{ T. David \and P.A. Gremaud  \thanks{P.A.G. was supported in part by National Science Foundation (NSF) awards NSF DMS-1522765 and DMS-1745654.}\and J.L. Hart\thanks{J.L.H. was supported in part by the National Science Foundation (NSF) award NSF DMS-1522765.}}
+\institute{T. David \at Department of Mechanical Engineering, University of Canterbury, New Zealand, \email{tim.david@canterbury.ac.nz} \and P.A. Gremaud \at Department of Mathematics, North Carolina State University, Raleigh, NC, USA, \email{gremaud@ncsu.edu} \and J.L. Hart \at Department of Mathematics, North Carolina State University, Raleigh, NC, USA, \email{jlhart3@ncsu.edu}}
+%}
 \maketitle
 \thispagestyle{empty}
 
@@ -60,6 +61,8 @@ abstract here
 %\newpage
 
 \input{introduction}
+
+\input{model}
   
 \input{methodology}
 
