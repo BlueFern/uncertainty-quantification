@@ -1,13 +1,12 @@
 \section{Numerical results}
 \label{sec:results}
-In three subsections below, we analyze  the sensitivity of each of the three QoIs. In the first subsection, we discuss  further the probabilistic distribution of the uncertain parameters.  
 
 \subsection{Parameter distribution}
 \label{sec:param_sampling}
 
-We now revisit our assumption that all the uncertain parameters are independent and uniformly distributed within $\pm 10\%$ of  their nominal value. We do so by conducting a study of the steady state solutions, i..e, we solve the ODE system (\ref{caboodle}) {\sl without} stimuli as this significantly speeds up computation; indeed, a similar study on the full dynamics proved to not be computationally feasible.  
+We now revisit our assumption that all the uncertain parameters are independent and uniformly distributed within $\pm 10\%$ of  their nominal value. We do so by studying the steady state solutions, i..e, we solve the ODE system (\ref{caboodle}) {\sl without} stimuli as this significantly speeds up computation; indeed, a similar study on the full dynamics proved to not be computationally feasible.  
 
-While parameters are likely to be correlated, we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue * indicates a sample where the solver terminated prematurely, a yellow + indicates a sample where an unstable steady state was observed, a red $\circ$ indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed. The two parameters in question are defined below ($p_1,p_2$)
+While parameters are likely to be correlated, we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue \textcolor{blue}{*} indicates a sample where the solver terminated prematurely, a yellow \textcolor{yellow}{+} indicates a sample where an unstable steady state was observed, a red \textcolor{red}{$\circ$} indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed. The two parameters in question are defined below ($p_1,p_2$)
 \begin{eqnarray}\label{eqn:buff}
 [K^+]_e+B \quad\begin{array}{c}
 Y_2 \\ 
@@ -45,37 +44,48 @@ This article focuses on the typical case so we remove samples where the radius d
 Exploration of the 660 retained samples indicate that atypical cases have higher probability when the parameter which shifts the activation variable for the \pot flux through the soma KDR channel is reduced;
  however, this parameter does not characterize the solution regime by itself; it is likely that the solution regime is characterized by a combination of several parameters. Further sampling and exploration is required to better understand the structure in parameter space which determine the solution regime.
 
-\todo[inline]{I do not think we need to display BOTH the results from with the synthetic and non-synthetic stimuli. We can certainly discuss results for both, but, in the eye ball norm, the GSA results for all three QoIs are essentially identical.} 
 
 
 \subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
 \label{sec:qoi_K_ECS_Mean}
 
-Figure~\ref{fig:K_ECS_Mean} displays results for the average of the ECS potassium as defined in equation (\ref{K_ECS_Mean}). Across the top and bottom rows we present results for the rectangular pulse stimulus and experimental data stimulus, respectively. In the leftmost panel, predictions of the linear regression surrogate are plotted against the model values. The sensitivities $L_k$, $k=1,2,\dots,160$, are displayed in the center-left panel. Predictions of the PC surrogate are plotted against the model values in the center-right panel. The total Sobol' indices of the PC surrogate are given in the rightmost panel. Table~\ref{tab:K_ECS_Mean} reports the 5 most important parameters and their total Sobol' indices. 
+Figure~\ref{fig:K_ECS_Mean_rect} and ~\ref{fig:K_ECS_Mean_exp} display results for the average of the ECS potassium as defined in equation (\ref{K_ECS_Mean}) for the rectangular pulse stimulus and experimental pulse stimulus respectively. In the top left panels, predictions of the linear regression surrogate are plotted against the model values. The sensitivities $L_k$, $k=1,2,\dots,160$, are displayed in the top right panels. Predictions of the PC surrogate are plotted against the model values in the bottom left panels. The total Sobol' indices of the PC surrogate are given in the bottom right panels. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}\\
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
-\caption{Results for ECS potassium QoI. Top row: results with a rectangular pulse stimulus; bottom row: results with experimental data stimulus. From left to right, linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
-\label{fig:K_ECS_Mean}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps} \\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}
+\caption{ECS potassium QoI with a rectangular pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\label{fig:K_ECS_Mean_rect}
 \end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps} \\
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
+\caption{ECS potassium QoI with experimental pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\label{fig:K_ECS_Mean_exp}
+\end{figure}
+
+In both cases, Table~\ref{tab:K_ECS_Mean} reports the five most important parameters and their total Sobol' indices. 
+
 
 \begin{table}[h]
 \centering
+\ra{1.3}
 \begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
+\toprule
+Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
+\midrule
 62 & 0.143 in $m_{4\alpha}$ and $m_{4 \beta}$ &  0.3738 & 0.3732\\
 63 & 5.67 in $m_{4\alpha}$ and $m_{4 \beta}$  &  0.2449 & 0.2297\\
 61 & gKleak\_d in Neuron &0.2074 & 0.2409\\
 75 & 34.9 in $m_{6 \alpha}$ & 0.1124 & 0.1112\\
 116 & dhod in Neuron & 0.0342 & 0.0226\\
+ \arrayrulecolor{black}\bottomrule
 \end{tabular}
 \caption{Most influential parameters for the ECS potassium QoI.}
 \label{tab:K_ECS_Mean}
@@ -85,42 +95,48 @@ The top two values in Table \ref{tab:K_ECS_Mean} are scaling and shift parameter
 
 The results for this specific QoI are similar for both the rectangular pulse and experimental data stimulus. In both cases, the QoI is approximated with reasonable accuracy by a linear model and with higher accuracy by the PC model. The most important parameters are shared in both cases. Notice that parameter $p_1$ as defined in Subsection~\ref{sec:param_sampling} above appears to be important in the linear model but unimportant in the PC model. This is because it is strongly correlated with parameter $p_2$, see Figure~\ref{steady_states}  and as a result the coefficient in linear regression may be very large because its effect is offset by the effect of $p_2$. To decorrelate inputs, the PC surrogate is build with only $p_1$ instead of both $p_1$ and $p_2$. It subsequently has minimal importance.
 
-\subsection{QoI (equation (\ref{vol_flow})) (volumetric flow rate)}
+The remaining two QoIs also present very similar results for both the rectangular pulse and experimental data stimulus. In the interest of conciseness, we only present figures corresponding to the experimental data stimulus for these two QoIs; Tables~\ref{tab:qoi_vol_flow} and ~\ref{tab:qoi_AM_AMp_Min} give results for both stimuli. 
 
-Figure~\ref{fig:qoi_vol_flow} displays results for the volumetric flow rate (defined in equation (\ref{vol_flow})) in the cerebral tissue. In the same manner as Figure~\ref{fig:K_ECS_Mean}, the linear and PC surrogate predictions and sensitivities are plotted for both the rectangular pulse and experimental data stimulus. Table~\ref{tab:qoi_vol_flow} reports the 5 most important parameters and their total Sobol' indices. Unsurprisingly the parameter list contains values found in the SMCEC compartment of the full model. However, the topmost parameter ($z_4$) is associated with the conductance of the inwardly rectifying SMC KIR channel defined as a function of both membrane potential $v_{SMC}$ and the \pot concentration in the perivascular space $[K^+]_{PVS}$, given by 
-\begin{equation}
-g_{KIR}=exp\left[ z_5 v_{SMC}+z_3[K^+]_{PVS}-z_4\right] 
-\end{equation}
+\subsection{QoI (\eqref{vol_flow})) (volumetric flow rate)}
+
+Figure~\ref{fig:qoi_vol_flow_exp} displays results for the volumetric flow rate in the cerebral tissue defined by (\ref{vol_flow})  in the same manner as Figures~\ref{fig:K_ECS_Mean_rect} and ~\ref{fig:K_ECS_Mean_exp}. The results correspond to the experimental data stimulus.  Table~\ref{tab:qoi_vol_flow} reports the five most important parameters and their total Sobol' indices. Unsurprisingly, the parameter list contains values found in the SMCEC compartment of the full model. However, the topmost parameter ($z_4$) is associated with the conductance of the inwardly rectifying SMC KIR channel defined as a function of both membrane potential $v_{SMC}$ and the \pot concentration in the perivascular space $[K^+]_{PVS}$, given by 
+\begin{eqnarray}
+g_{KIR}=exp\left[ z_5 v_{SMC}+z_3[K^+]_{PVS}-z_4\right]  \label{eq:gkir}
+\end{eqnarray}
 as shown in \cite{Dormanns2015} fitting to the data of \cite{Filosa2006}. $z_4$ shifts the conductance to the right for constant $[K^+]_{PVS}$  concentration in the perivascular space whilst $n_{cross}$ determines the strength of $[Ca^{2+}]$ in determining the reaction rate of phosphorylation of myosin \cite{Hai1988}. $z_2$ although not especially important it shifts the Nernst potential for the KIR channel to the right as shown by 
-\begin{equation}
-v_{KIR}=z_1 [K^+]_{PVS}-z_2
-\end{equation}
+\begin{eqnarray}
+v_{KIR}=z_1 [K^+]_{PVS}-z_2. \label{vkir}
+\end{eqnarray}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps}\\
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
-\caption{Results for the volumetric flow rate in the cerebral tissue QoI. Top row: results with a rectangular pulse stimulus; bottom row: results with experimental data stimulus. From left to right, linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
-\label{fig:qoi_vol_flow}
+%\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Rectangular.eps}
+%\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}
+%\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular.eps}
+%\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps} \\
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
+\caption{Volumetric flow rate in the cerebral tissue with experimental pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\label{fig:qoi_vol_flow_exp}
 \end{figure}
 
 We again observe reasonably accurate fits by a linear surrogate and improved accuracy by a PC surrogate. The surrogate predictions and important parameters for the rectangular pulse and experimental stimulus closely agree. The influential parameters for the volumetric flow rate in the cerebral tissue are different than those found to be influential for the ECS potassium; an unsurprising result. As in Subsection~\ref{sec:qoi_K_ECS_Mean}, parameter $p_1$ appears important in the linear surrogate but unimportant in the PC surrogate.
 
 \begin{table}[h]
 \centering
+\ra{1.3}
 \begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
+\toprule
+Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
+\midrule
 141 &  $z_4$ in SMCEC & 0.4561 & 0.4420\\
 158 & $n_{cross}$ in WallMechanics & 0.3311 & 0.3544\\ 
  139 & $z_2$ in SMCEC & 0.0529 & 0.0436\\
  142 & $z_5$ in SMCEC &  0.0351 &0.0305\\
   136 & G\_K\_i in SMCEC & 0.0305 &0.0362\\
+   \arrayrulecolor{black}\bottomrule
 \end{tabular}
 \caption{Most influential parameters for the volumetric flow rate in the cerebral tissue QoI.}
 \label{tab:qoi_vol_flow}
@@ -128,32 +144,36 @@ Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
 
 \subsection{QoI \eqref{AM_AMp_Min} ($AM+AM_p$ Min)}
 
-Figure~\ref{fig:qoi_AM_AMp_Min} displays results for the minimum of the combined concentration of the actin myosin complex. As in the previous subsections, the linear and PC surrogate predictions and sensitivities are plotted for both the rectangular pulse and experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the 5 most important parameters (ranked by the total Sobol' indices for the rectangular pulse stimulus) and their total Sobol' indices. We see from the Table that the same parameters appear for this QoI . Although at first analysis this should not be surprising it does suggest that the reaction rates of the actin myosin model for vessel contraction/dilation are relatively insensitive to finding the minimum of the contraction force and that the KIR ion channel is a vital component of the model. 
+Figure~\ref{fig:qoi_AM_AMp_Min_exp} displays results for the minimum of the combined concentration of the actin myosin complex with the experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the five most important parameters (ranked by the total Sobol' indices for the rectangular pulse stimulus) and their total Sobol' indices. We see from the Table that the same parameters appear for this QoI . Although at first analysis this should not be surprising it does suggest that the reaction rates of the actin myosin model for vessel contraction/dilation are relatively insensitive to finding the minimum of the contraction force and that the KIR ion channel is a vital component of the model. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.eps}\\
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Experimental.eps}
-\caption{Results for the minimum of the combined concentration of the actin myosin complex QoI. Top row: results with a rectangular pulse stimulus; bottom row: results with experimental data stimulus. From left to right, linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
-\label{fig:qoi_AM_AMp_Min}
+%\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
+%\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}
+%\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular.eps}
+%\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.eps}\\
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps} \\
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental.eps}
+\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Experimental.eps}
+\caption{Minimum of the combined concentration of the actin myosin complex with experimental pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\label{fig:qoi_AM_AMp_Min_exp}
 \end{figure}
 
 The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate; this highlights the nonlinearity of this particular QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are related to the wall mechanics. Parameter $p_1$ appears important in the linear surrogate but unimportant in the PC surrogate.
 
 \begin{table}[h]
 \centering
+\ra{1.3}
 \begin{tabular}{cccc}
-Index & Identification & Total Sobol' Index (RP) & Total Sobol' Index (ES)\\
+\toprule
+Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
+\midrule
 141 & $z_4$ in SMCEC & 0.6203 & 0.6242\\
 158 & $n_{cross}$ in WallMechanics & 0.1488 &0.1239\\
 139 &  $z_2$ in SMCEC & 0.0954 &0.0918\\
 142 & $z_5$ in SMCEC & 0.0629 & 0.0644\\
 140 & $z_3$ in SMCEC & 0.0273 &0.0261\\
+ \arrayrulecolor{black}\bottomrule
 \end{tabular}
 \caption{Most influential parameters for the combined concentration of the actin myosin complex QoI.}
 \label{tab:qoi_AM_AMp_Min}
