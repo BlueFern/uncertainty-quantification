@@ -4,9 +4,7 @@
 \subsection{Parameter distribution}
 \label{sec:param_sampling}
 
-We now revisit our assumption that all the uncertain parameters are independent and uniformly distributed within $\pm 10\%$ of  their nominal value. We do so by studying the steady state solutions, i..e, we solve the ODE system (\ref{caboodle}) {\sl without} stimuli as this significantly speeds up computation; indeed, a similar study on the full dynamics proved to not be computationally feasible.  
-
-While parameters are likely to be correlated, we do not know the correlation structure a priori. The model is run, with no stimulus applied, for 919 different parameter samples. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are highly influential in determining the behavior of the solution. A blue \textcolor{blue}{*} indicates a sample where the solver terminated prematurely, a yellow \textcolor{yellow}{+} indicates a sample where an unstable steady state was observed, a red \textcolor{red}{$\circ$} indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed. The two parameters in question are defined below ($p_1,p_2$)
+Applying the methodology described in Section~\ref{sec:param_dist_fit}, $S=919$ parameter samples are drawn and \eqref{caboodle} is solved for each sample with no stimulus applied. Of these 919 runs, 670 of them fail due to ode15s terminating prematurely because its time steps became too small. The remaining 249 yields 139 solutions for which the radius reaches a stable steady state (at least for the duration of the time integration) and 110 solutions for which the radius reaches a steady state but subsequently because transient. The left panel of Figure~\ref{steady_states} displays four representative solutions for the radius; the red curves remain in steady state for the duration of our time integration whereas the black curves revert into a transit regime after some time in or near steady state. The right panel of Figure~\ref{steady_states} displays the samples for two parameters (in the buffer equation) which are found to be highly influential in determining the behavior of the solution. A blue \textcolor{blue}{*} indicates a sample where the solver terminated prematurely, a yellow \textcolor{yellow}{$\Diamond$} indicates a sample where an unstable steady state was observed, a red \textcolor{red}{$\circ$} indicates a sample where the solution remained in steady state. A strong correlation determining the behavior of the solution is observed. The two parameters in question are defined below ($p_1,p_2$)
 \begin{eqnarray}\label{eqn:buff}
 [K^+]_e+B \quad\begin{array}{c}
 Y_2 \\ 
@@ -22,11 +20,11 @@ The parameters $p_1$ and $p_2$ have values 5.5 and 1.09, representing a shift an
 \centering
 \includegraphics[width=.4 \textwidth]{Figures/Steady_State_Curves.eps}
 \includegraphics[width=.4 \textwidth]{Figures/First_Iteration_Samples.eps}
-\caption{Left: examples of stable (red) and unstable (black) steady state solutions. Right: samples of the buffer parameters using uniform independent sampling. A blue \* indicates the sample yielded a premature termination of the solver, a yellow + indicates the sample yielded an unstable steady state, a red $\circ$ indicates the sample yielded a stable steady state.}
+\caption{Left: examples of stable (red) and unstable (black) steady state solutions. Right: samples of the buffer parameters using uniform independent sampling. A blue \textcolor{blue}{*} indicates the sample yielded a premature termination of the solver, a yellow \textcolor{yellow}{$\Diamond$} indicates the sample yielded an unstable steady state, a red \textcolor{red}{$\circ$} indicates the sample yielded a stable steady state.}
 \label{steady_states}
 \end{figure}
 
-Observing this correlation, we use the samples for which the radius remained in steady state to fit the two buffer parameters with a bivariate distribution with beta marginals and a Frank copula. The experiment was repeat by sampling the two correlated parameters with the bivariate distribution and all other parameter from their original uniform distributions. The samples yielding steady state solutions where collected, a bivariate distribution fit to them, and the experimented was repeated. After three additional iterations of this process we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This fitted distribution is used for all subsequent analysis. 
+Observing this correlation, we use the accepted samples to fit the two buffer parameters with a bivariate bivariate Frank copula with beta marginals. The experiment is repeated by sampling the two correlated parameters from this bivariate distribution and all other parameter from their original uniform distributions. After four iterations refining the joint distribution of $(p_1,p_2)$, we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This fitted distribution is used for all subsequent analysis. 
 
 Samples are drawn and the model, with a stimulus applied (in two separate cases, the 10 second rectangular pulse and the 16 second stimulus from experimental data), is run for each sample. This results in solutions exhibiting three different physiological regimes; they are displayed in Figure~\ref{solution_regimes} where the radius is plotted as a function of time. The leftmost panel corresponds to the typical case when the radius increases in response to the stimulus and then decreases when it is removed; the center panel corresponds to an atypical case where the radius has an initial decrease in response to the stimulus; the right panel corresponds to another atypical case where the radius reaches another steady state an does not decrease after the stimulus is removed.
 
@@ -46,27 +44,33 @@ Exploration of the 660 retained samples indicate that atypical cases have higher
 
 
 
-\subsection{QoI \eqref{K_ECS_Mean} ($K_{ECS}$ Mean)}
+\subsection{ECS $K^+_{mean}$}
 \label{sec:qoi_K_ECS_Mean}
 
-Figure~\ref{fig:K_ECS_Mean_rect} and ~\ref{fig:K_ECS_Mean_exp} display results for the average of the ECS potassium as defined in equation (\ref{K_ECS_Mean}) for the rectangular pulse stimulus and experimental pulse stimulus respectively. In the top left panels, predictions of the linear regression surrogate are plotted against the model values. The sensitivities $L_k$, $k=1,2,\dots,160$, are displayed in the top right panels. Predictions of the PC surrogate are plotted against the model values in the bottom left panels. The total Sobol' indices of the PC surrogate are given in the bottom right panels. 
+Figure~\ref{fig:K_ECS_Mean_rect} and ~\ref{fig:K_ECS_Mean_exp} display results for the average of the ECS potassium as defined in equation (\ref{K_ECS_Mean}) for the rectangular pulse stimulus and experimental pulse stimulus respectively. In the top left panels, predictions of the linear regression surrogate are plotted against the model values. The sensitivities $L_j$, $j=1,2,\dots,160$, are displayed in the top right panels. Predictions of the PC surrogate are plotted against the model values in the bottom left panels. The total Sobol' indices of the PC surrogate are given in the bottom right panels. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps} \\
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}
-\caption{ECS potassium QoI with a rectangular pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\includegraphics[width=.46 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Rectangular.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Rectangular.eps} \\
+\vspace{.2 cm}
+\includegraphics[width=.46 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Rectangular.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Rectangular.eps}
+\caption{ECS potassium QoI with a rectangular pulse stimulus. From left to right and top to bottom: linear surrogate predictions, linear surrogate importance measure, PC surrogate predictions, total Sobol' indices for PC surrogate.}
 \label{fig:K_ECS_Mean_rect}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps} \\
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
-\caption{ECS potassium QoI with experimental pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\includegraphics[width=.46 \textwidth]{Figures/K_ECS_Mean_QoI_LR_Prediction_Experimental.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/K_ECS_Mean_QoI_LR_VI_Experimental.eps} \\
+\vspace{.2 cm}
+\includegraphics[width=.46 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_Prediction_Experimental.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/K_ECS_Mean_QoI_PCE_SI_Experimental.eps}
+\caption{ECS potassium QoI with experimental pulse stimulus. From left to right and top to bottom: linear surrogate predictions, linear surrogate importance measure, PC surrogate predictions, total Sobol' indices for PC surrogate.}
 \label{fig:K_ECS_Mean_exp}
 \end{figure}
 
@@ -78,7 +82,7 @@ In both cases, Table~\ref{tab:K_ECS_Mean} reports the five most important parame
 \ra{1.3}
 \begin{tabular}{cccc}
 \toprule
-Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
+Parameter Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
 \midrule
 62 & 0.143 in $m_{4\alpha}$ and $m_{4 \beta}$ &  0.3738 & 0.3732\\
 63 & 5.67 in $m_{4\alpha}$ and $m_{4 \beta}$  &  0.2449 & 0.2297\\
@@ -91,19 +95,19 @@ Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\
 \label{tab:K_ECS_Mean}
 \end{table}
 
-The top two values in Table \ref{tab:K_ECS_Mean} are scaling and shift parameters for the activation gating variable in the dendrite NaP channel respectively. These effectively define the characteristic time scale and forcing function in the rate equation for the open  probability of the persistent sodium channel whilst the third most ''important'' parameter deteremines the strength of the  conductance in the \pot leak ion channel. The fourth parameter (index 75) is the scaling of the neuron membrane potential in the K flux through dendritic KDR channel. As noted above this parameter provides for atypical cases having higher probability when the parameter value is reduced. The final parameter in Table \ref{tab:K_ECS_Mean} is small but corresponds to the assume half-length of the dendrite. This is to be expected as the longer the dendrite the larger the ion flux. 
+The top two values in Table \ref{tab:K_ECS_Mean} are scaling and shift parameters for the activation gating variable in the dendrite NaP channel respectively. These effectively define the characteristic time scale and forcing function in the rate equation for the open  probability of the persistent sodium channel whilst the third most ``important" parameter deteremines the strength of the  conductance in the \pot leak ion channel. The fourth parameter (parameter index 75) is the scaling of the neuron membrane potential in the K flux through dendritic KDR channel. As noted above this parameter provides for atypical cases having higher probability when the parameter value is reduced. The final parameter in Table \ref{tab:K_ECS_Mean} is small but corresponds to the assume half-length of the dendrite. This is to be expected as the longer the dendrite the larger the ion flux. 
 
 The results for this specific QoI are similar for both the rectangular pulse and experimental data stimulus. In both cases, the QoI is approximated with reasonable accuracy by a linear model and with higher accuracy by the PC model. The most important parameters are shared in both cases. Notice that parameter $p_1$ as defined in Subsection~\ref{sec:param_sampling} above appears to be important in the linear model but unimportant in the PC model. This is because it is strongly correlated with parameter $p_2$, see Figure~\ref{steady_states}  and as a result the coefficient in linear regression may be very large because its effect is offset by the effect of $p_2$. To decorrelate inputs, the PC surrogate is build with only $p_1$ instead of both $p_1$ and $p_2$. It subsequently has minimal importance.
 
 The remaining two QoIs also present very similar results for both the rectangular pulse and experimental data stimulus. In the interest of conciseness, we only present figures corresponding to the experimental data stimulus for these two QoIs; Tables~\ref{tab:qoi_vol_flow} and ~\ref{tab:qoi_AM_AMp_Min} give results for both stimuli. 
 
-\subsection{QoI (\eqref{vol_flow})) (volumetric flow rate)}
+\subsection{Volumetric Flow Rate}
 
 Figure~\ref{fig:qoi_vol_flow_exp} displays results for the volumetric flow rate in the cerebral tissue defined by (\ref{vol_flow})  in the same manner as Figures~\ref{fig:K_ECS_Mean_rect} and ~\ref{fig:K_ECS_Mean_exp}. The results correspond to the experimental data stimulus.  Table~\ref{tab:qoi_vol_flow} reports the five most important parameters and their total Sobol' indices. Unsurprisingly, the parameter list contains values found in the SMCEC compartment of the full model. However, the topmost parameter ($z_4$) is associated with the conductance of the inwardly rectifying SMC KIR channel defined as a function of both membrane potential $v_{SMC}$ and the \pot concentration in the perivascular space $[K^+]_{PVS}$, given by 
 \begin{eqnarray}
 g_{KIR}=exp\left[ z_5 v_{SMC}+z_3[K^+]_{PVS}-z_4\right]  \label{eq:gkir}
 \end{eqnarray}
-as shown in \cite{Dormanns2015} fitting to the data of \cite{Filosa2006}. $z_4$ shifts the conductance to the right for constant $[K^+]_{PVS}$  concentration in the perivascular space whilst $n_{cross}$ determines the strength of $[Ca^{2+}]$ in determining the reaction rate of phosphorylation of myosin \cite{Hai1988}. $z_2$ although not especially important it shifts the Nernst potential for the KIR channel to the right as shown by 
+as shown in \cite{Dormanns2015} fitting to the data of \cite{Filosa2006}. $z_4$ shifts the conductance to the right for constant $[K^+]_{PVS}$  concentration in the perivascular space whilst $n_{cross}$ determines the strength of $[Ca^{2+}]$ in determining the reaction rate of phosphorylation of myosin \cite{Hai1988}. Although not especially important, $z_2$ shifts the Nernst potential for the KIR channel to the right in the equation
 \begin{eqnarray}
 v_{KIR}=z_1 [K^+]_{PVS}-z_2. \label{vkir}
 \end{eqnarray}
@@ -114,11 +118,14 @@ v_{KIR}=z_1 [K^+]_{PVS}-z_2. \label{vkir}
 %\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Rectangular.eps}
 %\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Rectangular.eps}
 %\includegraphics[width=.24 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Rectangular.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps} \\
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
-\caption{Volumetric flow rate in the cerebral tissue with experimental pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\includegraphics[width=.46 \textwidth]{Figures/Vol_Flow_QoI_LR_Prediction_Experimental.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/Vol_Flow_QoI_LR_VI_Experimental.eps} \\
+\vspace{.2 cm}
+\includegraphics[width=.46 \textwidth]{Figures/Vol_Flow_QoI_PCE_Prediction_Experimental.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/Vol_Flow_QoI_PCE_SI_Experimental.eps}
+\caption{Volumetric flow rate in the cerebral tissue with experimental pulse stimulus. From left to right and top to bottom: linear surrogate predictions, linear surrogate importance measure, PC surrogate predictions, total Sobol' indices for PC surrogate.}
 \label{fig:qoi_vol_flow_exp}
 \end{figure}
 
@@ -129,7 +136,7 @@ We again observe reasonably accurate fits by a linear surrogate and improved acc
 \ra{1.3}
 \begin{tabular}{cccc}
 \toprule
-Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
+Parameter Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
 \midrule
 141 &  $z_4$ in SMCEC & 0.4561 & 0.4420\\
 158 & $n_{cross}$ in WallMechanics & 0.3311 & 0.3544\\ 
@@ -142,7 +149,7 @@ Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\
 \label{tab:qoi_vol_flow}
 \end{table}
 
-\subsection{QoI \eqref{AM_AMp_Min} ($AM+AM_p$ Min)}
+\subsection{$[AM+AM_p]_{min}$}
 
 Figure~\ref{fig:qoi_AM_AMp_Min_exp} displays results for the minimum of the combined concentration of the actin myosin complex with the experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the five most important parameters (ranked by the total Sobol' indices for the rectangular pulse stimulus) and their total Sobol' indices. We see from the Table that the same parameters appear for this QoI . Although at first analysis this should not be surprising it does suggest that the reaction rates of the actin myosin model for vessel contraction/dilation are relatively insensitive to finding the minimum of the contraction force and that the KIR ion channel is a vital component of the model. 
 \begin{figure}[h]
@@ -151,11 +158,14 @@ Figure~\ref{fig:qoi_AM_AMp_Min_exp} displays results for the minimum of the comb
 %\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Rectangular.eps}
 %\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Rectangular.eps}
 %\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Rectangular.eps}\\
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps} \\
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental.eps}
-\includegraphics[width=.49 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Experimental.eps}
-\caption{Minimum of the combined concentration of the actin myosin complex with experimental pulse stimulus. From left to right and top to bottom: linear regression predictions, linear regression variable importance, PCE predictions, total Sobol' indices for PCE.}
+\includegraphics[width=.46 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Experimental.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/AM_AMp_Min_QoI_LR_VI_Experimental.eps} \\
+\vspace{.2 cm}
+\includegraphics[width=.46 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_Prediction_Experimental.eps}
+\hspace{.1 cm}
+\includegraphics[width=.475 \textwidth]{Figures/AM_AMp_Min_QoI_PCE_SI_Experimental.eps}
+\caption{Minimum of the combined concentration of the actin myosin complex with experimental pulse stimulus. From left to right and top to bottom: linear surrogate predictions, linear surrogate importance measure, PC surrogate predictions, total Sobol' indices for PC surrogate.}
 \label{fig:qoi_AM_AMp_Min_exp}
 \end{figure}
 
@@ -166,7 +176,7 @@ The linear surrogate does not perform as well for this QoI; however, the PC surr
 \ra{1.3}
 \begin{tabular}{cccc}
 \toprule
-Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
+Parameter Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Index (exp.)\\
 \midrule
 141 & $z_4$ in SMCEC & 0.6203 & 0.6242\\
 158 & $n_{cross}$ in WallMechanics & 0.1488 &0.1239\\

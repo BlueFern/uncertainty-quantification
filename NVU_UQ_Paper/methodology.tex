@@ -1,22 +1,18 @@
 \section{Methodology}\label{sec:meth}
 
-How to describe the uncertainty attached to the parameter vector $\boldsymbol{\theta}$ is an important and delicate {\sl modeling assumption}. Here, we give each $\theta_i$, $i=1,\dots, 160$, a nominal value $\bar \theta_i$ and assume each parameter to be uniformly distributed over the range of value $[0.9\, \bar\theta_i, 1.1 \,\bar\theta_i]$, i.e., within $\pm 10\%$ of the nominal value. All the parameters  are assumed to be independent, an assumption we revisit and improve upon below. 
+At an abstract level, our analysis may be described in a four step process: (i) define a probability distribution for $\theta$ which models its uncertainty, (ii) draw samples from this distribution, (iii) evaluate the model for each of these parameter samples, (iv) use these model evaluations to infer its sensitivity to each parameter. Subsection~\ref{sec:param_dist_fit} describes our approach for step (i). Step (ii) is easily executed using standard methods. The computational bottleneck for our analysis is the model evaluations in step (iii). While relatively large and stiff, the ODE system (\ref{caboodle}) can be  solved with standard tools and methods, here through the MATLAB routine ode15s with relative and absolute tolerances of $10^{-4}$. The evaluation of the above QoIs themselves from the ODE solutions is straightforward and can be done at low cost. Inferring the sensitivities may be done in a plurality of ways. Because of the parameter dimension and computational cost of model evaluations, we adopt a multi-phased procedure of screening, surrogate modeling, and global sensitivity analysis, described in Subsections~\ref{sec:screen}, ~\ref{sec:surrogate}, and ~\ref{sec:gsa} respectively. We summarize our method in Subsection~\ref{sec:summary}.
 
-A key  step in analyzing the dependency of a QoI $q = g(\boldsymbol{\theta})$ on its inputs is the evaluation of $g$ at $M$ samples $\boldsymbol\theta^k$, $k=1,\dots, M$, from the parameter distribution (where superscripts are used to refer to specific samples). 
-This is also the  main  computational bottleneck as it requires the numerical resolution of  the ODE system (\ref{caboodle})  by computing the $M$ solutions $\mathbf y^k$, $k=1,\dots , M$, corresponding to  the parameter samples. 
-While relatively large and stiff, the ODE system (\ref{caboodle}) can be  solved with standard tools and methods, here through the MATLAB routine ode15s  with relative and absolute tolerances of $10^{-4}$. The evaluation of the above QoIs themselves from the ODE solutions is straightforward and can be done at low cost.
+\subsection{Parameter Distribution Fitting}
+\label{sec:param_dist_fit}
 
+Describing the uncertainty attached to the parameter vector $\boldsymbol{\theta}$ is an important and delicate {\sl modeling assumption}. Here, we give each $\theta_i$, $i=1,\dots, 160$, a nominal value $\bar \theta_i$ and assume each parameter to be independent and uniformly distributed over the interval $[0.9\, \bar\theta_i, 1.1 \,\bar\theta_i]$, i.e., within $\pm 10\%$ of the nominal value. Larger intervals where considered for the parameters. For the NVU model under consideration, increasing the width of the interval resulted in many samples for which the solution exhibited atypical or non-physical behavior, or in some cases ode15s was unable to solve the system. Our choice of $\pm 10\%$ uncertainty is considered a reasonable compromise between accounting for uncertainty and ensuring computational feasibility. 
+	
+Our assumption of parameter independence is incorrect. In fact, ode15s is unable to solve the system for most samples drawn under this assumption. The parameter dependencies, which are unknown a priori, are discovered through a computational procedure akin to Approximate Bayesian Computation \cite{abc}. Our approach, described below, is computationally intractable when applied to the NVU model under consideration. We simplify the model by removing the stimulus, i.e. modeling the steady state behavior of the system. A collection of $S$ samples, $\boldsymbol{\theta}^k$, $k=1,2,\dots,S$, are drawn from our initial distribution (assuming independence) and the ODE system is solved for each parameter sample. The collection of solutions are post-processed to partition the samples $\{\boldsymbol{\theta}^k\}_{k=1}^S$ into two subsets $\{\boldsymbol{\theta}^{a_k}\}_{k=1}^{S_a}$ and $\{\boldsymbol{\theta}^{r_k}\}_{k=1}^{S_r}$, where $a_k$, $k=1,2,\dots,S_a$ denotes the samples where the steady state solution exhibited normal behavior and $r_k$, $k=1,2,\dots,S_r$ denotes the samples where it does not. We reject the samples $\{\boldsymbol{\theta}^{r_k}\}_{k=1}^{S_r}$ and fit a distribution to the accepted samples $\{\boldsymbol{\theta}^{a_k}\}_{k=1}^{S_a}$ using standard statistical methods. This new distribution is sampled $S$ times,  the ODE system is solved for each sample, and the results are post-processed into accepted and rejected samples again. We continue this process iterative until satisfactory convergence of the fitted distribution.
 
-
-For the present application, the large parameter dimension and computational cost of the above model evaluations prohibit the direct use of most global sensitivity analysis methods. In other words, the value of $M$ (number of samples)  we can ``afford" is too small for these methods to be applicable. 
-For each QoI, the overall procedure is thus as follows (i) dimension reduction, (ii) surrogate modeling, (iii) global sensitivity analysis.
-These steps are individually considered in the next three subsections. 
-
-
-
-
-\subsection{Dimension reduction}
-Using the previously generated model evaluations, we fit a {\sl linear model} to a QoI under study
+\subsection{Screening}
+\label{sec:screen}
+Having determined a parameter distribution, we evaluate the QoI $q=g(\boldsymbol{\theta})$ at $M$ different samples, denote them $\boldsymbol{\theta}^k$, $k=1,2,\dots,M$.
+We fit a {\sl linear model} to the QoI under study
 \begin{eqnarray}
 g(\boldsymbol\theta^k) = g(\theta_1^k, \dots, \theta_P^k) \approx \beta_0 + \sum\limits_{j=1}^{160} \beta_j \theta_j^k, \quad k=1, \dots, M. \label{lr}
 \end{eqnarray}
@@ -28,9 +24,10 @@ To obtain a model with a more manageable size, we reduce the parameter space to 
 \begin{eqnarray}
 g(\theta_1, \dots, \theta_{160}) \approx h(\theta_{j_1}, \dots, \theta_{j_r}), \label{reddim}
 \end{eqnarray}
-where $h$ is obtained from $g$ by fixing any non-influential parameter $\theta_j$ in $g$  to its nominal value $\bar\theta_j$. In Section~\ref{sec:results}, this reduction yields around 15-20 parameters instead of the original 160. We denote by $\hat{\boldsymbol{\theta}}$ the reduced parameter vector. 
+where $h$ is obtained from $g$ by treating the non-influential parameters as latent. In Section~\ref{sec:results}, this reduction yields around 15-20 parameters instead of the original 160. We denote by $\hat{\boldsymbol{\theta}}$ the reduced parameter vector. 
 
 \subsection{Surrogate model}
+\label{sec:surrogate}
 For any of the three considered QoIs, our information on the function $h$ defined (\ref{reddim}) consists of the set of sampled values $\{ h(\theta_{j_1}^k, \dots, \theta_{j_r}^k)\}$, $k=1, \dots, M$.  To facilitate the use of standard GSA tools, which may require derivatives or variance estimations, it is both convenient and computationally advantageous to construct an approximating function, i.e., a surrogate model. 
 We use a sparse Polynomial Chaos (PC) surrogate. This amounts to introducing a polynomial approximation of $h$ of the type
 \begin{eqnarray}
@@ -40,12 +37,13 @@ where the $\psi_{\boldsymbol{\alpha}}$'s are multivariate polynomials which are 
 \begin{eqnarray}
 \int \psi_{\boldsymbol{\alpha}}(\mathbf x) \psi_{\boldsymbol{\beta}}(\mathbf x)\, p_{\boldsymbol{\theta}}(\mathbf x) \, d\mathbf{x} = \delta _{\boldsymbol{\alpha},\boldsymbol{\beta}} \label{ortho}
 \end{eqnarray}
-where $\boldsymbol{\alpha}$ and $\boldsymbol{\beta}$ are multi-indices and $\delta _{\boldsymbol{\alpha},\boldsymbol{\beta}}$ is the generalized Kronecker symbol. Due to our choice of distributions for $\boldsymbol{\theta}$, the $\psi_{\boldsymbol{\alpha}}$'s are essentially Legendre polynomials and the coefficients are computed through least-squares minimization. All surrogate models are validated using 10-fold cross validation.
+where $\boldsymbol{\alpha}$ and $\boldsymbol{\beta}$ are multi-indices and $\delta _{\boldsymbol{\alpha},\boldsymbol{\beta}}$ is the generalized Kronecker symbol. The coefficients are computed through least-squares minimization, see the Appendix for additional discussion. All surrogate models are validated using 10-fold cross validation.
 
-Polynomial chaos is by now a well documented method and we refer the readers for instance to the  UQLab \cite{uqlab} manual for more details. Incidentally, we make use of the implementation from  \cite{uqlab} in the results below. 
+Polynomial Chaos is by now a well documented method. We use the \textit{UQLab} implementation for the results below and refer the reader to its manual \cite{uqlab} for more details.
 
 
 \subsection{Global sensitivity analysis} 
+\label{sec:gsa}
 We use variance based GSA to assess the relative importance of the input parameters of $H$ in (\ref{pce}). In their simplest form,  the total Sobol' indices \cite{saltellitotalindex} apportion to uncertain parameters, or sets thereof, their relative contribution to the variance of the output. Indeed, thanks to the law of total variance, we can decompose the variance of $q = H(\hat{\boldsymbol{\theta}})$ as follows
 \begin{eqnarray}
 \operatorname{var}(q) = \operatorname{var}(\mathbb E[q|\hat{\boldsymbol{\theta}}_{\sim i}]) + \mathbb E[\operatorname{var}(q|\hat{\boldsymbol{\theta}}_{\sim i})], \label{ltv}
@@ -61,27 +59,28 @@ S_{T_i} = \frac{\mathbb E[\operatorname{var}(q|\hat{\boldsymbol{\theta}}_{\sim i
 The relevance of this basic definition can be extended to time dependent QoIs \cite{timegsa}, stochastic QoIs \cite{stogsa} or correlated parameters \cite{corvar}.
 
 
-\subsection{Overall numerical approach}
-The overall numerical approach combined the above three steps together with the determination and use of a corrected joint distribution discussed in \S~\ref{sec:param_sampling}; it is summarized in  Algorithm~\ref{algo}. 
+\subsection{Summary of the Method}
+\label{sec:summary}
+Algorithm~\ref{algo} provides a summary of the method. 
 
 \begin{algorithm}
 \caption{overall numerical approach}\label{algo}
 \begin{algorithmic}[1]
 \While{parameter distribution has not converged}
-\For{$k=1:M$} \Comment{sampling}
+\For{$k=1:S$} \Comment{sampling}
 \State sample parameter distribution  $\longrightarrow \boldsymbol{\theta}^k$; solve (\ref{caboodle}) (without stimulus) $\longrightarrow \mathbf y^k$
 \EndFor
-\State estimate parameter correlations
-\State fit parametrized multivariate distribution for correlated parameters; update joint distribution \Comment{see \S~\ref{sec:param_sampling}}
+\State partition the parameter samples into accepted and rejected samples
+\State fit a new distribution to the accepted samples \Comment{see \S~\ref{sec:param_dist_fit}}
 \EndWhile
 \For{$k=1:M$} \Comment{sampling (final distribution)}
 \State sample parameter distribution  $\longrightarrow \boldsymbol{\theta}^k$; solve (\ref{caboodle}) (with stimulus) $\longrightarrow \mathbf y^k$
 \EndFor
 \For{each QoI $q$}
 \State solve the least-squares problem (\ref{lr}) \Comment{linear approximation}
-\State identify the influential parameter vector $\hat{\boldsymbol\theta} =   (\theta_{j_1}, \dots, \theta_{j_r})$  \Comment{dimension reduction}
+\State identify the influential parameter vector $\hat{\boldsymbol\theta} =   (\theta_{j_1}, \dots, \theta_{j_r})$  \Comment{screening}
 \State solve the least-squares problem  (\ref{pce}) for the polynomial  approximation $H$ \Comment{surrogate model}
-\State compute total Sobol' indices (\ref{sobol}) for the surrogate model $H$
+\State compute total Sobol' indices (\ref{sobol}) for the surrogate model $H$ \Comment{global sensitivity analysis}
 \EndFor
 \end{algorithmic}
 \end{algorithm}
