@@ -14,10 +14,10 @@ Based on physiological considerations, we consider below three quantities of int
 \begin{eqnarray}
 q = g(\boldsymbol{\theta}). \label{qoi}
 \end{eqnarray}
-The overall goal of our numerical study is to determine  which of the uncertain parameters $\theta_1, \dots, \theta_P$  are the most/least influential for each QoI. There is substantial amount of research currently being done in applied mathematics and statistics in the corresponding field of Global Sensitivity Analysis  (GSA). How to meaningfully define ``influential" or ``non-influential" and  how to develop methods applicable to high-dimensional problems are two significant challenges of the field \cite{corvar,timegsa,stogsa,iooss,owen,saltelli}. 
+The overall goal of our numerical study is to determine  which of the uncertain parameters $\theta_1, \dots, \theta_P$  are the most/least influential for each QoI. There is a substantial amount of research currently being done in applied mathematics and statistics in the corresponding field of Global Sensitivity Analysis  (GSA). How to meaningfully define ``influential" or ``non-influential" and  how to develop methods applicable to high-dimensional problems are two significant challenges of the field \cite{corvar,timegsa,stogsa,iooss,owen,saltelli}. 
 
 
 
 The present \gls{nvc} model contains $N=67$ state variables and   $P= 160$ uncertain parameters.
-Such a complex model constructed with a high-dimensional parameter space is not easily amenable to sensitivity analyses considering the significant computing resource required. In fact, part of our contribution in this paper is to show how to meaningfully reduce the dimension of the original problem to make it amenable to standard  GSA methods; the large dimension of the parameter space and the complexity of the model precludes the  direct application of GSA tools. 
+The complexity of the model and large parameter space dimension preclude a direct application of GSA tools. Part of our contribution in this paper is to show how to meaningfully reduce the dimension of the original problem to make it amenable to standard GSA methods
 
