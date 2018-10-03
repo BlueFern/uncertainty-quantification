@@ -1,6 +1,6 @@
 \section{Methodology}\label{sec:meth}
 
-At an abstract level, our analysis may be described in a four step process: (i) define a probability distribution for $\theta$ which models its uncertainty, (ii) draw samples from this distribution, (iii) evaluate the QoI for each of these parameter samples, (iv) use these QoI evaluations to infer its sensitivity to each parameter. Subsection~\ref{sec:param_dist_fit} describes our approach for step (i). Step (ii) is easily executed using standard methods. The computational bottleneck for our analysis is the QoI evaluations (which require ODE solves) in step (iii). While relatively large and stiff, the ODE system (\ref{caboodle}) can be  solved with standard tools and methods, here through the MATLAB routine ode15s with relative and absolute tolerances of $10^{-4}$. The evaluation of the above QoIs themselves from the ODE solutions is straightforward and can be done at low cost. Inferring the sensitivities may be done in a plurality of ways. Because of the parameter dimension and computational cost of model evaluations, we adopt a multi-phased procedure of screening, surrogate modeling, and global sensitivity analysis, described in Subsections~\ref{sec:screen}, ~\ref{sec:surrogate}, and ~\ref{sec:gsa} respectively. We summarize our method in Subsection~\ref{sec:summary}.
+At an abstract level, our analysis may be described in a four step process: (i) define a probability distribution for $\theta$ which models its uncertainty, (ii) draw samples from this distribution, (iii) evaluate the QoI for each of these parameter samples, (iv) use these QoI evaluations to infer its sensitivity to each parameter. Subsection~\ref{sec:param_dist_fit} describes our approach for step (i). Step (ii) is easily executed using standard methods. The computational bottleneck for our analysis is the QoI evaluations (which require ODE solves) in step (iii). While relatively large and stiff, the ODE system (\ref{caboodle}) can be  solved with standard tools and methods, here through the MATLAB routine ode15s with relative and absolute tolerances of $10^{-4}$. The evaluation of the above QoIs themselves from the ODE solutions is straightforward and can be done at low cost. Inferring the sensitivities may be done in a plurality of ways. Because of the parameter dimension and computational cost of model evaluations, we adopt a multi-phased procedure of screening, surrogate modeling, and computing Sobol' indices, described in Subsections~\ref{sec:screen}, ~\ref{sec:surrogate}, and ~\ref{sec:gsa} respectively. We summarize our method in Subsection~\ref{sec:summary}.
 
 \subsection{Parameter Distribution Fitting}
 \label{sec:param_dist_fit}
@@ -42,9 +42,9 @@ where $\boldsymbol{\alpha}$ and $\boldsymbol{\beta}$ are multi-indices and $\del
 Polynomial Chaos is by now a well documented method. We use the \textit{UQLab} implementation for the results below and refer the reader to its manual \cite{uqlab} for more details.
 
 
-\subsection{Global sensitivity analysis} 
+\subsection{Sobol' indices} 
 \label{sec:gsa}
-We use variance based GSA to assess the relative importance of the input parameters of $H$ in (\ref{pce}). In their simplest form,  the total Sobol' indices \cite{saltellitotalindex} apportion to uncertain parameters, or sets thereof, their relative contribution to the variance of the output. Indeed, thanks to the law of total variance, we can decompose the variance of $q = H(\hat{\boldsymbol{\theta}})$ as follows
+We use variance based GSA to assess the relative importance of the input parameters of $H$ in (\ref{pce}). In their simplest form, the total Sobol' indices \cite{saltellitotalindex} apportion to uncertain parameters, or sets thereof, their relative contribution to the variance of the output. Indeed, thanks to the law of total variance, we can decompose the variance of $q = H(\hat{\boldsymbol{\theta}})$ as follows
 \begin{eqnarray}
 \operatorname{var}(q) = \operatorname{var}(\mathbb E[q|\hat{\boldsymbol{\theta}}_{\sim i}]) + \mathbb E[\operatorname{var}(q|\hat{\boldsymbol{\theta}}_{\sim i})], \label{ltv}
 \end{eqnarray}
@@ -77,10 +77,10 @@ Algorithm~\ref{algo} provides a summary of the method.
 \State sample parameter distribution  $\longrightarrow \boldsymbol{\theta}^k$; solve (\ref{caboodle}) (with stimulus) $\longrightarrow \mathbf y^k$
 \EndFor
 \For{each QoI $q$}
-\State solve the least-squares problem (\ref{lr}) \Comment{linear approximation}
+\State solve the least-squares problem (\ref{lr}) \Comment{linear model}
 \State identify the influential parameter vector $\hat{\boldsymbol\theta} =   (\theta_{j_1}, \dots, \theta_{j_r})$  \Comment{screening}
 \State solve the least-squares problem  (\ref{pce}) for the polynomial  approximation $H$ \Comment{surrogate model}
-\State compute total Sobol' indices (\ref{sobol}) for the surrogate model $H$ \Comment{global sensitivity analysis}
+\State compute total Sobol' indices (\ref{sobol}) for the surrogate model $H$ \Comment{Sobol' indices}
 \EndFor
 \end{algorithmic}
 \end{algorithm}

@@ -1,15 +1,19 @@
 \section*{Appendix}
 
 Determining the coefficients $c_{\boldsymbol{\alpha}}$ in the Polynomial Chaos surrogate \eqref{pce} is challenging for high dimensional parameter spaces. Ideally, one would solve the least squares problem
+\begin{ceqn}
 \begin{eqnarray}
 \label{least_squares}
-\min \sum\limits_{k=1}^M \left(g(\boldsymbol{\theta}^k)-\sum_{\boldsymbol{\alpha}} c_{\boldsymbol{\alpha}} \psi_{\boldsymbol{\alpha}}(\hat{\boldsymbol{\theta}}) \right)^2
+\min \sum\limits_{k=1}^M \left(g(\boldsymbol{\theta}^k)-\sum_{\boldsymbol{\alpha}} c_{\boldsymbol{\alpha}} \psi_{\boldsymbol{\alpha}}(\hat{\boldsymbol{\theta}}) \right)^2 \tag{A.1}
 \end{eqnarray}
+\end{ceqn}
 to determine the coefficients. This approach is infeasible for the problems considered in this article. If there are, for instance, 18 input variables ($\theta_{j_i}$'s) then a $3^{rd}$ degree polynomial has 1330 unknown coefficients and a $4^{th}$ degree polynomial has 7315 unknown coefficients. With less than 1000 sample points, as in our case, \eqref{least_squares} will admit infinitely many solutions which interpolate the data but will yield poor approximations of the QoI. Rather, we seek an approximate solution of \eqref{least_squares} for which most of the coefficients are exactly 0. This may be achieved by introducing a penalty term and solving
+\begin{ceqn}
 \begin{eqnarray}
 \label{least_squares_reg}
-\min \sum\limits_{k=1}^M \left(g(\boldsymbol{\theta}^k)-\sum_{\boldsymbol{\alpha}} c_{\boldsymbol{\alpha}} \psi_{\boldsymbol{\alpha}}(\hat{\boldsymbol{\theta}}) \right)^2 + \lambda \sum_{\boldsymbol{\alpha}} \vert c_{\boldsymbol{\alpha}} \vert
+\min \sum\limits_{k=1}^M \left(g(\boldsymbol{\theta}^k)-\sum_{\boldsymbol{\alpha}} c_{\boldsymbol{\alpha}} \psi_{\boldsymbol{\alpha}}(\hat{\boldsymbol{\theta}}) \right)^2 + \lambda \sum_{\boldsymbol{\alpha}} \vert c_{\boldsymbol{\alpha}} \vert \tag{A.2}
 \end{eqnarray}
+\end{ceqn}
 instead of \eqref{least_squares}. Adding the sum of absolute values of the coefficients encourages a sparse solution, i.e. one with many 0 coefficients. However, it comes at the cost of making the objective function non-differentiable and hence \eqref{least_squares_reg} requires a more sophisticated optimization approach in comparison to \eqref{least_squares}. A plurality of well documented methods exist for solving \eqref{least_squares_reg}. In this article we use Least Angle Regression (LAR) \cite{lar} with its implementation in \cite{uqlab} and a maximum polynomial degree of 5.
 
 Because the basis function of the Polynomial Chaos surrogate are orthogonal with respect to the PDF $p_{\hat{\boldsymbol{\theta}}}$, the variance and conditional expectation in \eqref{sobol} may be computed analytically as a function of the coefficients. Hence the total Sobol' indices of the Polynomial Chaos surrogate are given in closed form as a function of the coefficients.

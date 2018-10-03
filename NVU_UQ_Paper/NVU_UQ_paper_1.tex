@@ -6,9 +6,11 @@
 	\newlength\figurewidth
 \definecolor{grey}{gray}{0.5}
 \definecolor{lightgrey}{gray}{0.8}
-\usepackage[numbers]{natbib} %[numbers]
+\usepackage[sort,numbers]{natbib} %[numbers]
 %\usepackage[papersize={85cm,30cm},left=2cm,top=2cm]{geometry}
 %\usepackage[a3paper,left=2cm,top=4cm,bottom=4cm]{geometry}
+
+\usepackage{nccmath}
 
 \def\ns{\vspace{-.06truein}}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
@@ -74,7 +76,7 @@ abstract here
 
 \input{appendix}
 
-\bibliographystyle{KathisBibstyle} % no .sty!
+%\bibliographystyle{KathisBibstyle} % no .sty!
 \bibliography{library}
 
 \end{document}
