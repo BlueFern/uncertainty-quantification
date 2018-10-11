@@ -24,7 +24,7 @@ The parameters $p_1$ and $p_2$ have values 5.5 and 1.09, representing a shift an
 \label{steady_states}
 \end{figure}
 
-Observing this correlation, we use the accepted samples to fit the two buffer parameters with a bivariate bivariate Frank copula with beta marginals. The experiment is repeated by sampling the two correlated parameters from this bivariate distribution and all other parameter from their original uniform distributions. After four iterations refining the joint distribution of $(p_1,p_2)$, we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This fitted distribution is used for all subsequent analysis. 
+Observing this correlation, we use the accepted samples to fit the two buffer parameters with a bivariate Frank copula with beta marginals. The experiment is repeated by sampling the two correlated parameters from this bivariate distribution and all other parameter from their original uniform distributions. After four iterations refining the joint distribution of $(p_1,p_2)$, we were able to generate 902 out of 960 samples which yielded solutions with stable steady states (51 solutions had unstable steady states and 7 had premature solver terminations). This fitted distribution is used for all subsequent analysis. 
 
 Samples are drawn and the model, with a stimulus applied (in two separate cases, the 10 second rectangular pulse and the 16 second stimulus from experimental data), is run for each sample. This results in solutions exhibiting three different physiological regimes; they are displayed in Figure~\ref{solution_regimes} where the radius is plotted as a function of time. The leftmost panel corresponds to the typical case when the radius increases in response to the stimulus and then decreases when it is removed; the center panel corresponds to an atypical case where the radius has an initial decrease in response to the stimulus; the right panel corresponds to another atypical case where the radius reaches another steady state an does not decrease after the stimulus is removed.
 
@@ -108,27 +108,27 @@ Parameter Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Ind
 116 & half-length of dendrite & 0.0342 & 0.0226\\
  \arrayrulecolor{black}\bottomrule
 \end{tabular}
-\caption{Most influential parameters for the ECS potassium QoI.}
+\caption{Most influential parameters for the ECS potassium QoI. The leftmost column is the parameter index displayed in the figures, the left-center column provides a description of the parameter, the right-center column is the total Sobol' index computed for the parameter using the rectangular pulse stimulus, and the right column is the total Sobol' index computed for the parameter using the stimulus from lab experiments.}
 \label{tab:K_ECS_Mean}
 \end{table}
-The top two values in Table \ref{tab:K_ECS_Mean} are scaling and shift parameters for the activation gating variable in the dendrite NaP channel respectively, whose o.d.e is defined as 
+The top two values in Table \ref{tab:K_ECS_Mean} are scaling and shift parameters for the activation gating variable in the dendrite NaP channel respectively, whose ODE is defined as 
 \begin{eqnarray}\label{eqn:m4}
-\frac{dm_4}{dt}=m_{4 \alpha}(1-m_4)-m_{4 \beta}m_4 \nonumber \\
-m_{4 \alpha}=  \frac{1}{6(1 + exp(-(0.143  v_d + 5.67)))}\nonumber \\
-m_{4 \beta}= \frac{exp(-(0.143 v_d + 5.67))}{6(1 + exp(-(0.143 v_d + 5.67)))}
+\frac{dm_4}{dt}=m_{4 \alpha}(1-m_4)-m_{4 \beta}m_4, \nonumber \\
+m_{4 \alpha}=  \frac{1}{6(1 + exp(-(c_1  v_d + c_2)))},\nonumber \\
+m_{4 \beta}= \frac{exp(-(c_1 v_d + c_2))}{6(1 + exp(-(c_1 v_d + c_2)))}.
 \end{eqnarray}
-Paremeters indexed as 62 and 63 have the values 0.143 and 5.67 respectively as shown in equation (\ref{eqn:m4}). These effectively define the characteristic time scale and forcing function in the rate equation for the open  probability of the persistent sodium channel. The third most "important" parameter determines the strength of the  conductance in the \pot leak ion channel. The fourth parameter (parameter index 75) is the shift of the neuron membrane potential in the o.d.e. for the activation variable for the  K flux through dendritic KDR channel, defined as 
+The parameters $c_1$ and $c_2$ in \eqref{eqn:m4} correspond to the parameters indexed as 62 and 63 in the results, their nominal values are 0.143 and 5.67, respectively. These effectively define the characteristic time scale and forcing function in the rate equation for the open  probability of the persistent sodium channel. The third most important parameter determines the strength of the  conductance in the \pot leak ion channel. The fourth parameter (parameter index 75), denoted as $c_3$ below, is the shift of the neuron membrane potential in the ODE for the activation variable for the  K flux through dendritic KDR channel, defined as 
 \begin{eqnarray}\label{eqn:m6}
-m_{6  \alpha}     = 0.016 (\frac{v_d + 34.9}{1 - exp(-(0.2 * v_d + 6.98))} 
+m_{6  \alpha}     = 0.016 \left(\frac{v_d + c_3}{1 - exp(-(0.2 * v_d + 0.2c_3))} \right), 
 \end{eqnarray}
-Parameter indexed as 75 has the value 34.9 as shown in equation (\ref{eqn:m6}). As noted above this parameter provides for atypical cases having higher probability when the parameter value is reduced. The final parameter in Table \ref{tab:K_ECS_Mean} is small but corresponds to the assumed half-length of the dendrite. This is not unexpected as the longer the dendrite the larger the total ion flux. 
+where the nominal value of $c_3$ is 34.9. As noted above this parameter provides for atypical cases having higher probability when the parameter value is reduced. The final parameter in Table \ref{tab:K_ECS_Mean} is small but corresponds to the assumed half-length of the dendrite. This is not unexpected as the longer the dendrite the larger the total ion flux. 
 
-The results for this specific QoI are similar for both the rectangular pulse and experimental data stimulus. In both cases, the QoI is approximated with reasonable accuracy by a linear model and with higher accuracy by the PC model. The most important parameters are shared in both cases. Notice that parameter $p_1$ as defined in Subsection~\ref{sec:param_sampling} above appears to be important in the linear model but unimportant in the PC model. This is because it is strongly correlated with parameter $p_2$, see Figure~\ref{steady_states}  and as a result the coefficient in linear surrogate may be very large because its effect is offset by the effect of $p_2$. To decorrelate inputs, the PC surrogate is build with only $p_1$ instead of both $p_1$ and $p_2$. It subsequently has minimal importance.
+The results for this specific QoI are similar for both the rectangular pulse and experimental data stimulus. In both cases, the QoI is approximated with reasonable accuracy by a linear model and with higher accuracy by the PC model. The most important parameters are shared in both cases. Notice that parameter $p_1$, defined in \eqref{eqn:buff}, appears to be important in the linear model but unimportant in the PC model. This is because it is strongly correlated with parameter $p_2$ (also defined in defined in \eqref{eqn:buff}), see Figure~\ref{steady_states}, and as a result the coefficient in linear surrogate may be very large because its effect is offset by the effect of $p_2$. To decorrelate inputs, the PC surrogate is build with only $p_1$ instead of both $p_1$ and $p_2$. It subsequently has minimal importance.
 
 The remaining two QoIs also present very similar results for both the rectangular pulse and experimental data stimulus. In the interest of conciseness, we only present figures corresponding to the experimental data stimulus for these two QoIs; Tables~\ref{tab:qoi_vol_flow} and ~\ref{tab:qoi_AM_AMp_Min} give results for both stimuli. 
 
 \subsection{Volumetric Flow Rate}
-Figure~\ref{fig:qoi_vol_flow_exp} displays results for the volumetric flow rate in the cerebral tissue defined by (\ref{vol_flow})  in the same manner as Figures~\ref{fig:K_ECS_Mean_rect} and \ref{fig:K_ECS_Mean_exp}. The results correspond to the experimental data stimulus.  Table~\ref{tab:qoi_vol_flow} reports the five most important parameters and their total Sobol' indices. Unsurprisingly, the parameter list contains values found in the SMC/EC compartment of the full model. However, the topmost parameter ($z_4$) is associated with the conductance of the inwardly rectifying SMC KIR channel ($g_{KIR}$) defined as a function of both membrane potential $v_{SMC}$ and the \pot concentration in the perivascular space $[K^+]_{PVS}$, given by 
+Figure~\ref{fig:qoi_vol_flow_exp} displays results for the volumetric flow rate in the cerebral tissue defined by (\ref{vol_flow})  in the same manner as Figures~\ref{fig:K_ECS_Mean_rect} and \ref{fig:K_ECS_Mean_exp}. The results correspond to the experimental data stimulus.  Table~\ref{tab:qoi_vol_flow} reports the five most important parameters and their total Sobol' indices. Unsurprisingly, the parameter list contains values found in the SMC/EC compartment of the full model. However, the topmost parameter, $z_4$, is associated with the conductance of the inwardly rectifying SMC KIR channel, $g_{KIR}$, defined as a function of both membrane potential $v_{SMC}$ and the \pot concentration in the perivascular space $[K^+]_{PVS}$, given by 
 \begin{eqnarray}
 g_{KIR}=exp\left( z_5 v_{SMC}+z_3[K^+]_{PVS}-z_4\right)  \label{eqn:gkir}
 \end{eqnarray}
@@ -170,13 +170,13 @@ Parameter Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Ind
   136 & conductance of the $K^+$ channel in SMC/EC & 0.0305 &0.0362\\
    \arrayrulecolor{black}\bottomrule
 \end{tabular}
-\caption{Most influential parameters for the volumetric flow rate in the cerebral tissue QoI.}
+\caption{Most influential parameters for the volumetric flow rate in the cerebral tissue QoI. The leftmost column is the parameter index displayed in the figures, the left-center column provides a description of the parameter, the right-center column is the total Sobol' index computed for the parameter using the rectangular pulse stimulus, and the right column is the total Sobol' index computed for the parameter using the stimulus from lab experiments.}
 \label{tab:qoi_vol_flow}
 \end{table}
 
 \subsection{$[AM+AM_p]_{min}$}
 
-Figure~\ref{fig:qoi_AM_AMp_Min_exp} displays results for the minimum of the combined concentration of the actin myosin complex with the experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the five most important parameters (ranked by the total Sobol' indices for the rectangular pulse stimulus) and their total Sobol' indices. We see from the Table that the same parameters appear for this QoI . Although at first analysis this should not be surprising it does suggest that the reaction rates of the actin myosin model for vessel contraction/dilation are relatively insensitive to finding the minimum of the contraction force and that the KIR ion channel is a vital component of the model. 
+Figure~\ref{fig:qoi_AM_AMp_Min_exp} displays results for the minimum of the combined concentration of the actin myosin complex with the experimental data stimulus. Table~\ref{tab:qoi_AM_AMp_Min} reports the five most important parameters (ranked by the total Sobol' indices for the rectangular pulse stimulus) and their total Sobol' indices. By comparing Table~\ref{tab:qoi_AM_AMp_Min} and Table~\ref{tab:qoi_vol_flow}, we see that the $[AM+AM_p]_{min}$ and volumetric flow rate QoIs share their four most important parameters. Although at first analysis this should not be surprising it does suggest that the reaction rates of the actin myosin model for vessel contraction/dilation are relatively insensitive to finding the minimum of the contraction force and that the KIR ion channel is a vital component of the model. 
 \begin{figure}[h]
 \centering
 %\includegraphics[width=.24 \textwidth]{Figures/AM_AMp_Min_QoI_LR_Prediction_Rectangular.eps}
@@ -194,7 +194,7 @@ Figure~\ref{fig:qoi_AM_AMp_Min_exp} displays results for the minimum of the comb
 \label{fig:qoi_AM_AMp_Min_exp}
 \end{figure}
 
-The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate; this highlights the nonlinearity of this particular QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are related to the wall mechanics. Parameter $p_1$ appears important in the linear surrogate but unimportant in the PC surrogate.
+The linear surrogate does not perform as well for this QoI; however, the PC surrogate is far more accurate; this highlights the nonlinearity of this particular QoI. The subset of parameters used in the PC surrogate differs for the rectangular pulse and experimental stimulus cases, but the most important parameters, as measured by the total Sobol' indices, agree. The most influential parameters for the minimum of the combined concentration of the actin myosin complex coincide with those for the volumetric flow rate in the cerebral tissue, an unsurprising result since both QoI are related to the wall mechanics. As in the previous results, parameter $p_1$ appears important in the linear surrogate but unimportant in the PC surrogate.
 
 \begin{table}[h]
 \centering
@@ -210,7 +210,7 @@ Parameter Index & Identification & Total Sobol' Index (rect.) & Total Sobol' Ind
 140 & $z_3$ in SMCEC & 0.0273 &0.0261\\
  \arrayrulecolor{black}\bottomrule
 \end{tabular}
-\caption{Most influential parameters for the combined concentration of the actin myosin complex QoI.}
+\caption{Most influential parameters for the combined concentration of the actin myosin complex QoI. The leftmost column is the parameter index displayed in the figures, the left-center column provides a description of the parameter, the right-center column is the total Sobol' index computed for the parameter using the rectangular pulse stimulus, and the right column is the total Sobol' index computed for the parameter using the stimulus from lab experiments.}
 \label{tab:qoi_AM_AMp_Min}
 \end{table}
 

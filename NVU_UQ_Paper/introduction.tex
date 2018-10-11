@@ -8,9 +8,9 @@ In the above context, we investigate the sensitivity of  the \gls{nvc} response 
 \begin{eqnarray}
 \frac {d\boldsymbol{y}}{dt} = \mathbf{f}(\mathbf{y}, \boldsymbol{\theta}), \label{caboodle}
 \end{eqnarray}
-where $\mathbf{f}$ is a known function of its arguments. Equation (\ref{caboodle}) is completed with a set of initial conditions $\boldsymbol{y}(0) = \boldsymbol{y}_0$;  here, we simply take $\boldsymbol{y}_0$ as the  equilibrium solution at the parameters' nominal values, i.e., $\mathbf f(  \mathbf{y}_0, \bar{\boldsymbol{\theta}}) = 0$, where $ \bar{\boldsymbol{\theta}} = (\bar\theta_1, \dots, \bar\theta_P)$ denotes the expected values of the parameters. The supplementary material contains code and the expected values of parameters, further information can be found in \cite{Dormanns2015a}
+where $\mathbf{f}$ is a known function of its arguments. Equation (\ref{caboodle}) is completed with a set of initial conditions $\boldsymbol{y}(0) = \boldsymbol{y}_0$;  here, we simply take $\boldsymbol{y}_0$ as the  equilibrium solution at the parameters' nominal values, i.e., $\mathbf f(  \mathbf{y}_0, \bar{\boldsymbol{\theta}}) = 0$, where $ \bar{\boldsymbol{\theta}} = (\bar\theta_1, \dots, \bar\theta_P)$ denotes the expected values of the parameters. The supplementary material contains code and the expected values of parameters, further information can be found in \cite{Dormanns2015a}.
 
-Based on physiological considerations, we consider below three quantities of interest (QoI), see Section~\ref{sec:model}.  Let $q$ be one of our three  QoIs; while determined from the state variables, i.e., from $\mathbf y$, $q$ is  ultimately a function of the parameters alone (and possibly time), i.e.
+Based on physiological considerations, we examine three quantities of interest (QoI), see Section~\ref{sec:model}.  Let $q$ be one of our three  QoIs; while determined from the state variables, i.e., from $\mathbf y$, $q$ is  ultimately a function of the parameters alone (and possibly time), i.e.
 \begin{eqnarray}
 q = g(\boldsymbol{\theta}). \label{qoi}
 \end{eqnarray}
