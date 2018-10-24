@@ -8,7 +8,7 @@ In the above context, we investigate the sensitivity of  the \gls{nvc} response 
 \begin{eqnarray}
 \frac {d\boldsymbol{y}}{dt} = \mathbf{f}(\mathbf{y}, \boldsymbol{\theta}), \label{caboodle}
 \end{eqnarray}
-where $\mathbf{f}$ is a known function of its arguments. Equation (\ref{caboodle}) is completed with a set of initial conditions $\boldsymbol{y}(0) = \boldsymbol{y}_0$;  here, we simply take $\boldsymbol{y}_0$ as the  equilibrium solution at the parameters' nominal values, i.e., $\mathbf f(  \mathbf{y}_0, \bar{\boldsymbol{\theta}}) = 0$, where $ \bar{\boldsymbol{\theta}} = (\bar\theta_1, \dots, \bar\theta_P)$ denotes the expected values of the parameters. The supplementary material contains code and the expected values of parameters, further information can be found in \cite{Dormanns2015a}.
+where $\mathbf{f}$ is a known function of its arguments. Equation (\ref{caboodle}) is completed with a set of initial conditions $\boldsymbol{y}(0) = \boldsymbol{y}_0$;  here, we simply take $\boldsymbol{y}_0$ as the  equilibrium solution at the parameters' nominal values, i.e., $\mathbf f(  \mathbf{y}_0, \bar{\boldsymbol{\theta}}) = 0$, where $ \bar{\boldsymbol{\theta}} = (\bar\theta_1, \dots, \bar\theta_P)$ denotes the nominal values of the parameters. The Supplementary Material contains code and the nominal values of parameters, further information can be found in \cite{Dormanns2015a}.
 
 Based on physiological considerations, we examine three quantities of interest (QoI), see Section~\ref{sec:model}.  Let $q$ be one of our three  QoIs; while determined from the state variables, i.e., from $\mathbf y$, $q$ is  ultimately a function of the parameters alone (and possibly time), i.e.
 \begin{eqnarray}
@@ -18,6 +18,5 @@ The overall goal of our numerical study is to determine  which of the uncertain 
 
 
 
-The present \gls{nvc} model contains $N=67$ state variables and $P= 160$ uncertain parameters.
-The complexity of the model and large parameter space dimension preclude a direct application of GSA tools. Part of our contribution in this paper is to show how to meaningfully reduce the dimension of the original problem to make it amenable to standard GSA methods
+The present \gls{nvc} model contains $N=67$ state variables and $P= 160$ uncertain parameters. The complexity of the model and large parameter space dimension preclude a direct application of GSA tools. Part of our contribution in this paper is to show how multiple GSA tools may be combined to analyse such problems.
 
